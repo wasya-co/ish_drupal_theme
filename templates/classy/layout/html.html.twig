@@ -1,5 +1,4 @@
-{#
-/**
+{# /**
  * @file
  * Theme override for the basic structure of a single Drupal page.
  *
@@ -21,8 +20,8 @@
  *   placeholders.
  *
  * @see template_preprocess_html()
- */
-#}
+**/ #}
+
 {%
   set body_classes = [
     logged_in ? 'user-logged-in',
@@ -38,15 +37,20 @@
     <title>{{ head_title|safe_join(' | ') }}</title>
     <css-placeholder token="{{ placeholder_token }}">
     <js-placeholder token="{{ placeholder_token }}">
+    <style>
+      .main {
+        display: flex !important;
+      }
+      .main .layout-sidebar {
+        flex-shrink: 2;
+      }
+    </style>
   </head>
   <body{{ attributes.addClass(body_classes) }}>
-    {#
-      Keyboard navigation/accessibility link to main content section in
-      page.html.twig.
-    #}
-    <a href="#main-content" class="visually-hidden focusable skip-link">
-      {{ 'Skip to main content'|t }}
-    </a>
+
+    {# Keyboard navigation/accessibility link to main content section in page.html.twig . #}
+    <a href="#main-content" class="visually-hidden focusable skip-link">{{ 'Skip to main content'|t }}</a>
+
     {{ page_top }}
     {{ page }}
     {{ page_bottom }}

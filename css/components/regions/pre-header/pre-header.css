@@ -4,9 +4,12 @@
  *
  * It styles the pre-header as a global component; it does not style individual
  * pre-header items, such as search, which are styled by their own CSS files.
- */
+ * _vp_ 2023-08-22
+**/
 
 .region-pre-header {
+  background: #ded;
+
   display: flex;
   flex-wrap: wrap;
   align-items: center;
