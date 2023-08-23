@@ -1,0 +1,22 @@
+name: ish_drupal_theme
+type: theme
+'base theme': stable9
+starterkit: true
+version: VERSION
+libraries:
+  - ish_drupal_theme/base
+  - ish_drupal_theme/messages
+  - core/normalize
+libraries-extend:
+  user/drupal.user:
+    - ish_drupal_theme/user
+  core/drupal.dropbutton:
+    - ish_drupal_theme/dropbutton
+  core/drupal.dialog:
+    - ish_drupal_theme/dialog
+  file/drupal.file:
+    - ish_drupal_theme/file
+  core/drupal.progress:
+    - ish_drupal_theme/progress
+core_version_requirement: ^9
+generator: 'starterkit_theme:9.5.10'
