@@ -20,3 +20,19 @@ libraries-extend:
     - ish_drupal_theme/progress
 core_version_requirement: ^9
 generator: 'starterkit_theme:9.5.10'
+
+regions:
+  preheader: 'Preheader'
+  header: 'Header'
+  primary_menu: 'Primary menu'
+  secondary_menu: 'Secondary menu'
+  highlighted: 'Highlighted'
+  help: 'Help'
+  content: 'Content'
+  sidebar_first: 'Left sidebar'
+  sidebar_second: 'Right sidebar'
+  footer: 'Footer'
+  breadcrumb: 'Breadcrumb'
+  page_top: 'Page top'
+  page_bottom: 'Page bottom'
+
