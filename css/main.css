@@ -1,12 +1,17 @@
 
+
+article {
+  background: #fbfbfb;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+}
 .region {
   border: 1px solid orange;
 }
 
-
-header {
-  /* background: pink; */
-}
 .region-header {
   border: 0;
 
@@ -54,7 +59,7 @@ header {
   /* border: 2px solid cyan; */
 
   margin: 2em auto;
-  max-width: 800px;
+  max-width: 1040px;
 }
 .region-content article.node--view-mode-full .field--type-image {
   display: flex;
@@ -78,7 +83,9 @@ section.field--type-comment {
   border-radius: 8px;
 
   margin: 0 auto;
-  max-width: 800px;
+
+  display: flex;
+  flex-wrap: wrap;
 }
 .view-content .views-row {
   border-bottom: 1px solid red;
@@ -89,7 +96,7 @@ section.field--type-comment {
   border: 0;
 }
 .view-content .views-row .field--type-image {
-  float: left;
+  /* float: left; */
   padding: 0 10px 10px 0;
 }
 .node__links {
