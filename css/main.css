@@ -1,6 +1,14 @@
 
+article {
+  background: #fbfbfb;
+}
+
 header {
-  background: #4fb253;
+  /* background: red; */
+}
+main {
+  display: flex;
+  justify-content: center;
 }
 .region-header {
   display: flex;
@@ -12,7 +20,7 @@ header {
   border: 1px solid orange;
 }
 .region-primary-menu {
-  background: #77c37a;
+  /* background: #77c37a; */
 }
 .region-highlighted {
   background: #cecece;
@@ -26,7 +34,7 @@ header {
   /* border: 2px solid cyan; */
 
   margin: 2em auto;
-  max-width: 800px;
+  max-width: 1040px;
 }
 .region-content article.node--view-mode-full .field--type-image {
   display: flex;
@@ -50,7 +58,9 @@ section.field--type-comment {
   border-radius: 8px;
 
   margin: 0 auto;
-  max-width: 800px;
+
+  display: flex;
+  flex-wrap: wrap;
 }
 .view-content .views-row {
   border-bottom: 1px solid red;
@@ -61,7 +71,7 @@ section.field--type-comment {
   border: 0;
 }
 .view-content .views-row .field--type-image {
-  float: left;
+  /* float: left; */
   padding: 0 10px 10px 0;
 }
 .node__links {
