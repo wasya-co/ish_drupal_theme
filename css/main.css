@@ -1,27 +1,52 @@
 
+
 article {
   background: #fbfbfb;
 }
 
-header {
-  /* background: red; */
-}
 main {
   display: flex;
   justify-content: center;
 }
-.region-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
 .region {
   border: 1px solid orange;
 }
-.region-primary-menu {
-  /* background: #77c37a; */
+
+.region-header {
+  border: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+.region-header h1 {
+  margin-bottom: 0;
+}
+
+.site-name {
+  text-align: center;
+}
+
+.region-primary-menu {
+  border: 0;
+
+  text-align: center;
+}
+.region-primary-menu ul {
+  display: flex;
+  justify-content: center;
+}
+.region-primary-menu ul li {
+  padding: 1em;
+}
+
+.region-secondary-menu {
+  border: 0;
+
+  display: flex;
+  justify-content: center;
+}
+
 .region-highlighted {
   background: #cecece;
 }
