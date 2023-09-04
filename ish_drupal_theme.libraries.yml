@@ -1,6 +1,12 @@
 base:
   version: VERSION
+  js:
+    //stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css: {}
+
   css:
+    base:
+      //stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css: {}
+
     component:
       css/components/action-links.css:
         weight: -10
