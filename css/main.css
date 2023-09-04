@@ -84,8 +84,8 @@ section.field--type-comment {
 
   margin: 0 auto;
 
-  display: flex;
-  flex-wrap: wrap;
+  /* display: flex;
+  flex-wrap: wrap; */
 }
 .view-content .views-row {
   border-bottom: 1px solid red;
@@ -103,3 +103,38 @@ section.field--type-comment {
   clear: both;
 }
 
+.region-footer {
+  display: flex;
+  justify-content: center;
+}
+
+.view-_023q3-scrum-view .view-content {
+  display: flex;
+  flex-wrap: wrap;
+}
+.view-bibliography-websites .view-content {
+  display: flex;
+  flex-wrap: wrap;
+}
+.view-bibliography-websites .view-content .views-row {
+  max-width: 300px;
+}
+nav.menu--issues {
+  border: 1px solid green;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+
+  margin: 0;
+}
+nav.menu--issues h2 {
+  margin: 0;
+}
+nav.menu--issues ul.menu {
+  display: flex;
+  margin: 0;
+}
+nav.menu--issues ul.menu li {
+  padding-left: 10px;
+}
