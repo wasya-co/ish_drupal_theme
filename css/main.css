@@ -1,5 +1,4 @@
 
-
 article {
   background: #fbfbfb;
 }
@@ -59,7 +58,8 @@ main {
   /* border: 2px solid cyan; */
 
   margin: 2em auto;
-  max-width: 1040px;
+
+  max-width: 1000px;
 }
 .region-content article.node--view-mode-full .field--type-image {
   display: flex;
@@ -84,8 +84,6 @@ section.field--type-comment {
 
   margin: 0 auto;
 
-  /* display: flex;
-  flex-wrap: wrap; */
 }
 .view-content .views-row {
   border-bottom: 1px solid red;
@@ -103,6 +101,13 @@ section.field--type-comment {
   clear: both;
 }
 
+
+.view-cities .view-content {
+  display: flex;
+}
+article.node--view-mode-teaser {
+  border: 1px solid green;
+}
 .region-footer {
   display: flex;
   justify-content: center;
