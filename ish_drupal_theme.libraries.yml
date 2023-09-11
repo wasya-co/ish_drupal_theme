@@ -3,10 +3,11 @@ base:
   js:
     //stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css: {}
     js/main.js: {}
+    js/vendor/bootstrap@4.5.2.min.js: { minified: true }
   css:
     base:
-      //stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css: {}
-
+      css/vendor/bootstrap@4.5.2.min.css: {}
+      
     component:
       css/components/action-links.css:
         weight: -10
