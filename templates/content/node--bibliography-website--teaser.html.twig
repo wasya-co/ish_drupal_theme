@@ -5,7 +5,7 @@
   {{ title_prefix }}
   {% if label and not page %}
     <h2{{ title_attributes }}>
-      <a href="{{ node.field_link[0].value }}" target="_blank" >{{ label }}</a>
+      <a href="{{ node.field_link[0].value }}" >{{ label }}</a>
     </h2>
   {% endif %}
   {{ title_suffix }}

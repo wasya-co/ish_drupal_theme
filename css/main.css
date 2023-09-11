@@ -35,9 +35,14 @@ main {
 .region-primary-menu ul {
   display: flex;
   justify-content: center;
+  margin: 10px 0;
 }
 .region-primary-menu ul li {
-  padding: 1em;
+  padding: 0 1em;
+  border-right: 1px solid red;
+}
+.region-primary-menu ul li:last-child {
+  border-right: 0;
 }
 
 .region-secondary-menu {
@@ -45,6 +50,16 @@ main {
 
   display: flex;
   justify-content: center;
+}
+.region-secondary-menu ul.menu {
+  margin: 0;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+}
+.region-secondary-menu ul.menu li {
+  padding: 10px;
 }
 
 .region-highlighted {
@@ -59,7 +74,7 @@ main {
   /* border: 2px solid cyan; */
 
   margin: 2em auto;
-  max-width: 1040px;
+  width: 1000px;
 }
 .region-content article.node--view-mode-full .field--type-image {
   display: flex;
