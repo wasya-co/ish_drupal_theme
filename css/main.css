@@ -5,101 +5,97 @@ article {
 
 main {
   display: flex;
-  justify-content: center;
-}
+  justify-content: center; }
+
 .region {
-  border: 1px solid orange;
-}
+  border: 1px solid orange; }
 
 .region-header {
   border: 0;
-
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 .region-header h1 {
-  margin-bottom: 0;
-}
+  margin-bottom: 0; }
 
 .site-name {
-  text-align: center;
-}
+  text-align: center; }
 
 .region-primary-menu {
   border: 0;
+  text-align: center; }
 
-  text-align: center;
-}
 .region-primary-menu ul {
   display: flex;
   justify-content: center;
-}
+  margin: 10px 0; }
+
 .region-primary-menu ul li {
-  padding: 1em;
-}
+  padding: 0 1em;
+  border-right: 1px solid red; }
+
+.region-primary-menu ul li:last-child {
+  border-right: 0; }
 
 .region-secondary-menu {
   border: 0;
-
   display: flex;
-  justify-content: center;
-}
+  justify-content: center; }
+
+.region-secondary-menu ul.menu {
+  margin: 0;
+  height: 100%;
+  display: flex;
+  align-items: center; }
+
+.region-secondary-menu ul.menu li {
+  padding: 10px; }
 
 .region-highlighted {
-  background: #cecece;
-}
+  background: #cecece; }
+
 .region-breadcrumb::before {
   content: "Breadcrumbs: ";
   float: left;
-  padding-right: 10px;
-}
+  padding-right: 10px; }
+
 .region-content {
   /* border: 2px solid cyan; */
-
   margin: 2em auto;
-
   max-width: 1000px;
 }
 .region-content article.node--view-mode-full .field--type-image {
   display: flex;
-  justify-content: center;
-}
+  justify-content: center; }
+
 .region-content .field--type-image img {
   max-width: 100%;
-  height: auto;
-
-}
+  height: auto; }
 
 section.field--type-comment {
   border: 2px dashed green;
   border-radius: 8px;
-
-  padding: 10px;
-}
+  padding: 10px; }
 
 .view-content {
   border: 1px solid red;
   border-radius: 8px;
-
   margin: 0 auto;
-
-}
 .view-content .views-row {
   border-bottom: 1px solid red;
   padding: 10px;
-  clear: both;
-}
+  clear: both; }
+
 .view-content .views-row:last-child {
-  border: 0;
-}
+  border: 0; }
+
 .view-content .views-row .field--type-image {
   /* float: left; */
-  padding: 0 10px 10px 0;
-}
+  padding: 0 10px 10px 0; }
+
 .node__links {
-  clear: both;
-}
+  clear: both; }
 
 
 .view-cities .view-content {
@@ -110,36 +106,32 @@ article.node--view-mode-teaser {
 }
 .region-footer {
   display: flex;
-  justify-content: center;
-}
+  justify-content: center; }
 
 .view-_023q3-scrum-view .view-content {
   display: flex;
-  flex-wrap: wrap;
-}
+  flex-wrap: wrap; }
+
 .view-bibliography-websites .view-content {
   display: flex;
-  flex-wrap: wrap;
-}
+  flex-wrap: wrap; }
+
 .view-bibliography-websites .view-content .views-row {
-  max-width: 300px;
-}
+  max-width: 300px; }
+
 nav.menu--issues {
   border: 1px solid green;
-
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+  margin: 0; }
 
-  margin: 0;
-}
 nav.menu--issues h2 {
-  margin: 0;
-}
+  margin: 0; }
+
 nav.menu--issues ul.menu {
   display: flex;
-  margin: 0;
-}
+  margin: 0; }
+
 nav.menu--issues ul.menu li {
-  padding-left: 10px;
-}
+  padding-left: 10px; }

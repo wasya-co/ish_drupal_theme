@@ -1,0 +1,19 @@
+
+{{ attach_library('ish_drupal_theme/node') }}
+<article{{ attributes }}>
+
+  {{ title_prefix }}
+  {% if label and not page %}
+    <h2{{ title_attributes }}>
+      <a href="{{ node.field_link[0].value }}" >{{ label }}</a>
+    </h2>
+  {% endif %}
+  {{ title_suffix }}
+
+  <a href="{{ node.field_link[0].value }}" target="_blank" >
+    <div{{ content_attributes.addClass('node__content') }}>
+      {{ content }}
+    </div>
+  </a>
+
+</article>

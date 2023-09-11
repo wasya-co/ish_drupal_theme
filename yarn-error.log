@@ -1,0 +1,49 @@
+Arguments: 
+  /usr/local/bin/node /usr/local/bin/yarn add node-sass
+
+PATH: 
+  /Users/piousbox/opt/anaconda3/bin:/Users/piousbox/bin:/Users/piousbox/.yarn/bin:/Users/piousbox/.config/yarn/global/node_modules/.bin:/Users/piousbox/.rbenv/shims:/Users/piousbox/.rbenv/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Apple/usr/bin:/home/piousbox/projects/android/android-sdk-linux/:/home/piousbox/projects/android/android-sdk-linux/tools/:/home/piousbox/projects/android/android-sdk-linux/platform-tools/:.:/Users/piousbox/Library/Android/sdk/tools:/Users/piousbox/Library/Android/sdk/platform-tools
+
+Yarn version: 
+  1.22.19
+
+Node version: 
+  16.15.1
+
+Platform: 
+  darwin x64
+
+Trace: 
+  SyntaxError: /Users/piousbox/projects/docker/volumes/piousbox_drupal_development_data/web/themes/ish_drupal_theme/package.json: Unexpected token } in JSON at position 515
+      at JSON.parse (<anonymous>)
+      at /usr/local/lib/node_modules/yarn/lib/cli.js:1629:59
+      at Generator.next (<anonymous>)
+      at step (/usr/local/lib/node_modules/yarn/lib/cli.js:310:30)
+      at /usr/local/lib/node_modules/yarn/lib/cli.js:321:13
+
+npm manifest: 
+  {
+    "name": "ish_drupal_theme",
+    "version": "0.0.0",
+    "description": "piousbox_drupal_theme",
+    "main": "main.js",
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/wasya-co/ish_drupal_theme.git"
+    },
+    "author": "Victor Pudeyev <victor@wasya.co>",
+    "license": "ISC",
+    "bugs": {
+      "url": "https://github.com/wasya-co/ish_drupal_theme/issues"
+    },
+    "homepage": "https://github.com/wasya-co/ish_drupal_theme",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
