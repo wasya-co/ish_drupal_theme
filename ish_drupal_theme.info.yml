@@ -22,17 +22,19 @@ core_version_requirement: ^9
 generator: 'starterkit_theme:9.5.10'
 
 regions:
-  preheader: 'Preheader'
+  breadcrumb: 'Breadcrumb'
+  content: 'Content'
+  footer: 'Footer'
   header: 'Header'
+  help: 'Help'
+  highlighted: 'Highlighted'
+  page_bottom: 'Page bottom'
+  page_top: 'Page top'
+  postfooter: 'Postfooter'
+  preheader: 'Preheader'
   primary_menu: 'Primary menu'
   secondary_menu: 'Secondary menu'
-  highlighted: 'Highlighted'
-  help: 'Help'
-  content: 'Content'
   sidebar_first: 'Left sidebar'
   sidebar_second: 'Right sidebar'
-  footer: 'Footer'
-  breadcrumb: 'Breadcrumb'
-  page_top: 'Page top'
-  page_bottom: 'Page bottom'
+
 

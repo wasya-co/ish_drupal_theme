@@ -1,8 +1,10 @@
 
-0.0.0 - ???
-0.0.1 - ???
-0.0.2 - ???
+
 0.0.3 - 2023-08-30 - demmitv_drupal_theme that's the same as ish_drupal theme. nice straight frontpage.
 
 demmitv-0.0.0 - 2023-09-01 - LFG!
 
+ish-0.0.0 - 2023-09-01 - let's go
+
+piousbox-0.0.0 - 2023-09-xx - nice, works!
+piousbox-0.1.0 - 2023-09-11 - lets add scss
