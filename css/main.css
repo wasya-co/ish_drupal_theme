@@ -2,11 +2,58 @@ main {
   display: flex;
   justify-content: center; }
 
-.region {
-  border: 1px solid orange; }
+pre {
+  background: #eee;
+  padding: 1em; }
 
+/* B */
+.view-bibliography-websites .view-content {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; }
+  .view-bibliography-websites .view-content .views-row {
+    max-width: 300px; }
+
+.Card.BibliographyWebsite {
+  text-align: center;
+  padding: 2px;
+  width: 225px; }
+
+.block-inline-blockissues-navigator {
+  margin: 10px 0; }
+  .block-inline-blockissues-navigator .current-issue {
+    text-align: right; }
+  .block-inline-blockissues-navigator nav.menu--issues {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center; }
+    .block-inline-blockissues-navigator nav.menu--issues h2:after {
+      content: ":"; }
+  .block-inline-blockissues-navigator h2 {
+    font-size: 1em;
+    margin: 0; }
+  .block-inline-blockissues-navigator ul.menu {
+    display: flex;
+    margin: 0; }
+    .block-inline-blockissues-navigator ul.menu li {
+      padding: 0 10px;
+      border-right: 2px solid orange; }
+
+/* C */
+.Card {
+  border: 1px solid gray;
+  border-radius: 10px;
+  padding: 10px; }
+
+/* M */
+/* N */
+.node__links {
+  clear: both; }
+
+/* R */
 .region-header {
   border: 0;
+  margin-top: 50px;
   display: flex;
   justify-content: center;
   align-items: center; }
@@ -14,27 +61,21 @@ main {
 .region-header h1 {
   margin-bottom: 0; }
 
-.site-name {
-  text-align: center; }
-
 .region-primary-menu {
   border: 0;
   text-align: center; }
-
-.region-primary-menu ul {
-  display: flex;
-  justify-content: center;
-  margin: 10px 0; }
-
-.region-primary-menu ul li {
-  padding: 0 1em;
-  border-right: 1px solid red; }
-
-.region-primary-menu ul li:last-child {
-  border-right: 0; }
+  .region-primary-menu ul {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0; }
+    .region-primary-menu ul li {
+      padding: 0 1em;
+      border-right: 1px solid orange; }
+    .region-primary-menu ul li:last-child {
+      border-right: 0; }
 
 .region-secondary-menu {
-  border: 0;
+  border-bottom: 5px solid orange;
   display: flex;
   justify-content: center; }
 
@@ -56,8 +97,6 @@ main {
   padding-right: 10px; }
 
 .region-content {
-  /* border: 2px solid cyan; */
-  margin: 2em auto;
   width: 1000px; }
 
 .region-content article.node--view-mode-full .field--type-image {
@@ -73,15 +112,16 @@ section.field--type-comment {
   border-radius: 8px;
   padding: 10px; }
 
+.site-name {
+  text-align: center; }
+
 .view-content {
-  border: 1px solid red;
   border-radius: 8px;
   margin: 0 auto;
   /* display: flex;
   flex-wrap: wrap; */ }
 
 .view-content .views-row {
-  border-bottom: 1px solid red;
   padding: 10px;
   clear: both; }
 
@@ -92,37 +132,18 @@ section.field--type-comment {
   /* float: left; */
   padding: 0 10px 10px 0; }
 
-.node__links {
-  clear: both; }
-
 .region-footer {
+  border-top: 5px solid orange;
+  border-bottom: 2px solid orange;
   display: flex;
   justify-content: center; }
+  .region-footer > .block {
+    padding: 0 10px;
+    border-right: 1px solid orange; }
+
+.footer-3 {
+  padding: 1em 0; }
 
 .view-_023q3-scrum-view .view-content {
   display: flex;
   flex-wrap: wrap; }
-
-.view-bibliography-websites .view-content {
-  display: flex;
-  flex-wrap: wrap; }
-
-.view-bibliography-websites .view-content .views-row {
-  max-width: 300px; }
-
-nav.menu--issues {
-  border: 1px solid green;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  margin: 0; }
-
-nav.menu--issues h2 {
-  margin: 0; }
-
-nav.menu--issues ul.menu {
-  display: flex;
-  margin: 0; }
-
-nav.menu--issues ul.menu li {
-  padding-left: 10px; }
