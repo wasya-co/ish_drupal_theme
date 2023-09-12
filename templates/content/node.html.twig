@@ -65,7 +65,7 @@
  *
  * @see template_preprocess_node()
  *
- */
+**/
 #}
 {%
   set classes = [
@@ -101,5 +101,7 @@
   <div{{ content_attributes.addClass('node__content') }}>
     {{ content }}
   </div>
+
+  <div class="clearfix"></div>
 
 </article>
