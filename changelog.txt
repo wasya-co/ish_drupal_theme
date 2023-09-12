@@ -5,6 +5,7 @@
 demmitv-0.0.0 - 2023-09-01 - LFG!
 
 ish-0.0.0 - 2023-09-01 - let's go
+ish-0.2.0 - 2023-09-11 - merged piousbox-0.2.0
 
 piousbox-0.0.0 - 2023-09-xx - nice, works!
 piousbox-0.1.0 - 2023-09-11 - lets add scss

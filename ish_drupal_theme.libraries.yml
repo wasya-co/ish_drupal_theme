@@ -7,7 +7,7 @@ base:
   css:
     base:
       css/vendor/bootstrap@4.5.2.min.css: {}
-      
+
     component:
       css/components/action-links.css:
         weight: -10
@@ -56,6 +56,8 @@ base:
       css/components/ui-dialog.css:
         weight: -10
       css/main.css:
+        weight: -10
+      css/demmitv.css:
         weight: -10
 
 dialog:
