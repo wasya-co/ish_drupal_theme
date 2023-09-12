@@ -1,203 +1,149 @@
-
-
 main {
   display: flex;
-  justify-content: center;
-}
+  justify-content: center; }
+
 pre {
   background: #eee;
-  padding: 1em;
-}
+  padding: 1em; }
 
 /* B */
-
 .view-bibliography-websites .view-content {
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
+  flex-wrap: wrap; }
+  .view-bibliography-websites .view-content .views-row {
+    max-width: 300px; }
 
-  .views-row {
-    max-width: 300px;
-  }
-}
 .Card.BibliographyWebsite {
   text-align: center;
   padding: 2px;
-  width: 225px;
-  // width: 290px;
-}
+  width: 225px; }
 
 .block-inline-blockissues-navigator {
-  margin: 10px 0;
-
-  .current-issue {
-    text-align: right;
-  }
-  nav.menu--issues {
+  margin: 10px 0; }
+  .block-inline-blockissues-navigator .current-issue {
+    text-align: right; }
+  .block-inline-blockissues-navigator nav.menu--issues {
     display: flex;
     justify-content: flex-end;
-    align-items: center;
-    h2:after {
-      content: ":";
-    }
-  }
-  h2 {
+    align-items: center; }
+    .block-inline-blockissues-navigator nav.menu--issues h2:after {
+      content: ":"; }
+  .block-inline-blockissues-navigator h2 {
     font-size: 1em;
-    margin: 0;
-  }
-  ul.menu {
+    margin: 0; }
+  .block-inline-blockissues-navigator ul.menu {
     display: flex;
-    margin: 0;
-    li {
+    margin: 0; }
+    .block-inline-blockissues-navigator ul.menu li {
       padding: 0 10px;
-      border-right: 2px solid orange;
-    }
-
-  }
-}
+      border-right: 2px solid orange; }
 
 /* C */
-
 .Card {
   border: 1px solid gray;
   border-radius: 10px;
-  padding: 10px;
-}
+  padding: 10px; }
 
 /* M */
-
-
 /* N */
-
 .node__links {
-  clear: both;
-}
+  clear: both; }
 
 /* R */
-
-.region {
-  // border: 1px solid orange;
-}
-
 .region-header {
   border: 0;
-
   margin-top: 50px;
-
   display: flex;
   justify-content: center;
-  align-items: center;
-}
+  align-items: center; }
+
 .region-header h1 {
-  margin-bottom: 0;
-}
+  margin-bottom: 0; }
 
 .region-primary-menu {
   border: 0;
-
-  text-align: center;
-  ul {
+  text-align: center; }
+  .region-primary-menu ul {
     display: flex;
     justify-content: center;
-    margin: 10px 0;
-    li {
+    margin: 10px 0; }
+    .region-primary-menu ul li {
       padding: 0 1em;
-      border-right: 1px solid orange;
-    }
-    li:last-child {
-      border-right: 0;
-    }
-  }
-}
+      border-right: 1px solid orange; }
+    .region-primary-menu ul li:last-child {
+      border-right: 0; }
 
 .region-secondary-menu {
   border-bottom: 5px solid orange;
-
   display: flex;
-  justify-content: center;
-}
+  justify-content: center; }
+
 .region-secondary-menu ul.menu {
   margin: 0;
   height: 100%;
-
   display: flex;
-  align-items: center;
-}
+  align-items: center; }
+
 .region-secondary-menu ul.menu li {
-  padding: 10px;
-}
+  padding: 10px; }
 
 .region-highlighted {
-  background: #cecece;
-}
+  background: #cecece; }
+
 .region-breadcrumb::before {
   content: "Breadcrumbs: ";
   float: left;
-  padding-right: 10px;
-}
+  padding-right: 10px; }
+
 .region-content {
-  // border: 2px solid cyan;
-  // margin: 2em auto;
-  width: 1000px;
-}
+  width: 1000px; }
+
 .region-content article.node--view-mode-full .field--type-image {
   display: flex;
-  justify-content: center;
-}
+  justify-content: center; }
+
 .region-content .field--type-image img {
   max-width: 100%;
-  height: auto;
-
-}
+  height: auto; }
 
 section.field--type-comment {
   border: 2px dashed green;
   border-radius: 8px;
+  padding: 10px; }
 
-  padding: 10px;
-}
 .site-name {
-  text-align: center;
-}
+  text-align: center; }
+
 .view-content {
-  // border: 1px solid red;
   border-radius: 8px;
-
   margin: 0 auto;
-
   /* display: flex;
-  flex-wrap: wrap; */
-}
+  flex-wrap: wrap; */ }
+
 .view-content .views-row {
-  // border-bottom: 1px solid red;
   padding: 10px;
-  clear: both;
-}
+  clear: both; }
+
 .view-content .views-row:last-child {
-  border: 0;
-}
+  border: 0; }
+
 .view-content .views-row .field--type-image {
   /* float: left; */
-  padding: 0 10px 10px 0;
-}
+  padding: 0 10px 10px 0; }
 
 .region-footer {
   border-top: 5px solid orange;
   border-bottom: 2px solid orange;
-
   display: flex;
-  justify-content: center;
-
-  > .block {
+  justify-content: center; }
+  .region-footer > .block {
     padding: 0 10px;
-    border-right: 1px solid orange;
-  }
-}
+    border-right: 1px solid orange; }
+
 .footer-3 {
-  padding: 1em 0;
-}
+  padding: 1em 0; }
 
 .view-_023q3-scrum-view .view-content {
   display: flex;
-  flex-wrap: wrap;
-}
+  flex-wrap: wrap; }
