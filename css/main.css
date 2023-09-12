@@ -2,6 +2,11 @@ main {
   display: flex;
   justify-content: center; }
 
+@media screen and (max-width: 768px) {
+  /* cellphones */
+  main {
+    flex-direction: column-reverse; } }
+
 pre {
   background: #eee;
   padding: 1em; }
@@ -51,99 +56,21 @@ pre {
   clear: both; }
 
 /* R */
-.region-header {
-  border: 0;
-  margin-top: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center; }
-
-.region-header h1 {
-  margin-bottom: 0; }
-
-.region-primary-menu {
-  border: 0;
-  text-align: center; }
-  .region-primary-menu ul {
-    display: flex;
-    justify-content: center;
-    margin: 10px 0; }
-    .region-primary-menu ul li {
-      padding: 0 1em;
-      border-right: 1px solid orange; }
-    .region-primary-menu ul li:last-child {
-      border-right: 0; }
-
-.region-secondary-menu {
-  border-bottom: 5px solid orange;
-  display: flex;
-  justify-content: center; }
-
-.region-secondary-menu ul.menu {
-  margin: 0;
-  height: 100%;
-  display: flex;
-  align-items: center; }
-
-.region-secondary-menu ul.menu li {
-  padding: 10px; }
-
-.region-highlighted {
-  background: #cecece; }
-
-.region-breadcrumb::before {
-  content: "Breadcrumbs: ";
-  float: left;
-  padding-right: 10px; }
-
-.region-content {
-  width: 1000px; }
-
-.region-content article.node--view-mode-full .field--type-image {
-  display: flex;
-  justify-content: center; }
-
-.region-content .field--type-image img {
-  max-width: 100%;
-  height: auto; }
-
 section.field--type-comment {
   border: 2px dashed green;
   border-radius: 8px;
   padding: 10px; }
 
-.site-name {
-  text-align: center; }
-
 .view-content {
   border-radius: 8px;
-  margin: 0 auto;
-  /* display: flex;
-  flex-wrap: wrap; */ }
-
-.view-content .views-row {
-  padding: 10px;
-  clear: both; }
-
-.view-content .views-row:last-child {
-  border: 0; }
-
-.view-content .views-row .field--type-image {
-  /* float: left; */
-  padding: 0 10px 10px 0; }
-
-.region-footer {
-  border-top: 5px solid orange;
-  border-bottom: 2px solid orange;
-  display: flex;
-  justify-content: center; }
-  .region-footer > .block {
-    padding: 0 10px;
-    border-right: 1px solid orange; }
+  margin: 0 auto; }
+  .view-content .views-row {
+    padding: 10px;
+    clear: both; }
+    .view-content .views-row .field--type-image {
+      padding: 0 10px 10px 0; }
+  .view-content .views-row:last-child {
+    border: 0; }
 
 .footer-3 {
   padding: 1em 0; }
-
-.view-_023q3-scrum-view .view-content {
-  display: flex;
-  flex-wrap: wrap; }

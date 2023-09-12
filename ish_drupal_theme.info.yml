@@ -24,6 +24,7 @@ generator: 'starterkit_theme:9.5.10'
 regions:
   breadcrumb: 'Breadcrumb'
   content: 'Content'
+  filters: 'Filters'
   footer: 'Footer'
   header: 'Header'
   help: 'Help'
@@ -34,7 +35,6 @@ regions:
   preheader: 'Preheader'
   primary_menu: 'Primary menu'
   secondary_menu: 'Secondary menu'
-  sidebar_first: 'Left sidebar'
   sidebar_second: 'Right sidebar'
 
 

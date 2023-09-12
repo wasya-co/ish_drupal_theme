@@ -1,4 +1,12 @@
 
+article {
+  border: 1px solid orange;
+  border-radius: 8px;
+}
+
+.region {
+  border: 1px solid brown;
+}
 
 .region-header {
   border: 0;
@@ -44,3 +52,6 @@
   }
 }
 
+.region-header {
+  border-bottom: 5px solid orange;
+}

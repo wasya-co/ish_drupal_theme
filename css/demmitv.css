@@ -1,3 +1,10 @@
+article {
+  border: 1px solid orange;
+  border-radius: 8px; }
+
+.region {
+  border: 1px solid brown; }
+
 .region-header {
   border: 0;
   display: flex;
@@ -24,3 +31,6 @@
   .region-content .field--type-image img {
     max-width: 100%;
     height: auto; }
+
+.region-header {
+  border-bottom: 5px solid orange; }
