@@ -56,7 +56,7 @@ base:
         weight: -10
       css/main.css:
         weight: -10
-      css/region-filters.css:
+      css/regions.css:
         weight: -10
       css/demmitv.css:
         weight: -10
