@@ -59,6 +59,10 @@ base:
         weight: -10
       css/regions.css:
         weight: -10
+      css/service.css:
+        weight: -10
+      css/layout.css:
+        weight: -10
 
 dialog:
   version: VERSION
