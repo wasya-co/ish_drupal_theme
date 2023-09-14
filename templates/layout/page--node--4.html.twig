@@ -33,6 +33,7 @@
  * - page.highlighted: Items for the highlighted content region.
  * - page.help: Dynamic help text, mostly for admin pages.
  * - page.content: The main content of the current page.
+ * - page.sidebar_first: Items for the first sidebar.
  * - page.sidebar_second: Items for the second sidebar.
  * - page.footer: Items for the footer region.
  * - page.breadcrumb: Items for the breadcrumb region.
@@ -65,18 +66,6 @@
       {{ page.content }}
     </div>
 
-    {% if page.filters %}
-      <aside class="layout-filters" role="complementary">
-        {{ page.filters }}
-      </aside>
-    {% endif %}
-
-    {% if page.sidebar_second %}
-      <aside class="layout-sidebar-second" role="complementary">
-        {{ page.sidebar_second }}
-      </aside>
-    {% endif %}
-
   </main>
 
   {% if page.footer %}
@@ -98,5 +87,4 @@
 
   </footer>
 
-</div>
-
+</div>{# /.layout-container #}

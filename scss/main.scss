@@ -1,16 +1,85 @@
 
-
-article {
-  // background: red;
-}
-
 main {
   display: flex;
   justify-content: center;
 }
-.region {
-  border: 1px solid orange;
+@media screen and (max-width: 768px) { /* cellphones */
+  main {
+    flex-direction: column-reverse;
+  }
 }
+
+pre {
+  background: #eee;
+  padding: 1em;
+}
+
+/* B */
+
+.view-bibliography-websites,
+.view-dashboard-websites {
+  .view-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    .views-row {
+      max-width: 300px;
+    }
+  }
+}
+.Card.BibliographyWebsite {
+  text-align: center;
+  padding: 2px;
+  width: 225px;
+}
+
+.block-inline-blockissues-navigator {
+  margin: 10px 0;
+
+  .current-issue {
+    text-align: right;
+  }
+  nav.menu--issues {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    h2:after {
+      content: ":";
+    }
+  }
+  h2 {
+    font-size: 1em;
+    margin: 0;
+  }
+  ul.menu {
+    display: flex;
+    margin: 0;
+    li {
+      padding: 0 10px;
+      border-right: 2px solid orange;
+    }
+
+  }
+}
+
+/* C */
+
+.Card {
+  border: 1px solid gray;
+  border-radius: 10px;
+  padding: 10px;
+}
+/* M */
+
+
+/* N */
+
+.node__links {
+  clear: both;
+}
+
+/* R */
 
 .region-header {
   border: 0;
@@ -18,49 +87,49 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-.region-header h1 {
-  margin-bottom: 0;
-}
 
-.site-name {
-  text-align: center;
+
+  h1 {
+    margin-bottom: 0;
+  }
 }
 
 .region-primary-menu {
   border: 0;
 
   text-align: center;
-}
 
-.region-primary-menu ul {
-  display: flex;
-  justify-content: center;
-  margin: 10px 0;
-}
-.region-primary-menu ul li {
-  padding: 0 1em;
-  border-right: 1px solid red;
-}
-.region-primary-menu ul li:last-child {
-  border-right: 0;
+  ul {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+    li {
+      padding: 0 1em;
+      border-right: 1px solid orange;
+    }
+    li:last-child {
+      border-right: 0;
+    }
+  }
 }
 
 .region-secondary-menu {
-  border: 0;
+  border-bottom: 5px solid orange;
 
   display: flex;
   justify-content: center;
-}
-.region-secondary-menu ul.menu {
-  margin: 0;
-  height: 100%;
 
-  display: flex;
-  align-items: center;
-}
-.region-secondary-menu ul.menu li {
-  padding: 10px;
+  ul.menu {
+    margin: 0;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+
+    li {
+      padding: 10px;
+    }
+  }
 }
 
 .region-highlighted {
@@ -72,18 +141,18 @@ main {
   padding-right: 10px;
 }
 .region-content {
-  /* border: 2px solid cyan; */
 
-  margin: 2em auto;
   width: 1000px;
-}
-.region-content article.node--view-mode-full .field--type-image {
-  display: flex;
-  justify-content: center;
-}
-.region-content .field--type-image img {
-  max-width: 100%;
-  height: auto;
+
+  article.node--view-mode-full .field--type-image {
+    display: flex;
+    justify-content: center;
+  }
+
+  .field--type-image img {
+    max-width: 100%;
+    height: auto;
+  }
 
 }
 
@@ -93,64 +162,37 @@ section.field--type-comment {
 
   padding: 10px;
 }
-
 .view-content {
-  border: 1px solid red;
+
   border-radius: 8px;
 
   margin: 0 auto;
 
-  /* display: flex;
-  flex-wrap: wrap; */
-}
-.view-content .views-row {
-  border-bottom: 1px solid red;
-  padding: 10px;
-  clear: both;
-}
-.view-content .views-row:last-child {
-  border: 0;
-}
-.view-content .views-row .field--type-image {
-  /* float: left; */
-  padding: 0 10px 10px 0;
-}
-.node__links {
-  clear: both;
+  .views-row {
+    padding: 10px;
+    clear: both;
+    .field--type-image {
+      padding: 0 10px 10px 0;
+    }
+  }
+  .views-row:last-child {
+    border: 0;
+  }
 }
 
 .region-footer {
+  border-top: 5px solid orange;
+  border-bottom: 2px solid orange;
+
   display: flex;
   justify-content: center;
-}
 
-.view-_023q3-scrum-view .view-content {
-  display: flex;
-  flex-wrap: wrap;
+  > .block {
+    padding: 0 10px;
+    border-right: 1px solid orange;
+  }
 }
-.view-bibliography-websites .view-content {
-  display: flex;
-  flex-wrap: wrap;
-}
-.view-bibliography-websites .view-content .views-row {
-  max-width: 300px;
-}
-nav.menu--issues {
-  border: 1px solid green;
+.footer-3 {
+  padding: 1em 0;
 
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-
-  margin: 0;
-}
-nav.menu--issues h2 {
-  margin: 0;
-}
-nav.menu--issues ul.menu {
-  display: flex;
-  margin: 0;
-}
-nav.menu--issues ul.menu li {
-  padding-left: 10px;
 }
