@@ -1,7 +1,5 @@
 
-infinite shelter
 
-ish_drupal_theme
 
 == Tutorials ==
 

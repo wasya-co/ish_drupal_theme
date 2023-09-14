@@ -7,59 +7,19 @@ article {
   background: #fbfbfb;
 }
 
+
 main {
   display: flex;
-  justify-content: center;
-}
-.region {
-  border: 1px solid orange;
-}
+  justify-content: center; }
 
-.region-header {
-  border: 0;
+@media screen and (max-width: 768px) {
+  /* cellphones */
+  main {
+    flex-direction: column-reverse; } }
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.region-header h1 {
-  margin-bottom: 0;
-}
-
-.site-name {
-  text-align: center;
-}
-
-.region-primary-menu {
-  border: 0;
-
-  text-align: center;
-}
-.region-primary-menu ul {
-  display: flex;
-  justify-content: center;
-}
-.region-primary-menu ul li {
-  padding: 1em;
-}
-
-.region-secondary-menu {
-  border: 0;
-
-  display: flex;
-  justify-content: center;
-}
-
-.region-highlighted {
-  background: #cecece;
-}
-.region-breadcrumb::before {
-  content: "Breadcrumbs: ";
-  float: left;
-  padding-right: 10px;
-}
-.region-content {
-  /* border: 2px solid cyan; */
+pre {
+  background: #eee;
+  padding: 1em; }
 
   margin: 2em auto;
 
@@ -68,24 +28,54 @@ main {
 .region-content article.node--view-mode-full .field--type-image {
   display: flex;
   justify-content: center;
-}
-.region-content .field--type-image img {
-  max-width: 100%;
-  height: auto;
+  flex-wrap: wrap; }
+  .view-bibliography-websites .view-content .views-row {
+    max-width: 300px; }
 
-}
+.Card.BibliographyWebsite {
+  text-align: center;
+  padding: 2px;
+  width: 225px; }
 
+.block-inline-blockissues-navigator {
+  margin: 10px 0; }
+  .block-inline-blockissues-navigator .current-issue {
+    text-align: right; }
+  .block-inline-blockissues-navigator nav.menu--issues {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center; }
+    .block-inline-blockissues-navigator nav.menu--issues h2:after {
+      content: ":"; }
+  .block-inline-blockissues-navigator h2 {
+    font-size: 1em;
+    margin: 0; }
+  .block-inline-blockissues-navigator ul.menu {
+    display: flex;
+    margin: 0; }
+    .block-inline-blockissues-navigator ul.menu li {
+      padding: 0 10px;
+      border-right: 2px solid orange; }
+
+/* C */
+.Card {
+  border: 1px solid gray;
+  border-radius: 10px;
+  padding: 10px; }
+
+/* M */
+/* N */
+.node__links {
+  clear: both; }
+
+/* R */
 section.field--type-comment {
   border: 2px dashed green;
   border-radius: 8px;
-
-  padding: 10px;
-}
+  padding: 10px; }
 
 .view-content {
-  border: 1px solid red;
   border-radius: 8px;
-
   margin: 0 auto;
 
 }
