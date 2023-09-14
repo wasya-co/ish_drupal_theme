@@ -1,0 +1,110 @@
+
+main {
+  display: flex;
+  justify-content: center;
+}
+@media screen and (max-width: 768px) { /* cellphones */
+  main {
+    flex-direction: column-reverse;
+  }
+}
+
+pre {
+  background: #eee;
+  padding: 1em;
+}
+
+/* B */
+
+.view-bibliography-websites .view-content {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  .views-row {
+    max-width: 300px;
+  }
+}
+.Card.BibliographyWebsite {
+  text-align: center;
+  padding: 2px;
+  width: 225px;
+  // width: 290px;
+}
+
+.block-inline-blockissues-navigator {
+  margin: 10px 0;
+
+  .current-issue {
+    text-align: right;
+  }
+  nav.menu--issues {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    h2:after {
+      content: ":";
+    }
+  }
+  h2 {
+    font-size: 1em;
+    margin: 0;
+  }
+  ul.menu {
+    display: flex;
+    margin: 0;
+    li {
+      padding: 0 10px;
+      border-right: 2px solid orange;
+    }
+
+  }
+}
+
+/* C */
+
+.Card {
+  border: 1px solid gray;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+
+/* M */
+
+
+/* N */
+
+.node__links {
+  clear: both;
+}
+
+/* R */
+
+
+section.field--type-comment {
+  border: 2px dashed green;
+  border-radius: 8px;
+
+  padding: 10px;
+}
+.view-content {
+  border-radius: 8px;
+
+  margin: 0 auto;
+
+  .views-row {
+    padding: 10px;
+    clear: both;
+    .field--type-image {
+      padding: 0 10px 10px 0;
+    }
+  }
+  .views-row:last-child {
+    border: 0;
+  }
+}
+
+.footer-3 {
+  padding: 1em 0;
+}

@@ -2,10 +2,8 @@
  * @file
  * Table sort indicator.
  */
-
 th.is-active img {
-  display: inline;
-}
+  display: inline; }
+
 td.is-active {
-  background-color: #ddd;
-}
+  background-color: #ddd; }

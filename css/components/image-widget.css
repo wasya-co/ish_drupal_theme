@@ -13,21 +13,22 @@
  * @todo In Drupal 9, let core/themes/classy/templates/content-edit/image-widget.html.twig
  * attach the classy/image-widget asset library.
  */
-
 .image-preview {
-  float: left; /* LTR */
-  padding: 0 10px 10px 0; /* LTR */
-}
+  float: left;
+  /* LTR */
+  padding: 0 10px 10px 0;
+  /* LTR */ }
+
 [dir="rtl"] .image-preview {
   float: right;
-  padding: 0 0 10px 10px;
-}
+  padding: 0 0 10px 10px; }
+
 .image-widget-data {
-  float: left; /* LTR */
-}
+  float: left;
+  /* LTR */ }
+
 [dir="rtl"] .image-widget-data {
-  float: right;
-}
+  float: right; }
+
 .image-widget-data .text-field {
-  width: auto;
-}
+  width: auto; }
