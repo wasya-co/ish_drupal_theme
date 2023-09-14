@@ -2,7 +2,7 @@ base:
   version: VERSION
   js:
     //stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css: {}
-
+    js/main.js: {}
   css:
     base:
       //stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css: {}
