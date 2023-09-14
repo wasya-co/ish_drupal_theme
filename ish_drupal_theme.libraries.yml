@@ -58,8 +58,6 @@ base:
         weight: -10
       css/regions.css:
         weight: -10
-      css/demmitv.css:
-        weight: -10
 
 dialog:
   version: VERSION

@@ -1,8 +1,12 @@
-name: ish_drupal_theme
-type: theme
 'base theme': stable9
+core_version_requirement: ^9
+dependencies:
+  - drupal:views
+generator: 'starterkit_theme:9.5.10'
+name: ish_drupal_theme
 starterkit: true
-version: VERSION
+type: theme
+
 libraries:
   - ish_drupal_theme/base
   - ish_drupal_theme/messages
@@ -18,10 +22,6 @@ libraries-extend:
     - ish_drupal_theme/file
   core/drupal.progress:
     - ish_drupal_theme/progress
-core_version_requirement: ^9
-generator: 'starterkit_theme:9.5.10'
-dependencies:
-  - drupal:views
 
 regions:
   breadcrumb: 'Breadcrumb'
@@ -37,6 +37,7 @@ regions:
   preheader: 'Preheader'
   primary_menu: 'Primary menu'
   secondary_menu: 'Secondary menu'
+  sidebar_first: 'Left sidebar'
   sidebar_second: 'Right sidebar'
 
-
+version: VERSION
