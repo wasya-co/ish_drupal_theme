@@ -1,12 +1,12 @@
 
 
-article {
-  // background: red;
-}
-
 main {
   display: flex;
   justify-content: center;
+}
+pre {
+  background: #eee;
+  padding: 1em;
 }
 .region {
   border: 1px solid orange;
