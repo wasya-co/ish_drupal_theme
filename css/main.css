@@ -1,12 +1,12 @@
 main {
   display: flex;
-  justify-content: center; }
+  justify-content: center;
+  width: 100%; }
 
-@media screen and (max-width: 768px) {
-  /* cellphones */
-  main {
-    flex-direction: column-reverse; } }
+.layout-content {
+  width: 100%; }
 
+/* this is for demmitv only, also wrong! */
 pre {
   background: #eee;
   padding: 1em; }
@@ -67,7 +67,15 @@ pre {
 
 /* M */
 .maxwidth {
-  width: 1000px; }
+  width: 1000px;
+  margin: auto; }
+
+.layout__region--first,
+.layout__region--second {
+  width: 50%; }
+
+.layout--twocol-section {
+  display: flex; }
 
 /* N */
 .node__links {
@@ -91,3 +99,12 @@ section.field--type-comment {
 
 .footer-3 {
   padding: 1em 0; }
+
+/* S */
+/* superfish */
+.block-superfish {
+  width: auto; }
+
+ul.sf-menu .sf-sub-indicator {
+  left: 0;
+  right: auto; }
