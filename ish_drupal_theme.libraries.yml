@@ -63,6 +63,10 @@ base:
         weight: -10
       css/layout.css:
         weight: -10
+      css/wco.css:
+        weight: -10
+      vendor/fonts/lobster.css:
+        weight: -10
 
 dialog:
   version: VERSION

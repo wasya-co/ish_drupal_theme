@@ -54,7 +54,11 @@ pre {
   border-radius: 10px;
   padding: 10px; }
 
+.center {
+  text-align: center; }
+
 /* F */
+.flex-col,
 .flex-column {
   display: flex;
   flex-direction: column;

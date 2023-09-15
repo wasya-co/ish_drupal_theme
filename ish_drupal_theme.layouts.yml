@@ -15,6 +15,15 @@ layout_twocol_maxwidth:
   # class: '\Drupal\layout_builder\Plugin\Layout\TwoColumnLayout'
   # path: layouts/twocol_maxwidth
 
+layout_onecol_maxwidth:
+  label: 'One column Maxwidth'
+  category: 'Columns: 1'
+  template: templates/layout/layout--onecol-maxwidth
+  icon_map:
+    - [main]
+  regions:
+    main:
+      label: Main
 
 # one_column:
 #   label: 'One column'
