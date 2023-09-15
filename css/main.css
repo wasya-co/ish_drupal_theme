@@ -25,7 +25,8 @@ pre {
 .Card.BibliographyWebsite {
   text-align: center;
   padding: 2px;
-  width: 225px; }
+  width: 225px;
+  margin-bottom: 10px; }
 
 /* IssuesNavigator */
 .block-inline-blockissues-navigator {
