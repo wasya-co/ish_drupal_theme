@@ -50,6 +50,11 @@
     margin-bottom: 0;
   }
 }
+@media screen and (max-width: 768px) { /* cellphones */
+  .region-header {
+    flex-direction: column;
+  }
+}
 
 .region-highlighted {
   background: #cecece;
