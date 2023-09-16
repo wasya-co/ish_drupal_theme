@@ -121,3 +121,9 @@ ul.sf-menu li {
 ul.sf-menu .sf-sub-indicator {
   left: 0;
   right: auto; }
+
+/* Y */
+.YoutubeVideoPlayers {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
