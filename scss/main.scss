@@ -102,6 +102,17 @@ pre {
   width: 1000px;
   margin: auto;
 }
+@media screen and (max-width: 1024px) { /* desktop ??? */
+  .maxwidth {
+    width: 768px;
+  }
+}
+@media screen and (max-width: 768px) { /* cellphones */
+  .maxwidth {
+    width: auto;
+  }
+}
+
 .layout__region--first,
 .layout__region--second {
   width: 50%;
@@ -159,9 +170,42 @@ section.field--type-comment {
 .block-superfish {
   width: auto;
 }
-ul.sf-menu .sf-sub-indicator {
-  left: 0;
-  right: auto;
+ul.sf-menu {
+  li {
+    background: white;
+  }
+
+  .sf-sub-indicator {
+    left: 0;
+    right: auto;
+  }
 }
+@media screen and (max-width: 768px) { /* cellphones */
+  #superfish-main-toggle {
+    span {
+      display: none;
+    }
+  }
 
+  #superfish-main-accordion {
 
+    position: absolute;
+    // right: 0;
+    // width: 100vh;
+
+    height: 100vh;
+    background: white;
+  }
+}
+div.sf-accordion-toggle > a:after {
+  content: "≡";
+  font-size: 2em;
+  position: absolute;
+  right: 0.5em;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  speak: none;
+}

@@ -21,7 +21,8 @@
   border-top: 5px solid orange;
   border-bottom: 2px solid orange;
   display: flex;
-  justify-content: center; }
+  justify-content: center;
+  flex-wrap: wrap; }
   .region-footer > .block {
     padding: 0 10px;
     border-right: 1px solid orange; }

@@ -1,8 +1,9 @@
 base:
   version: VERSION
   js:
+    vendor/js/bootstrap@4.5.2.min.js: { minified: true }
     js/main.js: {}
-    js/vendor/bootstrap@4.5.2.min.js: { minified: true }
+
   css:
     base:
       css/vendor/bootstrap@4.5.2.min.css: {}
