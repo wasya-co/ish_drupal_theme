@@ -1,0 +1,16 @@
+
+/* superfish */
+//   content: "≡";
+
+.block-superfish {
+  width: auto;
+}
+ul.sf-menu {
+  li {
+    background: white;
+  }
+  .sf-sub-indicator {
+    left: 0;
+    right: auto;
+  }
+}

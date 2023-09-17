@@ -1,19 +1,16 @@
 
-main {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-}
-.layout-content {
-  width: 100%;
-}
-
-/* this is for demmitv only, also wrong! */
 // @media screen and (max-width: 768px) { /* cellphones */
 //   main {
 //     flex-direction: column-reverse;
 //   }
 // }
+
+
+main {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
 
 pre {
   background: #eee;
@@ -43,37 +40,6 @@ pre {
   margin-bottom: 10px;
 }
 
-/* IssuesNavigator */
-
-.block-inline-blockissues-navigator {
-  margin: 10px 0;
-
-  .current-issue {
-    text-align: right;
-  }
-  nav.menu--issues {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    h2:after {
-      content: ":";
-    }
-  }
-  h2 {
-    font-size: 1em;
-    margin: 0;
-  }
-  ul.menu {
-    display: flex;
-    margin: 0;
-    li {
-      padding: 0 10px;
-      border-right: 2px solid orange;
-    }
-
-  }
-}
-
 /* C */
 
 .Card {
@@ -82,7 +48,8 @@ pre {
   padding: 10px;
 }
 
-.center {
+.center, /* @deprecated, do not use! */
+.text-center {
   text-align: center;
 }
 
@@ -113,22 +80,7 @@ pre {
   }
 }
 
-.layout__region--first,
-.layout__region--second {
-  width: 50%;
-}
-.layout--twocol-section {
-  display: flex;
-}
-
 /* N */
-
-.node__links {
-  clear: both;
-}
-
-
-
 
 
 
@@ -142,13 +94,14 @@ section.field--type-comment {
 }
 .view-content {
 
-  border-radius: 8px;
+  // border-radius: 8px;
 
-  margin: 0 auto;
+  // margin: 0 auto;
 
   .views-row {
     padding: 10px;
     clear: both;
+
     .field--type-image {
       padding: 0 10px 10px 0;
     }
@@ -158,26 +111,28 @@ section.field--type-comment {
   }
 }
 
-.footer-3 {
-  padding: 1em 0;
-
+/* P */
+h1.page-title {
+  margin: 1em 0;
+  text-align: center;
 }
 
 /* S */
 
-/* superfish */
-//   content: "≡";
+/* T */
 
-.block-superfish {
-  width: auto;
-}
-ul.sf-menu {
-  li {
-    background: white;
-  }
-  .sf-sub-indicator {
-    left: 0;
-    right: auto;
+.view-terms-conditions {
+  border-left: 1px solid orange;
+  padding-left: 1em;
+
+  display: flex;
+  align-items: center;
+
+  .view-content.row {
+    margin: 0;
+    margin-left: 1em;
+    border-left: 1px solid orange;
+    padding: 0.5em 0 0.5em 1em;
   }
 }
 
