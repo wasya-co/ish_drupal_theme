@@ -17,7 +17,6 @@
 .region-footer {
   border-top: 5px solid orange;
   border-bottom: 2px solid orange;
-  margin-top: 1em;
   /* language switcher */ }
   .region-footer > .maxwidth {
     display: flex;
@@ -25,7 +24,8 @@
   .region-footer .block {
     padding: 0 10px;
     padding-top: 0.5em;
-    border-right: 1px solid orange; }
+    border: 1px solid orange;
+    border-left: 0; }
     .region-footer .block:first-child {
       border-left: 1px solid orange; }
   .region-footer ul.links {
