@@ -8,6 +8,7 @@ demmitv-0.0.0 - 2023-09-01 - LFG!
 ish-0.0.0 - 2023-09-01 - let's go
 ish-0.1.0 - 2023-09-14 - BASE, lets avoid merge conflicts!
 ish-0.2.0 - 2023-09-14 - wco-0.1.0 merged in, this one is actually wco-0.1.0. Groking two-col-maxwidth layout/section. Major changes!
+ish-0.3.0 - 2023-09-16 - clean after superfish
 
 piousbox-0.0.0 - 2023-09-xx - nice, works!
 piousbox-0.1.0 - 2023-09-11 - lets add scss
