@@ -1,4 +1,14 @@
+.layout-content {
+  width: 100%; }
+
 .node--type-advanced-page > .node__content {
   display: flex;
   flex-direction: column;
   align-items: center; }
+
+.layout__region--first,
+.layout__region--second {
+  width: 50%; }
+
+.layout--twocol-section {
+  display: flex; }

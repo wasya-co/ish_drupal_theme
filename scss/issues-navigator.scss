@@ -1,0 +1,31 @@
+
+/* IssuesNavigator */
+
+.block-inline-blockissues-navigator {
+  margin: 10px 0;
+
+  .current-issue {
+    text-align: right;
+  }
+  nav.menu--issues {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    h2:after {
+      content: ":";
+    }
+  }
+  h2 {
+    font-size: 1em;
+    margin: 0;
+  }
+  ul.menu {
+    display: flex;
+    margin: 0;
+    li {
+      padding: 0 10px;
+      border-right: 2px solid orange;
+    }
+
+  }
+}

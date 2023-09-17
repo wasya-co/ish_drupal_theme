@@ -1,6 +1,6 @@
 
 .region {
-  border: 1px solid cyan;
+  // border: 1px solid cyan;
 }
 
 .region-content {
@@ -29,13 +29,23 @@
   border-top: 5px solid orange;
   border-bottom: 2px solid orange;
 
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+  margin-top: 1em;
 
-  > .block {
+
+  > .maxwidth {
+    display: flex;
+    // justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .block {
     padding: 0 10px;
+    padding-top: 0.5em;
     border-right: 1px solid orange;
+
+    &:first-child {
+      border-left: 1px solid orange;
+    }
   }
 
   /* language switcher */
@@ -57,8 +67,14 @@
   }
 }
 
+.region-headerW {
+  border-bottom: 2px solid orange;
+  padding: 1em 0 0.5em 0;
+}
+
 .region-header {
-  border: 0;
+  // border: 0;
+  // border-bottom: 2px solid orange;
 
   display: flex;
   justify-content: space-between;
@@ -73,6 +89,7 @@
     flex-direction: column;
   }
 }
+
 
 .region-highlighted {
   background: #cecece;
@@ -94,6 +111,13 @@
     }
     li:last-child {
       border-right: 0;
+    }
+  }
+}
+.region-postfooter {
+  .maxwidth {
+    &:first-child {
+      // border-left: 1px solid orange;
     }
   }
 }

@@ -3,10 +3,6 @@ main {
   justify-content: center;
   width: 100%; }
 
-.layout-content {
-  width: 100%; }
-
-/* this is for demmitv only, also wrong! */
 pre {
   background: #eee;
   padding: 1em; }
@@ -28,34 +24,14 @@ pre {
   width: 225px;
   margin-bottom: 10px; }
 
-/* IssuesNavigator */
-.block-inline-blockissues-navigator {
-  margin: 10px 0; }
-  .block-inline-blockissues-navigator .current-issue {
-    text-align: right; }
-  .block-inline-blockissues-navigator nav.menu--issues {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center; }
-    .block-inline-blockissues-navigator nav.menu--issues h2:after {
-      content: ":"; }
-  .block-inline-blockissues-navigator h2 {
-    font-size: 1em;
-    margin: 0; }
-  .block-inline-blockissues-navigator ul.menu {
-    display: flex;
-    margin: 0; }
-    .block-inline-blockissues-navigator ul.menu li {
-      padding: 0 10px;
-      border-right: 2px solid orange; }
-
 /* C */
 .Card {
   border: 1px solid gray;
   border-radius: 10px;
   padding: 10px; }
 
-.center {
+.center,
+.text-center {
   text-align: center; }
 
 /* F */
@@ -80,47 +56,38 @@ pre {
   .maxwidth {
     width: auto; } }
 
-.layout__region--first,
-.layout__region--second {
-  width: 50%; }
-
-.layout--twocol-section {
-  display: flex; }
-
 /* N */
-.node__links {
-  clear: both; }
-
 section.field--type-comment {
   border: 2px dashed green;
   border-radius: 8px;
   padding: 10px; }
 
-.view-content {
-  border-radius: 8px;
-  margin: 0 auto; }
-  .view-content .views-row {
-    padding: 10px;
-    clear: both; }
-    .view-content .views-row .field--type-image {
-      padding: 0 10px 10px 0; }
-  .view-content .views-row:last-child {
-    border: 0; }
+.view-content .views-row {
+  padding: 10px;
+  clear: both; }
+  .view-content .views-row .field--type-image {
+    padding: 0 10px 10px 0; }
 
-.footer-3 {
-  padding: 1em 0; }
+.view-content .views-row:last-child {
+  border: 0; }
+
+/* P */
+h1.page-title {
+  margin: 1em 0;
+  text-align: center; }
 
 /* S */
-/* superfish */
-.block-superfish {
-  width: auto; }
-
-ul.sf-menu li {
-  background: white; }
-
-ul.sf-menu .sf-sub-indicator {
-  left: 0;
-  right: auto; }
+/* T */
+.view-terms-conditions {
+  border-left: 1px solid orange;
+  padding-left: 1em;
+  display: flex;
+  align-items: center; }
+  .view-terms-conditions .view-content.row {
+    margin: 0;
+    margin-left: 1em;
+    border-left: 1px solid orange;
+    padding: 0.5em 0 0.5em 1em; }
 
 /* Y */
 .YoutubeVideoPlayers {
