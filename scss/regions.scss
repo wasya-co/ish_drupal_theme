@@ -19,7 +19,7 @@
 .region-filters {
   display: flex;
 }
-@media screen and (min-width: 768px) { /* cellphones */
+@media screen and (max-width: 768px) { /* cellphones */
   .region-filters {
     flex-direction: column;
   }
@@ -36,6 +36,24 @@
   > .block {
     padding: 0 10px;
     border-right: 1px solid orange;
+  }
+
+  /* language switcher */
+  ul.links {
+    list-style: none;
+  }
+
+}
+@media screen and (max-width: 768px) { /* cellphones */
+  .region-footer {
+    justify-content: flex-start;
+    > .block {
+      border-right: 0;
+      ul {
+        border-left: 2px solid orange;
+        padding-left: 10px;
+      }
+    }
   }
 }
 

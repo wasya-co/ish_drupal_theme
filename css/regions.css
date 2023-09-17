@@ -12,7 +12,7 @@
 .region-filters {
   display: flex; }
 
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 768px) {
   /* cellphones */
   .region-filters {
     flex-direction: column; } }
@@ -22,10 +22,23 @@
   border-bottom: 2px solid orange;
   display: flex;
   justify-content: center;
-  flex-wrap: wrap; }
+  flex-wrap: wrap;
+  /* language switcher */ }
   .region-footer > .block {
     padding: 0 10px;
     border-right: 1px solid orange; }
+  .region-footer ul.links {
+    list-style: none; }
+
+@media screen and (max-width: 768px) {
+  /* cellphones */
+  .region-footer {
+    justify-content: flex-start; }
+    .region-footer > .block {
+      border-right: 0; }
+      .region-footer > .block ul {
+        border-left: 2px solid orange;
+        padding-left: 10px; } }
 
 .region-header {
   border: 0;
