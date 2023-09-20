@@ -2,6 +2,10 @@
 layout_twocol_maxwidth:
   label: 'Two column Maxwidth'
   category: 'Columns: 2'
+  class: '\Drupal\ish_drupal_module\Layout\TwocolLayout'
+  ## refers to css library
+  ## From: https://www.drupal.org/docs/drupal-apis/layout-api/how-to-register-layouts
+  # library: my_custom_module/advanced-layout-library
   template: templates/layout/layout--twocol-maxwidth
   icon_map:
     - [first, second]

@@ -1,25 +1,21 @@
 
-{%
-  set classes = [
-    'layout',
-    'layout--twocol-section',
-    'maxwidth',
-  ]
-%}
-{% if content %}
-  <div{{ attributes.addClass(classes) }}>
+<div class='maxwidth row {{ settings.extra_classes }}'>
 
-    {% if content.first %}
-      <div {{ region_attributes.first.addClass('layout__region', 'layout__region--first') }}>
-        {{ content.first }}
-      </div>
-    {% endif %}
+  {% if content %}
 
-    {% if content.second %}
-      <div {{ region_attributes.second.addClass('layout__region', 'layout__region--second') }}>
-        {{ content.second }}
-      </div>
-    {% endif %}
+      {% if content.first %}
+        <div {{ region_attributes.first.addClass('col-sm-12', 'col-md-6') }}>
+          {{ content.first }}
+        </div>
+      {% endif %}
 
-  </div>
-{% endif %}
+      {% if content.second %}
+        <div {{ region_attributes.second.addClass('col-sm-12', 'col-md-6') }}>
+          {{ content.second }}
+        </div>
+      {% endif %}
+
+  {% endif %}
+
+</div>
+
