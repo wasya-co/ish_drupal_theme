@@ -48,6 +48,7 @@ pre {
   padding: 10px;
 
   height: 100%;
+  margin-bottom: 10px;
 }
 
 .center, /* @deprecated, do not use! */
@@ -136,6 +137,16 @@ h1.page-title {
     border-left: 1px solid orange;
     padding: 0.5em 0 0.5em 1em;
   }
+}
+
+/* V */
+.valign-center {
+  vertical-align: middle;
+  align-items: center;
+}
+.valign-top {
+  vertical-align: top;
+  align-items: flex-start;
 }
 
 /* Y */
