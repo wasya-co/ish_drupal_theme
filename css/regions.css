@@ -22,11 +22,9 @@
     display: flex;
     flex-wrap: wrap; }
   .region-footer .block {
+    border: 1px solid orange;
     padding: 0 10px;
-    padding-top: 0.5em;
-    border: 1px solid orange; }
-    .region-footer .block:first-child {
-      border-left: 1px solid orange; }
+    padding-top: 0.5em; }
   .region-footer ul.links {
     list-style: none; }
 
