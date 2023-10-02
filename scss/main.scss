@@ -100,6 +100,55 @@ pre {
   align-items: center;
 }
 
+/* L */
+
+.region-footer {
+  .block-language {
+    display: inline-block;
+    ul.links {
+      display: flex;
+
+      li {
+        display: flex;
+        align-items: center;
+        padding-right: .8em;
+
+        &:last-child {
+          padding-right: 0;
+        }
+
+        a {
+          padding-left: 0.2em;
+
+        }
+      }
+
+      li {
+        &:before {
+          content: "";
+          display: inline-block;
+          width: 40px;
+          height: 27px;
+        }
+      }
+
+      li[hreflang="en"] {
+        &:before {
+          background: url('http://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2023/09/26212539/40x26-usa-tiny.png');
+        }
+      }
+
+      li[hreflang="es"] {
+        &:before {
+          background: url('//d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2023/09/26211148/40x26-colombia-tiny-1.png');
+        }
+      }
+
+
+    }
+  }
+}
+
 /* M */
 
 .maxwidth {

@@ -39,14 +39,10 @@
   }
 
   .block {
-    padding: 0 10px;
-    padding-top: 0.5em;
-
     border: 1px solid orange;
 
-    &:first-child {
-      border-left: 1px solid orange;
-    }
+    padding: 0 10px;
+    padding-top: 0.5em;
   }
 
   /* language switcher */
@@ -114,15 +110,7 @@
     }
   }
 }
-.region-postfooter {
-  // border: 1px solid orange;
 
-  .maxwidth {
-    &:first-child {
-      // border-left: 1px solid orange;
-    }
-  }
-}
 
 .region-secondary-menu {
   border-bottom: 5px solid orange;
