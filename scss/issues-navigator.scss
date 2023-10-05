@@ -2,7 +2,12 @@
 /* IssuesNavigator */
 
 .block-inline-blockissues-navigator {
-  margin: 10px 0;
+  margin: 10px 0 1em 0;
+
+  h2 {
+    font-size: 1em;
+    margin: 0;
+  }
 
   .current-issue {
     text-align: right;
@@ -10,22 +15,22 @@
   nav.menu--issues {
     display: flex;
     justify-content: flex-end;
-    align-items: center;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+
     h2:after {
       content: ":";
     }
   }
-  h2 {
-    font-size: 1em;
-    margin: 0;
-  }
+
   ul.menu {
     display: flex;
+    flex-wrap: wrap;
+
     margin: 0;
     li {
       padding: 0 10px;
       border-right: 2px solid orange;
     }
-
   }
 }
