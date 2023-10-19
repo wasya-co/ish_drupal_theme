@@ -1,0 +1,26 @@
+
+<div class='col-sm-6 col-md-3' >
+  {%
+    set classes = [
+      'Card',
+      'ServiceTeaser',
+    ]
+  %}
+  <article{{ attributes.addClass(classes) }} >
+
+    <div{{ content_attributes.addClass('node__content') }}>
+      {{ content }}
+    </div>
+
+    {{ title_prefix }}
+    {% if label and not page %}
+      <h2{{ title_attributes }}>
+        <a href="{{ url }}" rel="bookmark">{{ label }}</a>
+      </h2>
+    {% endif %}
+    {{ title_suffix }}
+
+    <div class="clearfix"></div>
+
+  </article>
+</div>
