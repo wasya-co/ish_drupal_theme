@@ -1,16 +1,13 @@
 .field--type-text-with-summary {
-  /* Originally, for `Infinite Business Plan - Download` */
   height: 100%; }
 
 .ish-layout .block-layout-builder {
-  /* Originally, for `Infinite Business Plan - Download` */
   height: 100%; }
 
 .layout-content {
   width: 100%; }
 
-.layout__region--first,
-.layout__region--second {
+.layout__region--first, .layout__region--second {
   width: 50%; }
 
 .layout--twocol-section {

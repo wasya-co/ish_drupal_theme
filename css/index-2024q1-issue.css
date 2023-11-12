@@ -1,26 +1,6 @@
-/**
- * @file
- * Utility classes to hide elements in different ways.
- */
-/**
- * Hide elements from all users.
- *
- * Used for elements which should not be immediately displayed to any user. An
- * example would be collapsible details that will be expanded with a click
- * from a user. The effect of this class can be toggled with the jQuery show()
- * and hide() functions.
- */
 .hidden {
   display: none; }
 
-/**
- * Hide elements visually, but keep them available for screen readers.
- *
- * Used for information required for screen reader users to understand and use
- * the site where visual display is undesirable. Information provided in this
- * manner should be kept concise, to avoid unnecessary burden on the user.
- * "!important" is used to prevent unintentional overrides.
- */
 .visually-hidden {
   position: absolute !important;
   overflow: hidden;
@@ -29,35 +9,21 @@
   height: 1px;
   word-wrap: normal; }
 
-/**
- * The .focusable class extends the .visually-hidden class to allow
- * the element to be focusable when navigated to via the keyboard.
- */
-.visually-hidden.focusable:active,
-.visually-hidden.focusable:focus {
+.visually-hidden.focusable:active, .visually-hidden.focusable:focus {
   position: static !important;
   overflow: visible;
   clip: auto;
   width: auto;
   height: auto; }
 
-/**
- * Hide visually and from screen readers, but maintain layout.
- */
 .invisible {
   visibility: hidden; }
 
-/**
- * @file
- * Visual styles for menu.
- */
 ul.menu {
   margin-left: 1em;
-  /* LTR */
   padding: 0;
   list-style: none outside;
-  text-align: left;
-  /* LTR */ }
+  text-align: left; }
 
 [dir="rtl"] ul.menu {
   margin-right: 1em;
@@ -70,8 +36,7 @@ ul.menu {
 
 .menu-item--collapsed {
   list-style-type: disc;
-  list-style-image: url(../../images/icons/menu-collapsed.png);
-  /* LTR */ }
+  list-style-image: url(../../images/icons/menu-collapsed.png); }
 
 [dir="rtl"] .menu-item--collapsed {
   list-style-image: url(../../images/icons/menu-collapsed-rtl.png); }
@@ -92,16 +57,12 @@ pre {
   background: #eee;
   padding: 1em; }
 
-/* B */
-/* BibliographyWebsite */
-.view-bibliography-websites .view-content,
-.view-dashboard-websites .view-content {
+.view-bibliography-websites .view-content, .view-dashboard-websites .view-content {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap; }
 
-.view-bibliography-websites .view-content .views-row,
-.view-dashboard-websites .view-content .views-row {
+.view-bibliography-websites .view-content .views-row, .view-dashboard-websites .view-content .views-row {
   max-width: 300px; }
 
 .Card.BibliographyWebsite {
@@ -110,7 +71,6 @@ pre {
   width: 225px;
   margin-bottom: 10px; }
 
-/* C */
 .Card {
   border: 1px solid gray;
   border-radius: 10px;
@@ -118,8 +78,7 @@ pre {
   height: 100%;
   margin-bottom: 10px; }
 
-.center,
-.text-center {
+.center, .text-center {
   text-align: center; }
 
 .Chip {
@@ -154,18 +113,12 @@ pre {
   border-bottom: 17px solid var(--wco-chip-bg-color);
   border-right: 12px solid transparent; }
 
-/* F */
-.flex-col,
-.flex-column {
+.flex-col, .flex-column {
   display: flex;
   flex-direction: column;
   align-items: center; }
 
-/* L */
-html[lang='en'] .block-language li[hreflang="en"],
-html[lang='es'] .block-language li[hreflang="es"],
-html[lang='pt-br'] .block-language li[hreflang="pt-br"],
-._ {
+html[lang='en'] .block-language li[hreflang="en"], html[lang='es'] .block-language li[hreflang="es"], html[lang='pt-br'] .block-language li[hreflang="pt-br"], ._ {
   border-bottom: 2px solid black; }
 
 .region-footer {
@@ -218,7 +171,6 @@ html[lang='pt-br'] .block-language li[hreflang="pt-br"],
   background: url("//d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2023/11/01111621/40x26-brasil-tiny.png"); }
 
 @media screen and (max-width: 768px) {
-  /* cellphones */
   .region-footer > .block {
     border-right: 0; }
   .region-footer > .block ul {
@@ -227,7 +179,6 @@ html[lang='pt-br'] .block-language li[hreflang="pt-br"],
   .region-footer > .maxwidth {
     justify-content: flex-end; } }
 
-/* M */
 .maxwidth {
   width: 1000px;
   margin: auto; }
@@ -236,16 +187,13 @@ html[lang='pt-br'] .block-language li[hreflang="pt-br"],
   max-width: 100%; }
 
 @media screen and (max-width: 1024px) {
-  /* desktop ??? */
   .maxwidth {
     width: 768px; } }
 
 @media screen and (max-width: 768px) {
-  /* cellphones */
   .maxwidth {
     width: auto; } }
 
-/* N */
 section.field--type-comment {
   border: 2px dashed green;
   border-radius: 8px;
@@ -261,18 +209,14 @@ section.field--type-comment {
 .view-content .views-row:last-child {
   border: 0; }
 
-/* P */
 h1.page-title {
   margin: 1em 0 0 0;
   text-align: center; }
 
-/* S */
-.search-form,
-.node_search-results {
+.search-form, .node_search-results {
   max-width: 1000px;
   margin: auto; }
 
-/* T */
 .Tags {
   display: flex; }
 
@@ -294,7 +238,6 @@ h1.page-title {
   border-left: 1px solid orange;
   padding: 0.5em 0 0.5em 1em; }
 
-/* V */
 .valign-center {
   vertical-align: middle;
   align-items: center; }
@@ -303,15 +246,11 @@ h1.page-title {
   vertical-align: top;
   align-items: flex-start; }
 
-/* Y */
 .YoutubeVideoPlayers {
   display: flex;
   flex-direction: column;
   align-items: center; }
 
-/*
-  From: regions.css
-**/
 .region-content article.node--view-mode-full .field--type-image {
   display: flex;
   justify-content: center; }
@@ -324,11 +263,9 @@ h1.page-title {
   display: flex; }
 
 @media screen and (max-width: 768px) {
-  /* cellphones */
   .region-filters {
     flex-direction: column; } }
 
-/* H */
 .region-headerW {
   padding: 1em 0 0.5em 0; }
 
@@ -341,14 +278,12 @@ h1.page-title {
   margin-bottom: 0; }
 
 @media screen and (max-width: 768px) {
-  /* cellphones */
   .region-header {
     flex-direction: column; } }
 
 .region-highlighted {
   background: #cecece; }
 
-/* P */
 .region-postfooter {
   display: flex; }
 
@@ -402,18 +337,15 @@ h1.page-title {
   text-align: center; }
 
 .field--type-text-with-summary {
-  /* Originally, for `Infinite Business Plan - Download` */
   height: 100%; }
 
 .ish-layout .block-layout-builder {
-  /* Originally, for `Infinite Business Plan - Download` */
   height: 100%; }
 
 .layout-content {
   width: 100%; }
 
-.layout__region--first,
-.layout__region--second {
+.layout__region--first, .layout__region--second {
   width: 50%; }
 
 .layout--twocol-section {
@@ -424,7 +356,6 @@ h1.page-title {
   flex-direction: column;
   align-items: center; }
 
-/* IssuesNavigator */
 .block-inline-blockissues-navigator {
   margin: 10px 0 1em 0; }
 
@@ -475,16 +406,12 @@ pre {
   background: #eee;
   padding: 1em; }
 
-/* B */
-/* BibliographyWebsite */
-.view-bibliography-websites .view-content,
-.view-dashboard-websites .view-content {
+.view-bibliography-websites .view-content, .view-dashboard-websites .view-content {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap; }
 
-.view-bibliography-websites .view-content .views-row,
-.view-dashboard-websites .view-content .views-row {
+.view-bibliography-websites .view-content .views-row, .view-dashboard-websites .view-content .views-row {
   max-width: 300px; }
 
 .Card.BibliographyWebsite {
@@ -493,7 +420,6 @@ pre {
   width: 225px;
   margin-bottom: 10px; }
 
-/* C */
 .Card {
   border: 1px solid gray;
   border-radius: 10px;
@@ -501,8 +427,7 @@ pre {
   height: 100%;
   margin-bottom: 10px; }
 
-.center,
-.text-center {
+.center, .text-center {
   text-align: center; }
 
 .Chip {
@@ -537,18 +462,12 @@ pre {
   border-bottom: 17px solid var(--wco-chip-bg-color);
   border-right: 12px solid transparent; }
 
-/* F */
-.flex-col,
-.flex-column {
+.flex-col, .flex-column {
   display: flex;
   flex-direction: column;
   align-items: center; }
 
-/* L */
-html[lang='en'] .block-language li[hreflang="en"],
-html[lang='es'] .block-language li[hreflang="es"],
-html[lang='pt-br'] .block-language li[hreflang="pt-br"],
-._ {
+html[lang='en'] .block-language li[hreflang="en"], html[lang='es'] .block-language li[hreflang="es"], html[lang='pt-br'] .block-language li[hreflang="pt-br"], ._ {
   border-bottom: 2px solid black; }
 
 .region-footer {
@@ -601,7 +520,6 @@ html[lang='pt-br'] .block-language li[hreflang="pt-br"],
   background: url("//d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2023/11/01111621/40x26-brasil-tiny.png"); }
 
 @media screen and (max-width: 768px) {
-  /* cellphones */
   .region-footer > .block {
     border-right: 0; }
   .region-footer > .block ul {
@@ -610,7 +528,6 @@ html[lang='pt-br'] .block-language li[hreflang="pt-br"],
   .region-footer > .maxwidth {
     justify-content: flex-end; } }
 
-/* M */
 .maxwidth {
   width: 1000px;
   margin: auto; }
@@ -619,16 +536,13 @@ html[lang='pt-br'] .block-language li[hreflang="pt-br"],
   max-width: 100%; }
 
 @media screen and (max-width: 1024px) {
-  /* desktop ??? */
   .maxwidth {
     width: 768px; } }
 
 @media screen and (max-width: 768px) {
-  /* cellphones */
   .maxwidth {
     width: auto; } }
 
-/* N */
 section.field--type-comment {
   border: 2px dashed green;
   border-radius: 8px;
@@ -644,18 +558,14 @@ section.field--type-comment {
 .view-content .views-row:last-child {
   border: 0; }
 
-/* P */
 h1.page-title {
   margin: 1em 0 0 0;
   text-align: center; }
 
-/* S */
-.search-form,
-.node_search-results {
+.search-form, .node_search-results {
   max-width: 1000px;
   margin: auto; }
 
-/* T */
 .Tags {
   display: flex; }
 
@@ -677,7 +587,6 @@ h1.page-title {
   border-left: 1px solid orange;
   padding: 0.5em 0 0.5em 1em; }
 
-/* V */
 .valign-center {
   vertical-align: middle;
   align-items: center; }
@@ -686,15 +595,11 @@ h1.page-title {
   vertical-align: top;
   align-items: flex-start; }
 
-/* Y */
 .YoutubeVideoPlayers {
   display: flex;
   flex-direction: column;
   align-items: center; }
 
-/*
-  From: regions.css
-**/
 .region-content article.node--view-mode-full .field--type-image {
   display: flex;
   justify-content: center; }
@@ -707,11 +612,9 @@ h1.page-title {
   display: flex; }
 
 @media screen and (max-width: 768px) {
-  /* cellphones */
   .region-filters {
     flex-direction: column; } }
 
-/* H */
 .region-headerW {
   padding: 1em 0 0.5em 0; }
 
@@ -724,14 +627,12 @@ h1.page-title {
   margin-bottom: 0; }
 
 @media screen and (max-width: 768px) {
-  /* cellphones */
   .region-header {
     flex-direction: column; } }
 
 .region-highlighted {
   background: #cecece; }
 
-/* P */
 .region-postfooter {
   display: flex; }
 
