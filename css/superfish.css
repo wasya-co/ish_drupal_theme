@@ -1,11 +1,1 @@
-/* superfish */
-.block-superfish {
-  width: auto; }
-
-ul.sf-menu {
-  cursor: pointer; }
-  ul.sf-menu li {
-    background: white; }
-  ul.sf-menu .sf-sub-indicator {
-    left: 0;
-    right: auto; }
+.block-superfish{width:auto}ul.sf-menu{cursor:pointer}ul.sf-menu li{background:white}ul.sf-menu .sf-sub-indicator{left:0;right:auto}
