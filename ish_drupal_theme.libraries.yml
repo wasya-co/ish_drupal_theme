@@ -1,14 +1,17 @@
 base:
   version: VERSION
   js:
-    vendor/js/bootstrap@4.5.2.min.js: { minified: true }
+    vendor/js/bootstrap@4.5.2.min.js:
+      minified: true
     js/main.js: {}
 
   css:
     base:
 
     layout:
-      vendor/css/bootstrap@4.5.2.min.css: { minified: true }
+      # vendor/css/bootstrap@4.5.2.min.css:
+      #   minified: true
+      #   weight: -10
 
     component:
       css/components/action-links.css:

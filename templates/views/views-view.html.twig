@@ -65,16 +65,19 @@
   {% if pager %}
     {{ pager }}
   {% endif %}
+
   {% if rows %}
-    {# 2023-11-17 _vp_ re-added `rows` for Our Technology Services #}
-    <div class="view-content">
+    {# 2023-11-17 _vp_ re-added `row` for Our Technology Services #}
+    {# 2023-11-17 _vp_ removed entirely #}
+    {# <div class="view-content row"> #}
       {{ rows }}
-    </div>
+    {# </div> #}
   {% elseif empty %}
     <div class="view-empty">
       {{ empty }}
     </div>
   {% endif %}
+
   {% if pager %}
     {{ pager }}
   {% endif %}
