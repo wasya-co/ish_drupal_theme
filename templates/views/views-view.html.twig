@@ -32,6 +32,7 @@
 #}
 {%
   set classes = [
+
     'view',
     'view-' ~ id|clean_class,
     'view-id-' ~ id,
@@ -65,7 +66,8 @@
     {{ pager }}
   {% endif %}
   {% if rows %}
-    <div class="view-content row">
+    {# 2023-11-17 _vp_ re-added `rows` for Our Technology Services #}
+    <div class="view-content">
       {{ rows }}
     </div>
   {% elseif empty %}
