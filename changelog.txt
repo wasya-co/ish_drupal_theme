@@ -16,5 +16,6 @@ piousbox-0.2.0 - 2023-09-12 - merged demmitv-0.0.0
 
 0.1.0 - 2023-10-18 - Consolidating. No reason for non-standard naming?
 0.2.0 - 2023-11-12 - groking performance, removing blocking css from the head.
+0.2.2 - 2023-11-13 - groking wco theme, very nice
 
 

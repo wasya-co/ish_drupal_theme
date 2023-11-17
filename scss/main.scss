@@ -1,4 +1,8 @@
 
+html {
+  font-size: 16px;
+}
+
 main {
   display: flex;
   justify-content: center;
@@ -50,7 +54,7 @@ pre {
 }
 
 .Chip {
-  --wco-chip-bg-color: #9eff87;
+  --wco-chip-bg-color: #9ef;
 
   display: inline;
   border-radius: 1em 0 0 1em;
@@ -91,6 +95,32 @@ pre {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+/* I */
+.block-field-blocknodearticlefield-issue {
+  display: flex;
+  float: left;
+
+  // margin: 1em 0;
+
+  .Chip {
+    --wco-chip-bg-color: #f9e;
+  }
+}
+.node--type-article.node--view-mode-teaser {
+  .node__content {
+    display: flex;
+
+    .field--name-field-image {
+      flex-shrink: 0;
+    }
+
+    .field--name-field-teaser-text {
+      margin: inherit;
+    }
+
+  }
 }
 
 /* L */
@@ -186,27 +216,29 @@ html[lang='pt-br'] .block-language li[hreflang="pt-br"],
         padding-left: 10px;
       }
     }
+
     > .maxwidth {
       justify-content: flex-end;
     }
   }
 }
+
 /* M */
 
 .maxwidth {
-  width: 1000px;
-  margin: auto;
+  max-width: 1000px;
+  // width: 1000px; /* 20231116 _vp_ why was this removed? */
 
+  margin: auto;
   article {
     img {
       max-width: 100%;
     }
   }
 }
-
 @media screen and (max-width: 1024px) { /* desktop ??? */
   .maxwidth {
-    width: 768px;
+    max-width: 768px;
   }
 }
 @media screen and (max-width: 768px) { /* cellphones */
@@ -222,11 +254,13 @@ html[lang='pt-br'] .block-language li[hreflang="pt-br"],
 
 
 section.field--type-comment {
-  border: 2px dashed green;
+  border: 2px dashed #999;
   border-radius: 8px;
 
   padding: 10px;
+  margin-bottom: 1em;
 }
+
 .view-content {
 
   // border-radius: 8px;
@@ -355,8 +389,19 @@ h1.page-title {
   justify-content: space-between;
   align-items: center;
 
+
   h1 {
     margin-bottom: 0;
+  }
+}
+@media screen and (min-width: 1000px) { /* cellphones */
+  .region-header {
+    width: 1000px;
+  }
+}
+@media screen and (min-width: 768px) { /* cellphones */
+  .region-header {
+    width: 100%;
   }
 }
 @media screen and (max-width: 768px) { /* cellphones */
