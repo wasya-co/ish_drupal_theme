@@ -1,4 +1,10 @@
 
+article {
+  img {
+    max-width: 100%;
+  }
+}
+
 html {
   font-size: 16px;
 }
@@ -30,7 +36,8 @@ pre {
     }
   }
 }
-.Card.BibliographyWebsite {
+
+.BibliographyWebsite {
   text-align: center;
   padding: 2px;
   width: 225px;
@@ -46,7 +53,12 @@ pre {
 
   height: 100%;
   margin-bottom: 10px;
+
+  box-shadow: 1px 1px 3px 0px var(--wco-light-text-color);
+  background: var(--wco-light-bg-color);
+  padding: 1em;
 }
+
 
 .center, /* @deprecated, do not use! */
 .text-center {
@@ -225,27 +237,8 @@ html[lang='pt-br'] .block-language li[hreflang="pt-br"],
 
 /* M */
 
-.maxwidth {
-  max-width: 1000px;
-  // width: 1000px; /* 20231116 _vp_ why was this removed? */
 
-  margin: auto;
-  article {
-    img {
-      max-width: 100%;
-    }
-  }
-}
-@media screen and (max-width: 1024px) { /* desktop ??? */
-  .maxwidth {
-    max-width: 768px;
-  }
-}
-@media screen and (max-width: 768px) { /* cellphones */
-  .maxwidth {
-    width: auto;
-  }
-}
+
 
 /* N */
 
@@ -322,6 +315,14 @@ h1.page-title {
     border-left: 1px solid orange;
     padding: 0.5em 0 0.5em 1em;
   }
+}
+
+.text-formatted {
+  /* 2023-11-17 _vp_ for mobile, to not touch the edge. for "at wco we understand the challenged... */
+  max-width: 90vw;
+  margin: auto;
+
+
 }
 
 /* V */
@@ -416,6 +417,7 @@ h1.page-title {
 }
 
 /* P */
+
 .region-postfooter {
   display: flex;
 
@@ -473,5 +475,33 @@ h1.page-title {
     li {
       padding: 10px;
     }
+  }
+}
+
+/* W */
+/* widths */
+
+.fullwidth {
+  width: 1000px;
+  margin: auto;
+}
+.maxwidth {
+  max-width: 1000px;
+  margin: auto;
+}
+@media screen and (max-width: 1024px) { /* tablet */
+  .fullwidth {
+    width: 768px;
+  }
+  .maxwidth {
+    max-width: 768px;
+  }
+}
+@media screen and (max-width: 768px) { /* cellphone */
+  .fullwidth {
+    width: auto;
+  }
+  .maxwidth {
+    width: auto;
   }
 }
