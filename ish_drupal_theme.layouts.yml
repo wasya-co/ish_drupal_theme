@@ -1,8 +1,52 @@
 
-layout_twocol_maxwidth:
-  label: 'Two column Maxwidth'
+
+layout_twocol_any:
+  label: 'Twocol Any'
   category: 'Columns: 2'
-  class: '\Drupal\ish_drupal_module\Layout\TwocolLayout'
+  class: '\Drupal\ish_drupal_module\Layout\TwocolAnywidthLayout'
+  template: templates/layout/layout--twocol-anywidth
+  icon_map:
+    - [first, second]
+  regions:
+    first:
+      label: First
+    second:
+      label: Second
+
+
+
+
+layout_onecol_any:
+  label: 'Onecol Any'
+  category: 'Columns: 1'
+  class: '\Drupal\ish_drupal_module\Layout\OnecolAnywidthLayout'
+  template: templates/layout/layout--onecol-anywidth
+  icon_map:
+    - [main]
+  regions:
+    main:
+      label: Main
+
+
+
+
+
+##
+## @deprecated
+##
+layout_onecol_maxwidth:
+  label: '202310 One column Maxwidth (deprecated)'
+  category: 'Columns: 1'
+  template: templates/layout/layout--onecol-maxwidth
+  icon_map:
+    - [main]
+  regions:
+    main:
+      label: Main
+layout_twocol_maxwidth:
+  label: '202310 Two Column Maxwidth (deprecated)'
+  category: 'Columns: 2'
+  class: '\Drupal\ish_drupal_module\Layout\TwocolMaxwidthLayout'
   ## refers to css library
   ## From: https://www.drupal.org/docs/drupal-apis/layout-api/how-to-register-layouts
   # library: my_custom_module/advanced-layout-library
@@ -14,40 +58,6 @@ layout_twocol_maxwidth:
       label: First
     second:
       label: Second
-
   # library: layout_builder/twocol_section
   # class: '\Drupal\layout_builder\Plugin\Layout\TwoColumnLayout'
   # path: layouts/twocol_maxwidth
-
-layout_onecol_maxwidth:
-  label: 'One column Maxwidth'
-  category: 'Columns: 1'
-  template: templates/layout/layout--onecol-maxwidth
-  icon_map:
-    - [main]
-  regions:
-    main:
-      label: Main
-
-# one_column:
-#   label: 'One column'
-#   category: 'My Layouts'
-#   template: templates/one-column
-#   default_region: main
-#   regions:
-#     main:
-#       label: Main content
-
-# two_column:
-#   label: 'Two column'
-#   category: 'My Layouts'
-#   template: templates/two-column
-#   default_region: main
-#   regions:
-#     main:
-#       label: Main content
-#     sidebar:
-#       label: Sidebar
-
-
-

@@ -282,8 +282,13 @@ h1.page-title {
 
 .search-form,
 .node_search-results {
+  // border: 2px solid blue;
+
   max-width: 1000px;
   margin: auto;
+}
+.search-form + h2 {
+  text-align: center;
 }
 
 
