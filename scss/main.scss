@@ -483,6 +483,18 @@ h1.page-title {
 }
 
 /* W */
+
+/* webform */
+.block-webform-block {
+  input {
+    max-width: 95vw;
+  }
+  .form-item {
+    max-width: 95vw;
+    margin: auto;
+  }
+}
+
 /* widths */
 
 .fullwidth {
