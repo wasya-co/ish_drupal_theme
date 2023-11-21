@@ -45,7 +45,7 @@ pre {
 .BibliographyWebsite {
   text-align: center;
   padding: 2px;
-  width: 225px;
+  // width: 225px;
   margin-bottom: 10px;
 }
 
@@ -489,15 +489,16 @@ h1.page-title {
 
   ul {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     margin: 10px 0;
 
     li {
       padding: 0 1em;
-      border-right: 1px solid orange;
+      border-left: 1px solid orange;
     }
-    li:last-child {
-      border-right: 0;
+    li:first-child {
+      border-left: 0;
     }
   }
 }
@@ -509,6 +510,7 @@ h1.page-title {
   display: flex;
   justify-content: center;
 
+
   ul.menu {
     margin: 0;
     height: 100%;
@@ -517,7 +519,28 @@ h1.page-title {
     align-items: center;
 
     li {
-      padding: 10px;
+      padding: 0 1em;
+      border-left: 1px solid orange;
+    }
+    li:first-child {
+      border-left: 0;
+    }
+  }
+}
+@media screen and (max-width: 768px) { /* cellphone */
+  .region-secondary-menu {
+    flex-wrap: wrap;
+
+    form {
+      display: flex;
+
+      .form-item {
+        margin: 0;
+      }
+    }
+
+    .menu--account {
+      margin: .5em 0;
     }
   }
 }
