@@ -79,6 +79,9 @@ pre {
   border-bottom: 17px solid var(--wco-chip-bg-color);
   border-right: 12px solid transparent; }
 
+/*
+ * Contributed Post
+**/
 article.node--type-contributed-post.node--view-mode-full {
   max-width: 1000px;
   margin: auto; }
@@ -89,6 +92,12 @@ article.node--type-contributed-post.node--view-mode-teaser footer {
 
 article.node--type-contributed-post.node--view-mode-teaser .node__content {
   display: inline-block; }
+
+@media screen and (max-width: 992px) {
+  /* small desktop */
+  article.node--type-contributed-post.node--view-mode-teaser .lvl-1 {
+    flex-direction: column;
+    align-items: flex-start; } }
 
 /* F */
 .flex-col,
