@@ -87,7 +87,7 @@
 %}
 {{ attach_library('ish_drupal_theme/node') }}
 <article{{ attributes.addClass(classes) }}>
-
+  {{ content.field_image_hero }}
 
   <div class='row'>
 
@@ -119,7 +119,7 @@
     <div class='col-sm-12'>
 
       <div{{ content_attributes.addClass('node__content') }}>
-        {{ content | without('field_vote_up_down') }}
+        {{ content | without('field_vote_up_down') | without('field_image_hero') }}
       </div>
 
     </div>

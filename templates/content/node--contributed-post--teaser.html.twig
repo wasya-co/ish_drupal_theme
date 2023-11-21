@@ -16,34 +16,39 @@
 
 
 
-  <div class='row'>
-    <div class='col-md-2'>
+  <div class='d-flex'>
+    <div class='' style="flex-shrink: 0; min-width: 100px;" >
       {{ content.field_vote_up_down }}
     </div>
-    <div class='col-md-10'>
-
-      {{ title_prefix }}
-      {% if label and not page %}
-        <h2{{ title_attributes }}>
-          <a href="{{ url }}" rel="bookmark">{{ label }}</a>
-        </h2>
-      {% endif %}
-      {{ title_suffix }}
-
-      {% if display_submitted %}
-        <footer class="node__meta">
-          {{ author_picture }}
-          <div{{ author_attributes.addClass('node__submitted') }}>
-            {% trans %}Submitted by {{ author_name }} on {{ date }}{% endtrans %}
-            {{ metadata }}
-          </div>
-        </footer>
-      {% endif %}
-
-      <div{{ content_attributes.addClass('node__content') }}>
-        {{ content | without('field_vote_up_down') }}
+    <div class='d-flex lvl-1 '>
+      <div style="flex-shrink: 0; margin-right: 1em;" >
+        {{ content.field_image_thumb }}
       </div>
+      <div class=''>
 
+        {{ title_prefix }}
+        {% if label and not page %}
+          <h2{{ title_attributes }}>
+            <a href="{{ url }}" rel="bookmark">{{ label }}</a>
+          </h2>
+        {% endif %}
+        {{ title_suffix }}
+
+        {% if display_submitted %}
+          <footer class="node__meta">
+            {{ author_picture }}
+            <div{{ author_attributes.addClass('node__submitted') }}>
+              {% trans %}Submitted by {{ author_name }} on {{ date }}{% endtrans %}
+              {{ metadata }}
+            </div>
+          </footer>
+        {% endif %}
+
+        <div{{ content_attributes.addClass('node__content') }}>
+          {{ content | without('field_vote_up_down') | without('field_image_thumb') }}
+        </div>
+
+      </div>
     </div>
   </div>
 
