@@ -1,6 +1,10 @@
 article img {
   max-width: 100%; }
 
+article footer {
+  max-width: 1000px;
+  margin: 1em auto; }
+
 html {
   font-size: 16px; }
 
@@ -27,7 +31,6 @@ pre {
 .BibliographyWebsite {
   text-align: center;
   padding: 2px;
-  width: 225px;
   margin-bottom: 10px; }
 
 /* C */
@@ -75,6 +78,17 @@ pre {
   height: 32px;
   border-bottom: 17px solid var(--wco-chip-bg-color);
   border-right: 12px solid transparent; }
+
+article.node--type-contributed-post.node--view-mode-full {
+  max-width: 1000px;
+  margin: auto; }
+
+article.node--type-contributed-post.node--view-mode-teaser footer {
+  margin: 0;
+  display: inline-block; }
+
+article.node--type-contributed-post.node--view-mode-teaser .node__content {
+  display: inline-block; }
 
 /* F */
 .flex-col,
@@ -153,6 +167,12 @@ html[lang='pt-br'] .block-language li[hreflang="pt-br"],
     justify-content: flex-end; } }
 
 /* M */
+article.media--type-remote-video.media--view-mode-full {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2em 0; }
+
 /* N */
 section.field--type-comment {
   border: 2px dashed #999;
@@ -185,7 +205,8 @@ h1.page-title {
 
 /* T */
 .Tags {
-  display: flex; }
+  display: flex;
+  margin-bottom: 10px; }
   .Tags .field__label {
     padding-right: 1em; }
   .Tags .field__items {
@@ -205,6 +226,14 @@ h1.page-title {
 .text-formatted {
   /* 2023-11-17 _vp_ for mobile, to not touch the edge. for "at wco we understand the challenged... */
   max-width: 90vw;
+  margin: auto; }
+
+/* U */
+.user-login-form,
+.user-pass,
+.user-register-form,
+._ {
+  max-width: 1000px;
   margin: auto; }
 
 /* V */
@@ -289,13 +318,14 @@ h1.page-title {
   text-align: center; }
   .region-primary-menu ul {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     margin: 10px 0; }
     .region-primary-menu ul li {
       padding: 0 1em;
-      border-right: 1px solid orange; }
-    .region-primary-menu ul li:last-child {
-      border-right: 0; }
+      border-left: 1px solid orange; }
+    .region-primary-menu ul li:first-child {
+      border-left: 0; }
 
 .region-secondary-menu {
   border-bottom: 5px solid orange;
@@ -307,7 +337,21 @@ h1.page-title {
     display: flex;
     align-items: center; }
     .region-secondary-menu ul.menu li {
-      padding: 10px; }
+      padding: 0 1em;
+      border-left: 1px solid orange; }
+    .region-secondary-menu ul.menu li:first-child {
+      border-left: 0; }
+
+@media screen and (max-width: 768px) {
+  /* cellphone */
+  .region-secondary-menu {
+    flex-wrap: wrap; }
+    .region-secondary-menu form {
+      display: flex; }
+      .region-secondary-menu form .form-item {
+        margin: 0; }
+    .region-secondary-menu .menu--account {
+      margin: .5em 0; } }
 
 /* W */
 /* webform */

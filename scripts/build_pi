@@ -1,0 +1,18 @@
+#!/bin/bash
+
+# set -e ## error
+set -x
+
+git add .
+git commit -m 'autocommit'
+git push
+
+# ssh do2 "cd /mnt/volume_sfo2_01/projects/docker/volumes/ish_drupal_production_data/web/themes/ish_drupal_theme ; git pull && echo $HOSTNAME ok"
+# ssh do2 "cd /mnt/volume_sfo2_01/projects/docker/volumes/demmitv_drupal_production_data/web/themes/ish_drupal_theme ; git pull && echo $HOSTNAME ok"
+ssh do2 "cd /mnt/volume_sfo2_01/projects/docker/volumes/piousbox_drupal_production_data/web/themes/ish_drupal_theme ; git pull && echo $HOSTNAME ok"
+# ssh do2 "cd /mnt/volume_sfo2_01/projects/docker/volumes/wco_drupal_production_data/web/themes/ish_drupal_theme ; git pull && echo $HOSTNAME ok"
+
+
+set +e
+set +x
+echo ok

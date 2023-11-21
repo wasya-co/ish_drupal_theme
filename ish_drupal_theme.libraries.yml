@@ -7,6 +7,8 @@ base:
 
   css:
     base:
+      css/main.css:
+        weight: -10
 
     layout:
       # vendor/css/bootstrap@4.5.2.min.css:
@@ -36,7 +38,6 @@ base:
       css/components/tabs.css:
       css/components/textarea.css:
       css/components/ui-dialog.css:
-      css/main.css:
       css/regions.css:
       css/service.css:
       css/layout.css:
