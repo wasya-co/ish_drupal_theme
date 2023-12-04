@@ -2,6 +2,7 @@
 article {
   img {
     max-width: 100%;
+    height: auto;
   }
   footer {
     max-width: 1000px;
@@ -111,7 +112,9 @@ article.node--type-contributed-post.node--view-mode-full {
   margin: auto;
 
 }
-article.node--type-contributed-post.node--view-mode-teaser {
+article.node--type-article.node--view-mode-teaser,
+article.node--type-contributed-post.node--view-mode-teaser,
+._ {
   footer {
     margin: 0;
     display: inline-block;
@@ -121,7 +124,9 @@ article.node--type-contributed-post.node--view-mode-teaser {
   }
 }
 @media screen and (max-width: 992px) { /* small desktop */
-  article.node--type-contributed-post.node--view-mode-teaser {
+  article.node--type-article.node--view-mode-teaser,
+  article.node--type-contributed-post.node--view-mode-teaser,
+  ._ {
     .lvl-1 {
       flex-direction: column;
       align-items: flex-start;
@@ -172,6 +177,7 @@ article.node--type-contributed-post.node--view-mode-teaser {
 html[lang='en'] .block-language li[hreflang="en"],
 html[lang='es'] .block-language li[hreflang="es"],
 html[lang='pt-br'] .block-language li[hreflang="pt-br"],
+html[lang='ru'] .block-language li[hreflang="es"],
 ._ {
   border-bottom: 2px solid black;
 }
@@ -203,6 +209,7 @@ html[lang='pt-br'] .block-language li[hreflang="pt-br"],
       display: flex;
       flex-wrap: wrap;
       justify-content: flex-start;
+      flex-direction: column;
 
 
       li {
@@ -245,6 +252,12 @@ html[lang='pt-br'] .block-language li[hreflang="pt-br"],
       li[hreflang="pt-br"] {
         &:before {
           background: url('//d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2023/11/01111621/40x26-brasil-tiny.png');
+        }
+      }
+
+      li[hreflang="ru"] {
+        &:before {
+          background: url('//d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2023/11/29103220/40x26-russia-tiny.png');
         }
       }
     }
