@@ -1,3 +1,6 @@
+{#
+  2023-12-08 :: Unused b/c every sub-theme has its own.
+#}
 {% extends "block.html.twig" %}
 {#
 /**
