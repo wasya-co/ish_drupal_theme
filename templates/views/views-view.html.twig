@@ -47,9 +47,9 @@
   {% endif %}
   {{ title_suffix }}
   {% if header %}
-    <div class="view-header">
+    {# 2023-12-07 :: Removed, so that header can flow nicely with items, in ish_local/locations. #}
+    {# <div class="view-header"> #}
       {{ header }}
-    </div>
   {% endif %}
   {% if exposed %}
     <div class="view-filters">
