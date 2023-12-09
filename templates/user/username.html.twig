@@ -21,9 +21,13 @@
  *
  * @see template_preprocess_username()
  */
-#}
+
 {% if link_path -%}
   <a{{ attributes.addClass('username') }}>{{ name }}{{ extra }}</a>
 {%- else -%}
   <span{{ attributes }}>{{ name }}{{ extra }}</span>
 {%- endif -%}
+
+#}
+
+<a href="/user/{{ uid }}">{{ name }}{{ extra }}</a>
