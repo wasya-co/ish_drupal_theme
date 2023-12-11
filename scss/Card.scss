@@ -1,0 +1,25 @@
+
+.Card,
+.OurTeam .Profile {
+  border: 1px solid gray;
+  border-radius: 10px;
+  padding: 10px;
+
+  // height: 100%; /* 2023-11-17 _vp_ teasers cannot be so tall! */
+  margin-bottom: 10px;
+
+  box-shadow: 1px 1px 3px 0px var(--wco-light-text-color);
+  background: var(--wco-light-bg-color);
+  padding: 1em;
+
+  .field--name-field-image-thumb {
+    display: flex;
+    justify-content: center;
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+
+}
