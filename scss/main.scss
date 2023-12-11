@@ -1,6 +1,7 @@
 
 @import "./block--header.scss";
 @import "./Card.scss";
+@import "./comments.scss";
 
 article {
   img {
@@ -30,6 +31,11 @@ pre {
 }
 
 /* B */
+
+// 2023-12-07 :: be ablet to valign 2col img+text
+.block-inline-blockbasic {
+  height: 100%;
+}
 
 /* BibliographyWebsite */
 
@@ -65,7 +71,7 @@ pre {
 .Chip {
   --wco-chip-bg-color: #9ef;
 
-  display: inline;
+  display: inline-block;
   border-radius: 1em 0 0 1em;
   margin-right: 32px;
   padding: 0.2em 0.2em 0.2em 0.6em;
@@ -95,6 +101,8 @@ pre {
   border-bottom: 17px solid var(--wco-chip-bg-color);
   border-right: 12px solid transparent;
 }
+
+
 
 /*
  * Contributed Post
@@ -138,7 +146,17 @@ article.node--type-contributed-post.node--view-mode-teaser,
   align-items: center;
 }
 
+/* forms */
+/*
+input.field--name-comment {
+  max-width: 100%;
+}
+
 /* I */
+.field--name-field-issue {
+  display: inline-block;
+}
+
 .block-field-blocknodearticlefield-issue {
   display: flex;
   float: left;
@@ -285,17 +303,6 @@ article.media--type-remote-video.media--view-mode-full {
 
 /* N */
 
-
-
-
-
-section.field--type-comment {
-  border: 2px dashed #999;
-  border-radius: 8px;
-
-  padding: 10px;
-  margin-bottom: 1em;
-}
 
 .view-content {
 
@@ -512,7 +519,6 @@ h1.page-title {
 
   display: flex;
   justify-content: center;
-
 
   ul.menu {
     margin: 0;

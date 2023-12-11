@@ -1,0 +1,37 @@
+
+{%
+  set classes = [
+    'block',
+    'block-' ~ configuration.provider|clean_class,
+    'block-' ~ plugin_id|clean_class,
+  ]
+%}
+<div{{ attributes.addClass(classes) }}>
+  {{ title_prefix }}
+  {% if label %}
+    <h2{{ title_attributes }}>{{ label }}</h2>
+  {% endif %}
+  {{ title_suffix }}
+  {% block content %}
+
+    <header class='header-v0-0-0 '
+      style="background-color:{{ content.field_background_color|escape|striptags|replace({"\n": "", "\r": "", "\t": ""}) }};" >
+      <div class='fullwidth a1'
+        style="background-image: url('{{ file_url(content.field_image['#items'].entity.uri.value) }}');" >
+        <h1 class='title' >{{ content.field_title }}</h1>
+        <h2 class='subtitle' >{{ content.field_subtitle }}</h2>
+      </div>
+
+      <div class="r1 fullwidth">
+        <div class="width-100">
+          <div class="r1C">
+          </div>
+        </div>
+      </div>
+
+    </header>
+
+
+  {% endblock %}
+</div>
+
