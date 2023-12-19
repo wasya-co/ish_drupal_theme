@@ -16,8 +16,8 @@
  * @see template_preprocess_user()
  */
 #}
-{% if content %}
-  <article{{ attributes.addClass('profile') }}>
-    {{ content }}
-  </article>
-{% endif %}
+<article{{ attributes.addClass('Profile') }}>
+  {% if content %}
+    {{- content -}}
+  {% endif %}
+</article>
