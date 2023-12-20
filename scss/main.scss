@@ -2,6 +2,7 @@
 @import "./block--header.scss";
 @import "./Card.scss";
 @import "./comments.scss";
+@import "./fonts.scss";
 
 article {
   img {
@@ -559,7 +560,7 @@ h1.page-title {
 /* webform */
 .block-webform-block {
   input {
-    max-width: 95vw;
+    max-width: 100%;
   }
   .form-item {
     max-width: 95vw;
