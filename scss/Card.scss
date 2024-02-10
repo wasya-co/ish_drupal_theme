@@ -12,6 +12,10 @@
   background: var(--wco-light-bg-color);
   padding: 1em;
 
+  h2 {
+    word-break: break-all;
+  }
+
   .field--name-field-image-thumb {
     display: flex;
     justify-content: center;
