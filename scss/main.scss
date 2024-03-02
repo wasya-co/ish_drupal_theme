@@ -1,19 +1,16 @@
 
-main {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-}
-.layout-content {
-  width: 100%;
-}
-
-/* this is for demmitv only, also wrong! */
 // @media screen and (max-width: 768px) { /* cellphones */
 //   main {
 //     flex-direction: column-reverse;
 //   }
 // }
+
+
+main {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
 
 pre {
   background: #eee;
@@ -43,47 +40,54 @@ pre {
   margin-bottom: 10px;
 }
 
-/* IssuesNavigator */
-
-.block-inline-blockissues-navigator {
-  margin: 10px 0;
-
-  .current-issue {
-    text-align: right;
-  }
-  nav.menu--issues {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    h2:after {
-      content: ":";
-    }
-  }
-  h2 {
-    font-size: 1em;
-    margin: 0;
-  }
-  ul.menu {
-    display: flex;
-    margin: 0;
-    li {
-      padding: 0 10px;
-      border-right: 2px solid orange;
-    }
-
-  }
-}
-
 /* C */
 
 .Card {
   border: 1px solid gray;
   border-radius: 10px;
   padding: 10px;
+
+  height: 100%;
+  margin-bottom: 10px;
 }
 
-.center {
+.center, /* @deprecated, do not use! */
+.text-center {
   text-align: center;
+}
+
+.Chip {
+  --wco-chip-bg-color: #9eff87;
+
+  display: inline;
+  border-radius: 1em 0 0 1em;
+  margin-right: 32px;
+  padding: 0.2em 0.2em 0.2em 0.6em;
+  height: 32px;
+  background: var(--wco-chip-bg-color);
+  position: relative;
+}
+.Chip::before {
+  content: "";
+  display: block;
+  position: absolute;
+  right: -16px;
+  top: 0;
+  width: 16px;
+  height: 32px;
+  border-top: 17px solid var(--wco-chip-bg-color);
+  border-right: 12px solid transparent;
+}
+.Chip::after {
+  content: "";
+  display: block;
+  position: absolute;
+  right: -16px;
+  bottom: 0;
+  width: 16px;
+  height: 32px;
+  border-bottom: 17px solid var(--wco-chip-bg-color);
+  border-right: 12px solid transparent;
 }
 
 /* F */
@@ -96,12 +100,79 @@ pre {
   align-items: center;
 }
 
+/* L */
+
+html[lang='en'] .block-language li[hreflang="en"],
+html[lang='es'] .block-language li[hreflang="es"],
+html[lang='pt-br'] .block-language li[hreflang="pt-br"],
+._ {
+  border-bottom: 2px solid black;
+}
+
+.region-footer {
+  .block-language {
+    display: inline-block;
+    ul.links {
+      display: flex;
+
+      li {
+        display: flex;
+        align-items: center;
+        padding-right: .8em;
+
+        &:last-child {
+          padding-right: 0;
+        }
+
+        a {
+          padding-left: 0.2em;
+
+        }
+      }
+
+      li {
+        &:before {
+          content: "";
+          display: inline-block;
+          width: 40px;
+          height: 27px;
+        }
+      }
+
+      li[hreflang="en"] {
+        &:before {
+          background: url('http://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2023/09/26212539/40x26-usa-tiny.png');
+        }
+      }
+
+      li[hreflang="es"] {
+        &:before {
+          background: url('//d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2023/09/26211148/40x26-colombia-tiny-1.png');
+        }
+      }
+
+      li[hreflang="pt-br"] {
+        &:before {
+          background: url('//d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2023/11/01111621/40x26-brasil-tiny.png');
+        }
+      }
+    }
+  }
+}
+
 /* M */
 
 .maxwidth {
   width: 1000px;
   margin: auto;
+
+  article {
+    img {
+      max-width: 100%;
+    }
+  }
 }
+
 @media screen and (max-width: 1024px) { /* desktop ??? */
   .maxwidth {
     width: 768px;
@@ -113,22 +184,7 @@ pre {
   }
 }
 
-.layout__region--first,
-.layout__region--second {
-  width: 50%;
-}
-.layout--twocol-section {
-  display: flex;
-}
-
 /* N */
-
-.node__links {
-  clear: both;
-}
-
-
-
 
 
 
@@ -142,13 +198,14 @@ section.field--type-comment {
 }
 .view-content {
 
-  border-radius: 8px;
+  // border-radius: 8px;
 
-  margin: 0 auto;
+  // margin: 0 auto;
 
   .views-row {
     padding: 10px;
     clear: both;
+
     .field--type-image {
       padding: 0 10px 10px 0;
     }
@@ -158,27 +215,58 @@ section.field--type-comment {
   }
 }
 
-.footer-3 {
-  padding: 1em 0;
-
+/* P */
+h1.page-title {
+  margin: 1em 0 0 0;
+  text-align: center;
 }
 
 /* S */
 
-/* superfish */
-//   content: "≡";
-
-.block-superfish {
-  width: auto;
+.search-form,
+.node_search-results {
+  max-width: 1000px;
+  margin: auto;
 }
-ul.sf-menu {
-  li {
-    background: white;
+
+
+/* T */
+
+.Tags {
+  display: flex;
+
+  .field__label {
+    padding-right: 1em;
   }
-  .sf-sub-indicator {
-    left: 0;
-    right: auto;
+
+  .field__items {
+    display: flex;
   }
+}
+
+.view-terms-conditions {
+  border-left: 1px solid orange;
+  padding-left: 1em;
+
+  display: flex;
+  align-items: center;
+
+  .view-content.row {
+    margin: 0;
+    margin-left: 1em;
+    border-left: 1px solid orange;
+    padding: 0.5em 0 0.5em 1em;
+  }
+}
+
+/* V */
+.valign-center {
+  vertical-align: middle;
+  align-items: center;
+}
+.valign-top {
+  vertical-align: top;
+  align-items: flex-start;
 }
 
 /* Y */

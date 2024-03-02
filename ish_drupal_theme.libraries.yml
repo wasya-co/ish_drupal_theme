@@ -55,14 +55,12 @@ base:
         weight: -10
       css/components/ui-dialog.css:
         weight: -10
-      css/main.css:
-        weight: -10
-      css/regions.css:
-        weight: -10
-      css/service.css:
-        weight: -10
-      css/layout.css:
-        weight: -10
+      css/main.css: {}
+      css/regions.css: {}
+      css/service.css: {}
+      css/layout.css: {}
+      css/issues-navigator.css: {}
+      css/superfish.css: {}
 
 dialog:
   version: VERSION
