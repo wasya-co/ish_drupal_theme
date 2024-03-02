@@ -16,5 +16,6 @@
     justify-content: center; }
     .Card .field--name-field-image-thumb img,
     .OurTeam .Profile .field--name-field-image-thumb img {
-      max-width: 100%;
+      max-width: 200px;
+      border: 1px dotted gray;
       height: auto; }
