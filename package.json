@@ -17,7 +17,7 @@
     "node-sass": "^9.0.0"
   },
   "scripts": {
-    "compile-css": "node-sass ./scss -o ./css",
-    "watch-css": "node-sass -w ./scss -o ./css"
+    "build": "node-sass ./scss -o ./css",
+    "watch": "node-sass -w ./scss -o ./css"
   }
 }

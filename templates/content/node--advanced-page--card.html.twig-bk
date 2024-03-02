@@ -1,0 +1,33 @@
+
+<div class="col-sm-6 col-md-3" >
+
+  {%
+    set classes = [
+      'Card',
+      'node',
+      'node--type-' ~ node.bundle|clean_class,
+      node.isPromoted() ? 'node--promoted',
+      node.isSticky() ? 'node--sticky',
+      not node.isPublished() ? 'node--unpublished',
+      view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
+    ]
+  %}
+  {{ attach_library('ish_drupal_theme/node') }}
+  <article{{ attributes.addClass(classes) }}>
+
+    <div{{ content_attributes.addClass('node__content') }}>
+      {{ content }}
+    </div>
+
+    {{ title_prefix }}
+    {% if label and not page %}
+      <div{{ title_attributes.addClass( 'text-center' ) }}>
+        <a href="{{ url }}" rel="bookmark">{{ label }}</a>
+      </div>
+    {% endif %}
+    {{ title_suffix }}
+
+    <div class="clearfix"></div>
+
+  </article>
+</div>

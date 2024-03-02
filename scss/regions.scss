@@ -1,6 +1,6 @@
 
 .region {
-  border: 1px solid cyan;
+  // border: 1px solid cyan;
 }
 
 .region-content {
@@ -29,13 +29,17 @@
   border-top: 5px solid orange;
   border-bottom: 2px solid orange;
 
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+  > .maxwidth {
+    display: flex;
+    // justify-content: center;
+    flex-wrap: wrap;
+  }
 
-  > .block {
-    padding: 0 10px;
-    border-right: 1px solid orange;
+  .block {
+    border: 1px solid orange;
+
+    padding: 0.5em;
+
   }
 
   /* language switcher */
@@ -57,8 +61,15 @@
   }
 }
 
+/* H */
+
+.region-headerW {
+  padding: 1em 0 0.5em 0;
+}
+
 .region-header {
-  border: 0;
+  // border: 0;
+  // border-bottom: 2px solid orange;
 
   display: flex;
   justify-content: space-between;
@@ -74,8 +85,30 @@
   }
 }
 
+
 .region-highlighted {
   background: #cecece;
+}
+
+/* P */
+.region-postfooter {
+  display: flex;
+
+  nav.menu--terms-conditions ul.menu {
+    border-left: 2px solid orange;
+    padding-left: 1em;
+
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+
+    li {
+      border-right: 2px solid orange;
+      padding-right: 1em;
+      margin-right: 1em;
+    }
+  }
 }
 
 .region-primary-menu {
@@ -97,6 +130,7 @@
     }
   }
 }
+
 
 .region-secondary-menu {
   border-bottom: 5px solid orange;
