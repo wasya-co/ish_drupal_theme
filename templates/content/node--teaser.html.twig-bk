@@ -24,24 +24,21 @@
 
 
   <div class='d-flex'>
-    <div class='' style="" >
-      {{ content.field_vote_up_down }}
-    </div>
+
+    {{ content.field_vote_up_down }}
+
     <div class='d-flex lvl-1 '>
-      <div class="d-flex" >
 
-        {% if content.field_image_thumb_url %}
-          <a href="{{ url }}" >
-            <img class='image-thumb' src="{{- content.field_image_thumb_url|escape|striptags|replace({"\n": "", "\r": "", "\t": ""}) -}}" alt='' />
-          </a>
-        {% endif %}
-
-        {% if content.field_image_thumb %}
-         {{ content.field_image_thumb }}
-        {% endif %}
+      {% if content.field_image_thumb_url %}
+        <a href="{{ url }}" >
+          <img class='image-thumb' src="{{- content.field_image_thumb_url|escape|striptags|replace({"\n": "", "\r": "", "\t": ""}) -}}" alt='' />
+        </a>
+      {% endif %}
+      {% if content.field_image_thumb %}
+        {{ content.field_image_thumb }}
+      {% endif %}
 
 
-      </div>
       <div class='ml-2'>
 
         {{ title_prefix }}

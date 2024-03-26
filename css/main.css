@@ -58,7 +58,7 @@ header.header-v0-0-0 {
   padding: 1em; }
   .Card h2,
   .OurTeam .Profile h2 {
-    word-break: break-all; }
+    word-break: auto-phrase; }
   .Card .field--name-field-image-thumb,
   .OurTeam .Profile .field--name-field-image-thumb {
     display: flex;
