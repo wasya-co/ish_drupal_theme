@@ -148,10 +148,12 @@ article.node--type-contributed-post.node--view-mode-teaser,
   align-items: center;
 }
 
-/* forms */
-/*
-input.field--name-comment {
-  max-width: 100%;
+.fullheight {
+  align-items: stretch;
+
+  .Card {
+    height: calc( 100% - 30px );
+  }
 }
 
 /* I */
