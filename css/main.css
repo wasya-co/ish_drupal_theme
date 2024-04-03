@@ -48,7 +48,8 @@ header.header-v0-0-0 {
         height: 100%; }
 
 .Card,
-.OurTeam .Profile {
+.OurTeam .Profile,
+.Teaser {
   border: 1px solid gray;
   border-radius: 10px;
   padding: 10px;
@@ -61,16 +62,22 @@ header.header-v0-0-0 {
   align-items: center;
   justify-content: flex-end; }
   .Card h2,
-  .OurTeam .Profile h2 {
+  .OurTeam .Profile h2,
+  .Teaser h2 {
     word-break: auto-phrase; }
   .Card .field--name-field-image-thumb,
-  .OurTeam .Profile .field--name-field-image-thumb {
+  .OurTeam .Profile .field--name-field-image-thumb,
+  .Teaser .field--name-field-image-thumb {
     display: flex;
     justify-content: center; }
     .Card .field--name-field-image-thumb img,
-    .OurTeam .Profile .field--name-field-image-thumb img {
+    .OurTeam .Profile .field--name-field-image-thumb img,
+    .Teaser .field--name-field-image-thumb img {
       max-width: 200px;
       height: auto; }
+
+.Teaser {
+  align-items: flex-start; }
 
 /* comments */
 .comment-wrapper article {
@@ -104,15 +111,16 @@ section.field--type-comment {
   flex-direction: column;
   align-items: center; }
 
-.vud-widget-thumbs .up.inactive,
-.vud-widget-thumbs .up.active,
-.vud-widget-thumbs .down.inactive,
-.vud-widget-thumbs .down.active,
-.vud-widget-thumbs ._ {
-  background-image: url("https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2024/03/25165201/thumbs2.png"); }
-
-.vud-widget-thumbs .up-score {
-  border-right: 0; }
+.vud-widget-thumbs {
+  margin: 0; }
+  .vud-widget-thumbs .up.inactive,
+  .vud-widget-thumbs .up.active,
+  .vud-widget-thumbs .down.inactive,
+  .vud-widget-thumbs .down.active,
+  .vud-widget-thumbs ._ {
+    background-image: url("https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2024/03/25165201/thumbs2.png"); }
+  .vud-widget-thumbs .up-score {
+    border-right: 0; }
 
 .vote-current-score {
   padding-top: 0; }
