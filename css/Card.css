@@ -1,5 +1,6 @@
 .Card,
-.OurTeam .Profile {
+.OurTeam .Profile,
+.Teaser {
   border: 1px solid gray;
   border-radius: 10px;
   padding: 10px;
@@ -12,13 +13,19 @@
   align-items: center;
   justify-content: flex-end; }
   .Card h2,
-  .OurTeam .Profile h2 {
+  .OurTeam .Profile h2,
+  .Teaser h2 {
     word-break: auto-phrase; }
   .Card .field--name-field-image-thumb,
-  .OurTeam .Profile .field--name-field-image-thumb {
+  .OurTeam .Profile .field--name-field-image-thumb,
+  .Teaser .field--name-field-image-thumb {
     display: flex;
     justify-content: center; }
     .Card .field--name-field-image-thumb img,
-    .OurTeam .Profile .field--name-field-image-thumb img {
+    .OurTeam .Profile .field--name-field-image-thumb img,
+    .Teaser .field--name-field-image-thumb img {
       max-width: 200px;
       height: auto; }
+
+.Teaser {
+  align-items: flex-start; }
