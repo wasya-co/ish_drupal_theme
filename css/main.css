@@ -48,26 +48,36 @@ header.header-v0-0-0 {
         height: 100%; }
 
 .Card,
-.OurTeam .Profile {
+.OurTeam .Profile,
+.Teaser {
   border: 1px solid gray;
   border-radius: 10px;
   padding: 10px;
-  margin-bottom: 10px;
+  margin-bottom: 30px;
   box-shadow: 1px 1px 3px 0px var(--wco-light-text-color);
   background: var(--wco-light-bg-color);
-  padding: 1em; }
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end; }
   .Card h2,
-  .OurTeam .Profile h2 {
-    word-break: break-all; }
+  .OurTeam .Profile h2,
+  .Teaser h2 {
+    word-break: auto-phrase; }
   .Card .field--name-field-image-thumb,
-  .OurTeam .Profile .field--name-field-image-thumb {
+  .OurTeam .Profile .field--name-field-image-thumb,
+  .Teaser .field--name-field-image-thumb {
     display: flex;
     justify-content: center; }
     .Card .field--name-field-image-thumb img,
-    .OurTeam .Profile .field--name-field-image-thumb img {
+    .OurTeam .Profile .field--name-field-image-thumb img,
+    .Teaser .field--name-field-image-thumb img {
       max-width: 200px;
-      border: 1px dotted gray;
       height: auto; }
+
+.Teaser {
+  align-items: flex-start; }
 
 /* comments */
 .comment-wrapper article {
@@ -95,6 +105,25 @@ section.field--type-comment {
 
 .lobster {
   font-family: 'Lobster', cursive; }
+
+.vud-widget {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+
+.vud-widget-thumbs {
+  margin: 0; }
+  .vud-widget-thumbs .up.inactive,
+  .vud-widget-thumbs .up.active,
+  .vud-widget-thumbs .down.inactive,
+  .vud-widget-thumbs .down.active,
+  .vud-widget-thumbs ._ {
+    background-image: url("https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2024/03/25165201/thumbs2.png"); }
+  .vud-widget-thumbs .up-score {
+    border-right: 0; }
+
+.vote-current-score {
+  padding-top: 0; }
 
 article img {
   max-width: 100%;
@@ -205,11 +234,10 @@ article.node--type-contributed-post.node--view-mode-teaser .node__content,
   flex-direction: column;
   align-items: center; }
 
-/* forms */
-/*
-input.field--name-comment {
-  max-width: 100%;
-}
+.fullheight {
+  align-items: stretch; }
+  .fullheight .Card {
+    height: calc( 100% - 30px); }
 
 /* I */
 .image-thumb {
