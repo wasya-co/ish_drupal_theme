@@ -10,13 +10,13 @@
   <div{{ attributes.addClass(classes) }}>
 
     {% if content.first %}
-      <div {{ region_attributes.first.addClass('col-sm-12', 'col-md-6') }}>
+      <div {{ region_attributes.first.addClass(settings.col1_classes) }}>
         {{ content.first }}
       </div>
     {% endif %}
 
     {% if content.second %}
-      <div {{ region_attributes.second.addClass('col-sm-12', 'col-md-6') }}>
+      <div {{ region_attributes.second.addClass(settings.col2_classes) }}>
         {{ content.second }}
       </div>
     {% endif %}

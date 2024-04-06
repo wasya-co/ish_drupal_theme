@@ -14,9 +14,9 @@
   {{ title_suffix }}
   {% block content %}
 
-    <header class='header-v0-0-0 '
+    <header class='header-v0-0-0 {{ content.field_classesw|escape|striptags }}'
       style="background-color:{{ content.field_background_color|escape|striptags }};" >
-      <div class='fullwidth a1'
+      <div class='{{ content.field_classes|escape|striptags }} a1'
         style="background-image: url('{{ file_url(content.field_image['#items'].entity.uri.value) }}');" >
         <h1 class='title' >{{ content.field_title }}</h1>
         <h2 class='subtitle' >{{ content.field_subtitle }}</h2>
