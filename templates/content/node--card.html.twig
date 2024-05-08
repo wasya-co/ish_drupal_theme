@@ -1,0 +1,64 @@
+
+{#
+  2024-04-05 A Node Card has thumb, and title on the bottom - good for col-md-3 displays.
+#}
+
+{%
+  set classes = [
+    'Card',
+
+    'node',
+    'node--type-' ~ node.bundle|clean_class,
+    node.isPromoted() ? 'node--promoted',
+    node.isSticky() ? 'node--sticky',
+    not node.isPublished() ? 'node--unpublished',
+    view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
+  ]
+%}
+{{ attach_library('ish_drupal_theme/node') }}
+
+<article{{ attributes.addClass(classes) }}>
+
+  <div class='mb-2'>
+    {% if content.field_image_thumb_url %}
+      <a href="{{ url }}" >
+        <img class='image-thumb' src="{{- content.field_image_thumb_url|escape|striptags|replace({"\n": "", "\r": "", "\t": ""}) -}}" alt='' />
+      </a>
+    {% endif %}
+    {% if content.field_image_thumb %}
+      {{ content.field_image_thumb }}
+    {% endif %}
+  </div>
+
+  <div class='d-flex'>
+
+    {{ content.field_vote_up_down }}
+
+    <div class="d-flex flex-column" >
+
+      {{ title_prefix }}
+      {% if label and not page %}
+        <h5{{ title_attributes }}>
+          <a href="{{ url }}" rel="bookmark">{{ label }}</a>
+        </h5>
+      {% endif %}
+      {{ title_suffix }}
+
+      {% if display_submitted %}
+
+        <div{{ author_attributes.addClass('node__submitted') }}>
+          {% trans %}Submitted by {{ author_name }} on {{ date }}{% endtrans %}
+          {{ metadata }}
+        </div>
+
+      {% endif %}
+
+      <div{{ content_attributes.addClass('node__content') }}>
+        {{ content | without('field_vote_up_down') | without('field_image_thumb') | without('field_image_thumb_url') }}
+      </div>
+
+    </div>
+  </div>
+
+</article>
+
