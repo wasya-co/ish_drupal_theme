@@ -499,7 +499,8 @@ h1.page-title {
 /* webform */
 .block-webform-block form .form-item {
   width: 100%; }
-  .block-webform-block form .form-item input {
+  .block-webform-block form .form-item input[type='text'],
+  .block-webform-block form .form-item input[type='email'] {
     width: 100%; }
 
 /* widths */
