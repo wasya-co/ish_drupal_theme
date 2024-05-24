@@ -1,0 +1,12 @@
+
+{%
+  set classes = [ 'Aphorism' ]
+%}
+<span{{ attributes.addClass(classes) }}>
+
+  <i class="fa-solid fa-quote-left" style="font-size: 5em;" ></i>
+
+  {%- for item in items -%}
+    {{ item.content }}
+  {%- endfor -%}
+</span>
