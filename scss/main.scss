@@ -575,7 +575,8 @@ h1.page-title {
   .form-item {
     width: 100%;
 
-    input {
+    input[type='text'],
+    input[type='email'] {
       width: 100%;
     }
   }
