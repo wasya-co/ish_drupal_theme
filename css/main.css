@@ -494,12 +494,10 @@ h1.page-title {
 
 /* W */
 /* webform */
-.block-webform-block input {
-  max-width: 100%; }
-
-.block-webform-block .form-item {
-  max-width: 95vw;
-  margin: auto; }
+.block-webform-block form .form-item {
+  width: 100%; }
+  .block-webform-block form .form-item input {
+    width: 100%; }
 
 /* widths */
 .fullwidth {
