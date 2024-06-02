@@ -570,15 +570,18 @@ h1.page-title {
 /* W */
 
 /* webform */
-.block-webform-block {
-  input {
-    max-width: 100%;
-  }
+.block-webform-block form {
+
   .form-item {
-    max-width: 95vw;
-    margin: auto;
+    width: 100%;
+
+    input[type='text'],
+    input[type='email'] {
+      width: 100%;
+    }
   }
 }
+
 
 /* widths */
 
