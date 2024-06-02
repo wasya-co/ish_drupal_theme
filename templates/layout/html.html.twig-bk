@@ -38,6 +38,8 @@
     <title>{{ head_title|safe_join(' | ') }}</title>
     <css-placeholder token="{{ placeholder_token }}" >
     <js-placeholder token="{{ placeholder_token }}" >
+
+    <script type="text/javascript" src="https://platform-api.sharethis.com/js/sharethis.js#property=665cfa9cfef97000199a5e23&product=inline-share-buttons&source=platform" async="async"></script>
   </head>
   <body{{ attributes.addClass(body_classes) }}>
     {# Keyboard navigation/accessibility link to main content section in page.html.twig : #}
