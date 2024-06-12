@@ -1,0 +1,49 @@
+
+<div class='maxwidth'>
+
+  {%
+    set classes = [
+      'wco-id-' ~ node.id,
+      'node',
+      'node--type-' ~ node.bundle|clean_class,
+      node.isPromoted() ? 'node--promoted',
+      node.isSticky() ? 'node--sticky',
+      not node.isPublished() ? 'node--unpublished',
+      view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
+    ]
+  %}
+  {{ attach_library('ish_drupal_theme/node') }}
+  <article{{ attributes.addClass(classes) }}>
+
+
+    {{ content.field_vote_up_down }}
+
+    {{ title_prefix }}
+    {% if label %}
+      <h2{{ title_attributes.addClass('text-center mt-4 mb-4 ') }}>{{ label }}</h2>
+    {% endif %}
+    {{ title_suffix }}
+
+    {% if display_submitted %}
+      <footer class="node__meta">
+        {{ author_picture }}
+        <div{{ author_attributes.addClass('node__submitted') }}>
+          By {{ author_name }} on {{ node.created.value|date('Y-m-d') }}
+          {{ metadata }}
+        </div>
+      </footer>
+    {% endif %}
+
+    <div class="sharethis-inline-share-buttons mb-2"></div>
+
+    <div{{ content_attributes.addClass('node__content') }}>
+      {{ content }}
+    </div>
+
+    <div class="clearfix"></div>
+
+  </article>
+
+</div>
+
+
