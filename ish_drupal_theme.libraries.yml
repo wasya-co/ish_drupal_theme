@@ -3,6 +3,8 @@ base:
   js:
     vendor/js/bootstrap@4.5.2.min.js:
       minified: true
+    vendor/js/fa-6.5.2-all.min.js:
+      minified: true
     js/main.js: {}
 
   css:
@@ -12,9 +14,9 @@ base:
         weight: -10
 
     layout:
-      # vendor/css/bootstrap@4.5.2.min.css:
-      #   minified: true
-      #   weight: -10
+      vendor/css/bootstrap@4.5.2.min.css:
+        minified: true
+        weight: -10
 
     component:
       css/components/action-links.css:
