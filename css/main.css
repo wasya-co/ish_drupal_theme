@@ -20,6 +20,7 @@ header.header-v0-0-0 {
     margin-bottom: 2em; }
   header.header-v0-0-0 .a1 {
     height: 40vh;
+    width: 100%;
     min-height: 300px;
     background-position: center;
     background-size: cover;
