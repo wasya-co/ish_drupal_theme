@@ -1,7 +1,7 @@
 {%
   set classes = [
     'layout',
-    'layout--twocol',
+    'layout--threecol',
     settings.extra_classes,
   ]
 %}
@@ -18,6 +18,12 @@
       {% if content.second %}
         <div {{ region_attributes.second.addClass(settings.col2_classes) }}>
           {{ content.second }}
+        </div>
+      {% endif %}
+
+      {% if content.third %}
+        <div {{ region_attributes.third.addClass(settings.col3_classes) }}>
+          {{ content.third }}
         </div>
       {% endif %}
 

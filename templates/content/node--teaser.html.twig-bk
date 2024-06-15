@@ -1,11 +1,13 @@
 
 {#
-  2023-12-06 :: Teaser is not a card. It is a col-md-12 sort of a display.
+  2023-12-06 :: Teaser is not a card, I should not need a template for it.
+    Nope... turns out, teaser looks like a card, so I need this file.
+    (Not really, I can just add a single class Card to each row...)
 #}
 
 {%
   set classes = [
-    'Teaser',
+    'Card',
 
     'node',
     'node--type-' ~ node.bundle|clean_class,
@@ -19,24 +21,26 @@
 
 <article{{ attributes.addClass(classes) }}>
 
+
+
   <div class='d-flex'>
-    <div class='mr-2' style="" >
-      {{ content.field_vote_up_down }}
-    </div>
+
+    {{ content.field_vote_up_down }}
+
     <div class='d-flex lvl-1 '>
 
-      <div class="d-flex mr-2 test-0" >
-        {% if content.field_image_thumb_url %}
-          <a href="{{ url }}" >
-            <img class='image-thumb' src="{{- content.field_image_thumb_url|escape|striptags|replace({"\n": "", "\r": "", "\t": ""}) -}}" alt='' />
-          </a>
-        {% endif %}
-        {% if content.field_image_thumb %}
-          {{ content.field_image_thumb }}
-        {% endif %}
+      {% if content.field_image_thumb_url %}
+        <a href="{{ url }}" >
+          <img class='image-thumb' src="{{- content.field_image_thumb_url|escape|striptags|replace({"\n": "", "\r": "", "\t": ""}) -}}" alt='' />
+        </a>
+      {% endif %}
+      {% if content.field_image_thumb %}
+        {{ content.field_image_thumb }}
+      {% endif %}
 
-      </div>
-      <div class=''>
+
+      <div class='ml-2'>
+
         {{ title_prefix }}
         {% if label and not page %}
           <h2{{ title_attributes }}>

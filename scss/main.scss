@@ -1,8 +1,10 @@
 
+@import "./aphorism.scss";
 @import "./block--header.scss";
 @import "./Card.scss";
 @import "./comments.scss";
 @import "./fonts.scss";
+@import "./vud-widget.scss";
 
 article {
   img {
@@ -147,10 +149,12 @@ article.node--type-contributed-post.node--view-mode-teaser,
   align-items: center;
 }
 
-/* forms */
-/*
-input.field--name-comment {
-  max-width: 100%;
+.fullheight {
+  align-items: stretch;
+
+  .Card {
+    height: calc( 100% - 30px );
+  }
 }
 
 /* I */
@@ -254,7 +258,7 @@ html[lang='ru'] .block-language li[hreflang="es"],
 
       li[hreflang="en"] {
         &:before {
-          background: url('http://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2023/09/26212539/40x26-usa-tiny.png');
+          background: url('//d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2023/09/26212539/40x26-usa-tiny.png');
         }
       }
 
@@ -329,6 +333,10 @@ article.media--type-remote-video.media--view-mode-full {
 }
 
 /* P */
+.padded {
+  margin: 0.5rem;
+}
+
 h1.page-title {
   margin: 1em 0 0 0;
   text-align: center;
@@ -562,15 +570,18 @@ h1.page-title {
 /* W */
 
 /* webform */
-.block-webform-block {
-  input {
-    max-width: 100%;
-  }
+.block-webform-block form {
+
   .form-item {
-    max-width: 95vw;
-    margin: auto;
+    width: 100%;
+
+    input[type='text'],
+    input[type='email'] {
+      width: 100%;
+    }
   }
 }
+
 
 /* widths */
 
