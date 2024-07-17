@@ -81,6 +81,10 @@ pre {
   height: 32px;
   background: var(--wco-chip-bg-color);
   position: relative;
+
+  a {
+    color: #999;
+  }
 }
 .Chip::before {
   content: "";
@@ -104,7 +108,18 @@ pre {
   border-bottom: 17px solid var(--wco-chip-bg-color);
   border-right: 12px solid transparent;
 }
-
+.Chip-2 {
+  background: lightblue;
+  a {
+    color: white;
+  }
+}
+.Chip-2::before {
+  border-top: 17px solid lightblue;
+}
+.Chip-2::after {
+  border-bottom: 17px solid lightblue;
+}
 
 
 /*
