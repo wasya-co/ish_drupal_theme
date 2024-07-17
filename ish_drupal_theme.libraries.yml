@@ -13,10 +13,11 @@ base:
       css/main.css:
         weight: -10
 
-    layout:
-      vendor/css/bootstrap@4.5.2.min.css:
-        minified: true
-        weight: -10
+    ## I include this manually in html.html.twig
+    # layout:
+    #   vendor/css/bootstrap@4.5.2.min.css:
+    #     minified: true
+    #     weight: -9
 
     component:
       css/components/action-links.css:
