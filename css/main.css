@@ -245,6 +245,9 @@ article.node--type-contributed-post.node--view-mode-teaser .node__content,
   margin-left: 2em;
   margin-bottom: 1em; }
 
+.field--name-field-subtitle {
+  text-align: center; }
+
 .flex-col,
 .flex-column {
   display: flex;
