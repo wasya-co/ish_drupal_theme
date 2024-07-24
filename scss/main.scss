@@ -35,10 +35,11 @@ pre {
 
 /* B */
 
-// 2023-12-07 :: be ablet to valign 2col img+text
-.block-inline-blockbasic {
-  height: 100%;
-}
+/* 2023-12-07 :: be ablet to valign 2col img+text */
+/* 2024-07-19 :: nonsense! removed. */
+// .block-inline-blockbasic {
+//   height: 100%;
+// }
 
 /* BibliographyWebsite */
 
@@ -156,6 +157,10 @@ article.node--type-contributed-post.node--view-mode-teaser,
 
 /* F */
 
+.Featured.view {
+  margin-left: 2em;
+  margin-bottom: 1em;
+}
 
 .flex-col,
 .flex-column {

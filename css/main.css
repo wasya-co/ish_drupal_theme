@@ -147,9 +147,8 @@ pre {
   padding: 1em; }
 
 /* B */
-.block-inline-blockbasic {
-  height: 100%; }
-
+/* 2023-12-07 :: be ablet to valign 2col img+text */
+/* 2024-07-19 :: nonsense! removed. */
 /* BibliographyWebsite */
 .view-bibliography-websites .view-content,
 .view-dashboard-websites .view-content {
@@ -242,6 +241,10 @@ article.node--type-contributed-post.node--view-mode-teaser .node__content,
     align-items: flex-start; } }
 
 /* F */
+.Featured.view {
+  margin-left: 2em;
+  margin-bottom: 1em; }
+
 .flex-col,
 .flex-column {
   display: flex;
