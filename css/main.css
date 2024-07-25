@@ -216,6 +216,7 @@ pre {
   border-bottom: 17px solid lightblue; }
 
 .City .header {
+  margin-bottom: var(--wco-margin-large);
   min-height: 300px;
   background-position: center center;
   background-size: cover;
