@@ -165,9 +165,6 @@ pre {
   padding: 2px;
   margin-bottom: 10px; }
 
-.block--system {
-  margin: 0 var(--wco-margin-large); }
-
 /* C */
 .center,
 .text-center {
@@ -217,6 +214,18 @@ pre {
 
 .Chip-2::after {
   border-bottom: 17px solid lightblue; }
+
+.City .header {
+  min-height: 300px;
+  background-position: center center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+  .City .header h2, .City .header h3, .City .header h4, .City .header h5 {
+    background: white;
+    padding: 0 1em; }
 
 /*
  * Contributed Post
