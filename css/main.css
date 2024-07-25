@@ -135,7 +135,8 @@ article footer {
   margin: 1em auto; }
 
 html {
-  font-size: 16px; }
+  font-size: 16px;
+  --wco-margin-large: 1em; }
 
 main {
   display: flex;
@@ -163,6 +164,9 @@ pre {
   text-align: center;
   padding: 2px;
   margin-bottom: 10px; }
+
+.block--system {
+  margin: 0 var(--wco-margin-large); }
 
 /* C */
 .center,
@@ -288,6 +292,7 @@ html[lang='ru'] .block-language li[hreflang="ru"],
 ._ {
   border-bottom: 2px solid black; }
 
+/* R */
 .region-footer {
   border-top: 5px solid orange;
   border-bottom: 2px solid orange; }
@@ -338,6 +343,9 @@ html[lang='ru'] .block-language li[hreflang="ru"],
       padding-left: 10px; }
   .region-footer > .maxwidth {
     justify-content: flex-end; } }
+
+.region-help {
+  margin: var(--wco-margin-large); }
 
 /* M */
 article.media--type-remote-video.media--view-mode-full {
@@ -438,6 +446,7 @@ h1.page-title {
   padding: 1em 0 0.5em 0; }
 
 .region-header {
+  border-bottom: 2px solid orange;
   display: flex;
   justify-content: space-between;
   align-items: center; }

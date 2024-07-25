@@ -20,6 +20,8 @@ article {
 
 html {
   font-size: 16px;
+  --wco-margin-large: 1em;
+
 }
 
 main {
@@ -61,6 +63,10 @@ pre {
   padding: 2px;
   // width: 225px;
   margin-bottom: 10px;
+}
+
+.block--system {
+  margin: 0 var(--wco-margin-large);
 }
 
 /* C */
@@ -226,6 +232,8 @@ html[lang='ru'] .block-language li[hreflang="ru"],
   border-bottom: 2px solid black;
 }
 
+/* R */
+
 .region-footer {
   border-top: 5px solid orange;
   border-bottom: 2px solid orange;
@@ -322,6 +330,10 @@ html[lang='ru'] .block-language li[hreflang="ru"],
       justify-content: flex-end;
     }
   }
+}
+
+.region-help {
+  margin: var(--wco-margin-large);
 }
 
 /* M */
@@ -476,7 +488,7 @@ h1.page-title {
 
 .region-header {
   // border: 0;
-  // border-bottom: 2px solid orange;
+  border-bottom: 2px solid orange;
 
   display: flex;
   justify-content: space-between;
