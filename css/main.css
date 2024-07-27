@@ -20,6 +20,7 @@ header.header-v0-0-0 {
     margin-bottom: 2em; }
   header.header-v0-0-0 .a1 {
     height: 40vh;
+    width: 100%;
     min-height: 300px;
     background-position: center;
     background-size: cover;
@@ -134,7 +135,8 @@ article footer {
   margin: 1em auto; }
 
 html {
-  font-size: 16px; }
+  font-size: 16px;
+  --wco-margin-large: 1em; }
 
 main {
   display: flex;
@@ -146,9 +148,8 @@ pre {
   padding: 1em; }
 
 /* B */
-.block-inline-blockbasic {
-  height: 100%; }
-
+/* 2023-12-07 :: be ablet to valign 2col img+text */
+/* 2024-07-19 :: nonsense! removed. */
 /* BibliographyWebsite */
 .view-bibliography-websites .view-content,
 .view-dashboard-websites .view-content {
@@ -178,6 +179,8 @@ pre {
   height: 32px;
   background: var(--wco-chip-bg-color);
   position: relative; }
+  .Chip a {
+    color: #999; }
 
 .Chip::before {
   content: "";
@@ -200,6 +203,30 @@ pre {
   height: 32px;
   border-bottom: 17px solid var(--wco-chip-bg-color);
   border-right: 12px solid transparent; }
+
+.Chip-2 {
+  background: lightblue; }
+  .Chip-2 a {
+    color: white; }
+
+.Chip-2::before {
+  border-top: 17px solid lightblue; }
+
+.Chip-2::after {
+  border-bottom: 17px solid lightblue; }
+
+.City .header {
+  margin-bottom: var(--wco-margin-large);
+  min-height: 300px;
+  background-position: center center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+  .City .header h2, .City .header h3, .City .header h4, .City .header h5 {
+    background: white;
+    padding: 0 1em; }
 
 /*
  * Contributed Post
@@ -228,6 +255,14 @@ article.node--type-contributed-post.node--view-mode-teaser .node__content,
     align-items: flex-start; } }
 
 /* F */
+.Featured.view {
+  margin-left: 2em;
+  margin-bottom: 1em; }
+
+.field--name-field-subtitle {
+  text-align: center;
+  margin-bottom: 2em; }
+
 .flex-col,
 .flex-column {
   display: flex;
@@ -263,10 +298,11 @@ article.node--type-contributed-post.node--view-mode-teaser .node__content,
 html[lang='en'] .block-language li[hreflang="en"],
 html[lang='es'] .block-language li[hreflang="es"],
 html[lang='pt-br'] .block-language li[hreflang="pt-br"],
-html[lang='ru'] .block-language li[hreflang="es"],
+html[lang='ru'] .block-language li[hreflang="ru"],
 ._ {
   border-bottom: 2px solid black; }
 
+/* R */
 .region-footer {
   border-top: 5px solid orange;
   border-bottom: 2px solid orange; }
@@ -317,6 +353,9 @@ html[lang='ru'] .block-language li[hreflang="es"],
       padding-left: 10px; }
   .region-footer > .maxwidth {
     justify-content: flex-end; } }
+
+.region-help {
+  margin: var(--wco-margin-large); }
 
 /* M */
 article.media--type-remote-video.media--view-mode-full {
@@ -417,6 +456,7 @@ h1.page-title {
   padding: 1em 0 0.5em 0; }
 
 .region-header {
+  border-bottom: 2px solid orange;
   display: flex;
   justify-content: space-between;
   align-items: center; }

@@ -20,6 +20,8 @@ article {
 
 html {
   font-size: 16px;
+  --wco-margin-large: 1em;
+
 }
 
 main {
@@ -35,10 +37,11 @@ pre {
 
 /* B */
 
-// 2023-12-07 :: be ablet to valign 2col img+text
-.block-inline-blockbasic {
-  height: 100%;
-}
+/* 2023-12-07 :: be ablet to valign 2col img+text */
+/* 2024-07-19 :: nonsense! removed. */
+// .block-inline-blockbasic {
+//   height: 100%;
+// }
 
 /* BibliographyWebsite */
 
@@ -62,6 +65,10 @@ pre {
   margin-bottom: 10px;
 }
 
+.block--system {
+  // margin: 0 var(--wco-margin-large);
+}
+
 /* C */
 
 
@@ -81,6 +88,10 @@ pre {
   height: 32px;
   background: var(--wco-chip-bg-color);
   position: relative;
+
+  a {
+    color: #999;
+  }
 }
 .Chip::before {
   content: "";
@@ -104,7 +115,40 @@ pre {
   border-bottom: 17px solid var(--wco-chip-bg-color);
   border-right: 12px solid transparent;
 }
+.Chip-2 {
+  background: lightblue;
+  a {
+    color: white;
+  }
+}
+.Chip-2::before {
+  border-top: 17px solid lightblue;
+}
+.Chip-2::after {
+  border-bottom: 17px solid lightblue;
+}
 
+.City {
+  .header {
+    // border: 1px solid red;
+    margin-bottom: var(--wco-margin-large);
+    min-height: 300px;
+
+    background-position: center center;
+    background-size: cover;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h2, h3, h4, h5 {
+      background: white;
+      padding: 0 1em;
+    }
+
+  }
+}
 
 
 /*
@@ -141,6 +185,15 @@ article.node--type-contributed-post.node--view-mode-teaser,
 
 /* F */
 
+.Featured.view {
+  margin-left: 2em;
+  margin-bottom: 1em;
+}
+
+.field--name-field-subtitle {
+  text-align: center;
+  margin-bottom: 2em;
+}
 
 .flex-col,
 .flex-column {
@@ -196,10 +249,12 @@ article.node--type-contributed-post.node--view-mode-teaser,
 html[lang='en'] .block-language li[hreflang="en"],
 html[lang='es'] .block-language li[hreflang="es"],
 html[lang='pt-br'] .block-language li[hreflang="pt-br"],
-html[lang='ru'] .block-language li[hreflang="es"],
+html[lang='ru'] .block-language li[hreflang="ru"],
 ._ {
   border-bottom: 2px solid black;
 }
+
+/* R */
 
 .region-footer {
   border-top: 5px solid orange;
@@ -297,6 +352,10 @@ html[lang='ru'] .block-language li[hreflang="es"],
       justify-content: flex-end;
     }
   }
+}
+
+.region-help {
+  margin: var(--wco-margin-large);
 }
 
 /* M */
@@ -451,7 +510,7 @@ h1.page-title {
 
 .region-header {
   // border: 0;
-  // border-bottom: 2px solid orange;
+  border-bottom: 2px solid orange;
 
   display: flex;
   justify-content: space-between;
