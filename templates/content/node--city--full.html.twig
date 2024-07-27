@@ -1,0 +1,35 @@
+
+{%
+  set classes = [
+    'City',
+    'node',
+    'node--type-' ~ node.bundle|clean_class,
+    node.isPromoted() ? 'node--promoted',
+    node.isSticky() ? 'node--sticky',
+    not node.isPublished() ? 'node--unpublished',
+    view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
+  ]
+%}
+{{ attach_library('ish_drupal_theme/node') }}
+<article{{ attributes.addClass(classes) }}>
+
+  {#
+    <img class='image-thumb' src="{{- node.field_image_hero_url|escape|striptags|replace({"\n": "", "\r": "", "\t": ""}) -}}" alt='' />
+  #}
+  <div class='header' style="background-image: url('{{- node.field_image_hero_url.value -}}'); " >
+    <h2 class='title'>
+      {{ node.title.value }}
+    </h2>
+    <h5 class='subtitle'>
+      {{ node.field_subtitle.value }}
+    </h5>
+  </div>
+
+
+  <div{{ content_attributes.addClass('node__content') }}>
+    {{ content }}
+  </div>
+
+  <div class="clearfix"></div>
+
+</article>
