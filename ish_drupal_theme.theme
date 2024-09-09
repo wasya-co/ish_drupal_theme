@@ -48,4 +48,3 @@ function ish_drupal_theme_theme($existing, $type, $theme, $path) {
   ];
 
 }
-
