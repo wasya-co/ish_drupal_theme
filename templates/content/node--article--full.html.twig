@@ -15,14 +15,14 @@
 <article{{ attributes.addClass(classes) }}>
 
   <div class='row'>
-    <div class='col-2 col-md-1'>
+    <div class='col-2 col-md-1 voteW'>
       {{ content.field_vote_up_down }}
     </div>
     <div class='col-10 col-md-11'>
 
       {{ title_prefix }}
       {% if label %}
-        <h2{{ title_attributes.addClass('title mt-4 mb-4 ') }}>{{ label }}</h2>
+        <h2{{ title_attributes.addClass('title mt-4 ') }}>{{ label }}</h2>
       {% endif %}
       {{ title_suffix }}
 
@@ -39,13 +39,21 @@
     </div>
   </div>
   <div class='row'>
-    <div class='col-12'>
+    <div class='col-md-6'></div>
+    <div class='col-md-6'>
 
       <div class="sharethis-inline-share-buttons mb-2"></div>
-      <div{{ content_attributes.addClass('node__content') }}>
-        {{ content | without('field_vote_up_down') | without('field_image_hero') }}
-      </div>
+      {{ content.field_tags }}
+      {{ content.field_tag_contrib }}
+      {{ content.field_issue }}
 
+    </div>
+  </div>
+  <div class='row'>
+    <div class='col-sm-12'>
+      <div{{ content_attributes.addClass('node__content') }}>
+        {{ content | without('field_vote_up_down') | without('field_image_hero') | without('field_tags') | without('field_tags_contrib') | without('field_issue') }}
+      </div>
     </div>
   </div>
 
