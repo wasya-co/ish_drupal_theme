@@ -140,7 +140,7 @@ article img {
 
 article footer {
   max-width: 1000px;
-  margin: 1em auto; }
+  margin: 0 auto 1em auto; }
 
 html {
   font-size: 16px;
@@ -242,7 +242,7 @@ pre {
 **/
 article.node--type-article h2.title {
   display: flex;
-  justify-content: center; }
+  /* 2024-09-11 :: left-align, to look good with vote up/down */ }
 
 article.node--type-contributed-post.node--view-mode-full {
   max-width: 1000px;
@@ -465,6 +465,11 @@ h1.page-title {
 .valign-top {
   vertical-align: top;
   align-items: flex-start; }
+
+.voteW {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end; }
 
 /* Y */
 .YoutubeVideoPlayers {
