@@ -492,6 +492,11 @@ h1.page-title {
   .region-filters {
     flex-direction: column; } }
 
+/* G */
+.gray,
+.grey {
+  text-color: grey; }
+
 /* H */
 /* header?! */
 .region-headerW {
