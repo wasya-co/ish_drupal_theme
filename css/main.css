@@ -399,6 +399,13 @@ h1.page-title {
   text-align: center; }
 
 /* S */
+.simplenews-subscriber-form .field--name-field-first-name,
+.simplenews-subscriber-form .field--name-field-last-name,
+.simplenews-subscriber-form .field--name-field-city,
+.simplenews-subscriber-form #edit-mail-0-value--description,
+.simplenews-subscriber-form ._ {
+  display: none; }
+
 .search-form,
 .node_search-results {
   max-width: 1000px;

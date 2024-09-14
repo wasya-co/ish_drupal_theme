@@ -415,6 +415,16 @@ h1.page-title {
 
 /* S */
 
+.simplenews-subscriber-form {
+  .field--name-field-first-name,
+  .field--name-field-last-name,
+  .field--name-field-city,
+  #edit-mail-0-value--description,
+  ._ {
+    display: none;
+  }
+}
+
 .search-form,
 .node_search-results {
   // border: 2px solid blue;
