@@ -22,6 +22,9 @@ html {
   font-size: 16px;
   --wco-margin-large: 1em;
 
+  --wco-dol-bg-color: white;    // unused
+  --wco-dol-bg2-color: #efefef; // simplenews-subscribe
+
 }
 
 main {
@@ -415,7 +418,15 @@ h1.page-title {
 
 /* S */
 
+/* herehere */
+
 .simplenews-subscriber-form {
+  background: var(--wco-dol-bg2-color);
+  padding: 1em;
+  border: 1px solid gray;
+  border-radius: 5px;
+  display: inline-block;
+
   .field--name-field-first-name,
   .field--name-field-last-name,
   .field--name-field-city,
