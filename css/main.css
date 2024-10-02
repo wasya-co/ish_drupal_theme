@@ -175,6 +175,13 @@ pre {
   padding: 2px;
   margin-bottom: 10px; }
 
+table.bordered {
+  border: 1px solid grey !important; }
+  table.bordered td {
+    border: 1px solid grey !important;
+    padding: 0.2em;
+    vertical-align: top; }
+
 /* C */
 .center,
 .text-center {
