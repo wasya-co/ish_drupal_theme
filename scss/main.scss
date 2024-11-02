@@ -86,10 +86,17 @@ table.bordered {
 
 
 
-.center, /* @deprecated, do not use! */
-.text-center {
+ div.center,
+   p.center,
+span.center {
   text-align: center;
 }
+table.center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
 
 .Chip {
   --wco-chip-bg-color: #9ef;
@@ -494,7 +501,9 @@ h1.page-title {
     display: flex;
   }
 }
-
+.text-center {
+  text-align: center;
+}
 .view-terms-conditions {
   border-left: 1px solid orange;
   padding-left: 1em;
