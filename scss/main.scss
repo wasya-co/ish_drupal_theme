@@ -234,6 +234,20 @@ article.node--type-contributed-post.node--view-mode-teaser,
   align-items: center;
 }
 
+.form-checkboxes {
+  display: flex;
+  flex-wrap: wrap;
+
+  border: 1px solid gray;
+  padding: 1em;
+  border-radius: 0.5em;
+
+  > div.form-item {
+    min-width: 200px;
+  }
+
+}
+
 .fullheight {
   align-items: stretch;
 
