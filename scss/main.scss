@@ -69,12 +69,18 @@ main {
 
 table.bordered {
   border: 1px solid grey !important;
+
   td {
     border: 1px solid grey !important;
     padding: 0.2em;
     vertical-align: top;
   }
+  th {
+    background: #cecece;
+    border: 1px solid grey !important;
+    padding: 0.2em;
 
+  }
 }
 
 /* C */
