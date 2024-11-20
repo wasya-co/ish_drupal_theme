@@ -33,11 +33,6 @@ main {
   width: 100%;
 }
 
-pre {
-  background: #eee;
-  padding: 1em;
-}
-
 /* B */
 
 /* 2023-12-07 :: be ablet to valign 2col img+text */
@@ -72,14 +67,37 @@ pre {
   // margin: 0 var(--wco-margin-large);
 }
 
+table.bordered {
+  border: 1px solid grey !important;
+
+  td {
+    border: 1px solid grey !important;
+    padding: 0.2em;
+    vertical-align: top;
+  }
+  th {
+    background: #cecece;
+    border: 1px solid grey !important;
+    padding: 0.2em;
+
+  }
+}
+
 /* C */
 
 
 
-.center, /* @deprecated, do not use! */
-.text-center {
+ div.center,
+   p.center,
+span.center {
   text-align: center;
 }
+table.center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
 
 .Chip {
   --wco-chip-bg-color: #9ef;
@@ -220,6 +238,20 @@ article.node--type-contributed-post.node--view-mode-teaser,
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.form-checkboxes {
+  display: flex;
+  flex-wrap: wrap;
+
+  border: 1px solid gray;
+  padding: 1em;
+  border-radius: 0.5em;
+
+  > div.form-item {
+    min-width: 200px;
+  }
+
 }
 
 .fullheight {
@@ -484,10 +516,13 @@ h1.page-title {
     display: flex;
   }
 }
-
+.text-center {
+  text-align: center;
+}
 .view-terms-conditions {
-  border-left: 1px solid orange;
-  padding-left: 1em;
+  // border-left: 1px solid orange;
+  // padding-left: 1em;
+
 
   display: flex;
   align-items: center;
