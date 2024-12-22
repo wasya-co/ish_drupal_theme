@@ -38,17 +38,20 @@
 
     </div>
   </div>
-  <div class='row'>
-    <div class='col-md-6'></div>
-    <div class='col-md-6'>
 
+  <div class='d-flex'>
+    <a href="{{ content.field_image_thumb.0 }}" data-lightbox="article-thumb" >
+      <img style="max-height: 80px;" src="{{ content.field_image_thumb.0 }}" alt='' />
+      &nbsp;
+    </a>
+    <div class='a'>
       <div class="sharethis-inline-share-buttons mb-2"></div>
       {{ content.field_tags }}
       {{ content.field_tag_contrib }}
       {{ content.field_issue }}
-
     </div>
   </div>
+
   <div class='row'>
     <div class='col-sm-12'>
       <div{{ content_attributes.addClass('node__content') }}>
