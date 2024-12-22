@@ -153,6 +153,10 @@ main {
   justify-content: center;
   width: 100%; }
 
+pre {
+  background: #eee;
+  padding: 1em; }
+
 /* B */
 /* 2023-12-07 :: be ablet to valign 2col img+text */
 /* 2024-07-19 :: nonsense! removed. */
@@ -171,26 +175,10 @@ main {
   padding: 2px;
   margin-bottom: 10px; }
 
-table.bordered {
-  border: 1px solid grey !important; }
-  table.bordered td {
-    border: 1px solid grey !important;
-    padding: 0.2em;
-    vertical-align: top; }
-  table.bordered th {
-    background: #cecece;
-    border: 1px solid grey !important;
-    padding: 0.2em; }
-
 /* C */
-div.center,
-p.center,
-span.center {
+.center,
+.text-center {
   text-align: center; }
-
-table.center {
-  margin-left: auto;
-  margin-right: auto; }
 
 .Chip {
   --wco-chip-bg-color: #9ef;
@@ -294,7 +282,6 @@ article.node--type-contributed-post.node--view-mode-teaser .node__content,
   margin-bottom: 1em; }
 
 .field--name-field-subtitle {
-  text-align: center;
   margin-bottom: 2em; }
 
 .flex-col,
@@ -302,15 +289,6 @@ article.node--type-contributed-post.node--view-mode-teaser .node__content,
   display: flex;
   flex-direction: column;
   align-items: center; }
-
-.form-checkboxes {
-  display: flex;
-  flex-wrap: wrap;
-  border: 1px solid gray;
-  padding: 1em;
-  border-radius: 0.5em; }
-  .form-checkboxes > div.form-item {
-    min-width: 200px; }
 
 .fullheight {
   align-items: stretch; }
@@ -474,10 +452,9 @@ h1.page-title {
   .Tags .field__items {
     display: flex; }
 
-.text-center {
-  text-align: center; }
-
 .view-terms-conditions {
+  border-left: 1px solid orange;
+  padding-left: 1em;
   display: flex;
   align-items: center; }
   .view-terms-conditions .view-content.row {

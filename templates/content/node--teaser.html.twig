@@ -45,7 +45,7 @@
         {% endif %}
         {{ title_suffix }}
 
-        {% if display_submitted %}
+        {# {% if display_submitted %}
           <footer class="node__meta">
             {{ author_picture }}
             <div{{ author_attributes.addClass('node__submitted') }}>
@@ -53,7 +53,7 @@
               {{ metadata }}
             </div>
           </footer>
-        {% endif %}
+        {% endif %} #}
 
         <div{{ content_attributes.addClass('node__content') }}>
           {{ content | without('field_vote_up_down') | without('field_image_thumb') | without('field_image_thumb_url') }}
