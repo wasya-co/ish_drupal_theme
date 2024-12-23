@@ -134,6 +134,15 @@ section.field--type-comment {
 .vote-current-score {
   padding-top: 0; }
 
+form.user-login-form .description {
+  display: none; }
+
+.form-type-email {
+  display: flex; }
+
+.form-type-password {
+  display: flex; }
+
 article img {
   max-width: 100%;
   height: auto; }
@@ -160,6 +169,14 @@ pre {
 /* B */
 /* 2023-12-07 :: be ablet to valign 2col img+text */
 /* 2024-07-19 :: nonsense! removed. */
+div.bordered {
+  border: 1px solid black; }
+
+table.bordered {
+  border: 1px solid black; }
+  table.bordered td {
+    border: 1px solid black; }
+
 /* BibliographyWebsite */
 .view-bibliography-websites .view-content,
 .view-dashboard-websites .view-content {
@@ -176,9 +193,8 @@ pre {
   margin-bottom: 10px; }
 
 /* C */
-.center,
-.text-center {
-  text-align: center; }
+.center {
+  margin: auto; }
 
 .Chip {
   --wco-chip-bg-color: #9ef;
@@ -280,6 +296,9 @@ article.node--type-contributed-post.node--view-mode-teaser .node__content,
 .Featured.view {
   margin-left: 2em;
   margin-bottom: 1em; }
+
+.field--name-field-comments ul.tips {
+  display: none; }
 
 .field--name-field-subtitle {
   margin-bottom: 2em; }
@@ -451,6 +470,9 @@ h1.page-title {
     padding-right: 1em; }
   .Tags .field__items {
     display: flex; }
+
+.text-center {
+  text-align: center; }
 
 .view-terms-conditions {
   border-left: 1px solid orange;
