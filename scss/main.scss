@@ -5,6 +5,7 @@
 @import "./comments.scss";
 @import "./fonts.scss";
 @import "./vud-widget.scss";
+@import "./users.scss";
 
 article {
   img {
@@ -46,6 +47,18 @@ pre {
 //   height: 100%;
 // }
 
+div.bordered {
+  border: 1px solid black;
+}
+
+table.bordered {
+  border: 1px solid black;
+
+  td {
+    border: 1px solid black;
+  }
+}
+
 /* BibliographyWebsite */
 
 .view-bibliography-websites,
@@ -76,9 +89,8 @@ pre {
 
 
 
-.center, /* @deprecated, do not use! */
-.text-center {
-  text-align: center;
+.center {
+  margin: auto;
 }
 
 .Chip {
@@ -208,6 +220,12 @@ article.node--type-contributed-post.node--view-mode-teaser,
 .Featured.view {
   margin-left: 2em;
   margin-bottom: 1em;
+}
+
+.field--name-field-comments {
+  ul.tips {
+    display: none;
+  }
 }
 
 .field--name-field-subtitle {
@@ -483,6 +501,9 @@ h1.page-title {
   .field__items {
     display: flex;
   }
+}
+.text-center {
+  text-align: center;
 }
 
 .view-terms-conditions {
