@@ -423,7 +423,6 @@ h1.page-title {
   text-align: center; }
 
 /* S */
-/* herehere */
 .simplenews-subscriber-form {
   background: var(--wco-dol-bg2-color);
   padding: 1em;
@@ -461,6 +460,11 @@ h1.page-title {
 
 .spacer-500 {
   height: 500px; }
+
+.stickied-list .item {
+  border-left: 5px solid gray;
+  padding-left: 5px;
+  margin-bottom: 1em; }
 
 /* T */
 .Tags {
