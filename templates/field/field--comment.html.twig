@@ -52,10 +52,10 @@
     <h2 class="title comment-form__title">{{ 'Add new comment'|t }}</h2>
     {{ comment_form }}
   {% else %}
-    {# Please <a href="/user/login">login</a> or <a href="/user/register">register</a> to post a comment. #}
+    Please <a href="/user/login">login</a> or <a href="/user/register">register</a> to post a comment.
 
-    <p>Please login or register to post a comment.</p>
-    {% include '@ish_drupal_theme/user/login_or_register.html.twig' %}
+    {# <p>Please login or register to post a comment.</p>
+    {% include '@ish_drupal_theme/user/login_or_register.html.twig' %} #}
 
 
   {% endif %}
