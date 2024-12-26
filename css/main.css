@@ -461,10 +461,12 @@ h1.page-title {
 .spacer-500 {
   height: 500px; }
 
-.stickied-list .item {
-  border-left: 5px solid gray;
-  padding-left: 5px;
-  margin-bottom: 1em; }
+.stickied-list {
+  margin-bottom: 2em; }
+  .stickied-list .item {
+    border-left: 5px solid gray;
+    padding-left: 5px;
+    margin-bottom: 1em; }
 
 /* T */
 .Tags {
