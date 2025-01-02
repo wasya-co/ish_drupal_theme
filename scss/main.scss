@@ -457,6 +457,16 @@ h1.page-title {
   }
 }
 
+.path-search .item-list {
+  max-width: 1000px;
+  margin: auto;
+
+  ol {
+    margin: 1em;
+    padding: 0;
+  }
+}
+
 .search-form,
 .node_search-results {
   // border: 2px solid blue;
