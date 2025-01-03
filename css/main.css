@@ -436,6 +436,13 @@ h1.page-title {
   .simplenews-subscriber-form ._ {
     display: none; }
 
+.path-search .item-list {
+  max-width: 1000px;
+  margin: auto; }
+  .path-search .item-list ol {
+    margin: 1em;
+    padding: 0; }
+
 .search-form,
 .node_search-results {
   max-width: 1000px;
