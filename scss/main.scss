@@ -215,6 +215,24 @@ article.node--type-contributed-post.node--view-mode-teaser,
 }
 
 /* E */
+
+form.user-form {
+  max-width: 1000px;
+  margin: auto;
+
+  .form-type-email,
+  .form-type-password,
+  ._ {
+    flex-direction: column;
+  }
+
+  .form-type-managed-file {
+    padding: 0.5em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+}
+
 /* F */
 
 .Featured.view {
@@ -296,6 +314,10 @@ html[lang='pt-br'] .block-language li[hreflang="pt-br"],
 html[lang='ru'] .block-language li[hreflang="ru"],
 ._ {
   border-bottom: 2px solid black;
+}
+
+.layout-container {
+  margin: 0;
 }
 
 /* R */
