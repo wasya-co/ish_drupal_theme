@@ -503,6 +503,13 @@ h1.page-title {
   .Tags .field__items {
     display: flex; }
 
+/* admin form tags are inline. */
+div[class^='field--name-field-tag'] .form-checkboxes {
+  display: flex; }
+
+.form-checkboxes {
+  display: flex; }
+
 .text-center {
   text-align: center; }
 
