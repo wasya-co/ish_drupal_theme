@@ -1,0 +1,13 @@
+
+.toc {
+  .views-row {
+    display: flex;
+
+    .views-field-field-weight {
+      padding-right: .4em;
+      &:after {
+        content: " - ";
+      }
+    }
+  }
+}
