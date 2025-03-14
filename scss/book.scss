@@ -4,7 +4,14 @@
     display: flex;
 
     .views-field-field-weight {
+      display: flex;
+
       padding-right: .4em;
+
+      .field-content {
+        padding-right: .4em;
+      }
+
       &:after {
         content: " - ";
       }
