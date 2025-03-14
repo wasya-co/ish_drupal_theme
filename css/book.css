@@ -1,0 +1,6 @@
+.toc .views-row {
+  display: flex; }
+  .toc .views-row .views-field-field-weight {
+    padding-right: .4em; }
+    .toc .views-row .views-field-field-weight:after {
+      content: " - "; }
