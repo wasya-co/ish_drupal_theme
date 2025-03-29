@@ -143,6 +143,16 @@ form.user-login-form .description {
 .form-type-password {
   display: flex; }
 
+.toc .views-row {
+  display: flex; }
+  .toc .views-row .views-field-field-weight {
+    display: flex;
+    padding-right: .4em; }
+    .toc .views-row .views-field-field-weight .field-content {
+      padding-right: .4em; }
+    .toc .views-row .views-field-field-weight:after {
+      content: " - "; }
+
 article img {
   max-width: 100%;
   height: auto; }
