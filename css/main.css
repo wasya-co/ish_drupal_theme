@@ -200,7 +200,7 @@ table.bordered {
   --wco-chip-bg-color: #9ef;
   background: var(--wco-chip-bg-color);
   border-radius: 1em 0 0 1em;
-  display: inline-block;
+  display: inline;
   height: 32px;
   margin-right: 32px;
   margin-bottom: 0.5em;
@@ -438,8 +438,7 @@ article.media--type-remote-video.media--view-mode-full {
   margin: 0.5rem; }
 
 h1.page-title {
-  margin: 1em 0 0 0;
-  text-align: center; }
+  margin: 1em 0 0 0; }
 
 /* S */
 .simplenews-subscriber-form {
