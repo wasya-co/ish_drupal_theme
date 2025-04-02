@@ -100,6 +100,18 @@ section.field--type-comment {
   section.field--type-comment {
     margin: 1em 5em; } }
 
+.node-contributed-post-form {
+  margin: 1em; }
+
+.form-checkboxes {
+  display: flex;
+  flex-wrap: wrap; }
+  .form-checkboxes .form-item {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 1em;
+    padding: 0.5em; }
+
 /* Fonts */
 .archivo-black {
   font-family: "Archivo Black", sans-serif;
