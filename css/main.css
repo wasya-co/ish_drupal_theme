@@ -175,6 +175,9 @@ pre {
   padding: 2px;
   margin-bottom: 10px; }
 
+.bordered.node--type-location {
+  border: 1px solid red; }
+
 /* C */
 .center,
 .text-center {
