@@ -3,8 +3,11 @@
 @import "./block--header.scss";
 @import "./Card.scss";
 @import "./comments.scss";
+@import "./contributed-post.scss";
 @import "./fonts.scss";
 @import "./vud-widget.scss";
+@import "./users.scss";
+@import "./book.scss";
 
 article {
   img {
@@ -46,6 +49,18 @@ pre {
 //   height: 100%;
 // }
 
+div.bordered {
+  border: 1px solid black;
+}
+
+table.bordered {
+  border: 1px solid black;
+
+  td {
+    border: 1px solid black;
+  }
+}
+
 /* BibliographyWebsite */
 
 .view-bibliography-websites,
@@ -80,9 +95,8 @@ pre {
 
 
 
-.center, /* @deprecated, do not use! */
-.text-center {
-  text-align: center;
+.center {
+  margin: auto;
 }
 
 .Chip {
@@ -90,7 +104,7 @@ pre {
 
   background: var(--wco-chip-bg-color);
   border-radius: 1em 0 0 1em;
-  display: inline-block;
+  display: inline;
   height: 32px;
   margin-right: 32px;
   margin-bottom: 0.5em;
@@ -207,11 +221,35 @@ article.node--type-contributed-post.node--view-mode-teaser,
 }
 
 /* E */
+
+form.user-form {
+  max-width: 1000px;
+  margin: auto;
+
+  .form-type-email,
+  .form-type-password,
+  ._ {
+    flex-direction: column;
+  }
+
+  .form-type-managed-file {
+    padding: 0.5em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+}
+
 /* F */
 
 .Featured.view {
   margin-left: 2em;
   margin-bottom: 1em;
+}
+
+.field--name-field-comments {
+  ul.tips {
+    display: none;
+  }
 }
 
 .field--name-field-subtitle {
@@ -235,6 +273,12 @@ article.node--type-contributed-post.node--view-mode-teaser,
 }
 
 /* I */
+
+.image-style-200x200 {
+  max-width: 200px;
+  width: 100%;
+}
+
 .image-thumb {
   max-width: 200px;
 }
@@ -276,6 +320,10 @@ html[lang='pt-br'] .block-language li[hreflang="pt-br"],
 html[lang='ru'] .block-language li[hreflang="ru"],
 ._ {
   border-bottom: 2px solid black;
+}
+
+.layout-container {
+  margin: 0;
 }
 
 /* R */
@@ -421,12 +469,11 @@ article.media--type-remote-video.media--view-mode-full {
 
 h1.page-title {
   margin: 1em 0 0 0;
-  text-align: center;
+  // text-align: center;
 }
 
 /* S */
 
-/* herehere */
 
 .simplenews-subscriber-form {
   background: var(--wco-dol-bg2-color);
@@ -441,6 +488,16 @@ h1.page-title {
   #edit-mail-0-value--description,
   ._ {
     display: none;
+  }
+}
+
+.path-search .item-list {
+  max-width: 1000px;
+  margin: auto;
+
+  ol {
+    margin: 1em;
+    padding: 0;
   }
 }
 
@@ -474,6 +531,16 @@ h1.page-title {
   height: 500px;
 }
 
+.stickied-list {
+  margin-bottom: 2em;
+
+  .item {
+    border-left: 5px solid gray;
+    padding-left: 5px;
+    margin-bottom: 1em;
+  }
+}
+
 /* T */
 
 .Tags {
@@ -487,6 +554,24 @@ h1.page-title {
   .field__items {
     display: flex;
   }
+}
+
+/* admin form tags are inline. */
+div[class^='field--name-field-tag'] {
+  .form-checkboxes {
+    display: flex;
+  }
+}
+.form-checkboxes {
+  display: flex;
+}
+
+
+
+
+
+.text-center {
+  text-align: center;
 }
 
 .view-terms-conditions {

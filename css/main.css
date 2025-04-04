@@ -100,6 +100,18 @@ section.field--type-comment {
   section.field--type-comment {
     margin: 1em 5em; } }
 
+.node-contributed-post-form {
+  margin: 1em; }
+
+.form-checkboxes {
+  display: flex;
+  flex-wrap: wrap; }
+  .form-checkboxes .form-item {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 1em;
+    padding: 0.5em; }
+
 /* Fonts */
 .archivo-black {
   font-family: "Archivo Black", sans-serif;
@@ -134,6 +146,25 @@ section.field--type-comment {
 .vote-current-score {
   padding-top: 0; }
 
+form.user-login-form .description {
+  display: none; }
+
+.form-type-email {
+  display: flex; }
+
+.form-type-password {
+  display: flex; }
+
+.toc .views-row {
+  display: flex; }
+  .toc .views-row .views-field-field-weight {
+    display: flex;
+    padding-right: .4em; }
+    .toc .views-row .views-field-field-weight .field-content {
+      padding-right: .4em; }
+    .toc .views-row .views-field-field-weight:after {
+      content: " - "; }
+
 article img {
   max-width: 100%;
   height: auto; }
@@ -160,6 +191,14 @@ pre {
 /* B */
 /* 2023-12-07 :: be ablet to valign 2col img+text */
 /* 2024-07-19 :: nonsense! removed. */
+div.bordered {
+  border: 1px solid black; }
+
+table.bordered {
+  border: 1px solid black; }
+  table.bordered td {
+    border: 1px solid black; }
+
 /* BibliographyWebsite */
 .view-bibliography-websites .view-content,
 .view-dashboard-websites .view-content {
@@ -179,15 +218,14 @@ pre {
   border: 1px solid red; }
 
 /* C */
-.center,
-.text-center {
-  text-align: center; }
+.center {
+  margin: auto; }
 
 .Chip {
   --wco-chip-bg-color: #9ef;
   background: var(--wco-chip-bg-color);
   border-radius: 1em 0 0 1em;
-  display: inline-block;
+  display: inline;
   height: 32px;
   margin-right: 32px;
   margin-bottom: 0.5em;
@@ -279,10 +317,25 @@ article.node--type-contributed-post.node--view-mode-teaser .node__content,
   border-radius: 5px; }
 
 /* E */
+form.user-form {
+  max-width: 1000px;
+  margin: auto; }
+  form.user-form .form-type-email,
+  form.user-form .form-type-password,
+  form.user-form ._ {
+    flex-direction: column; }
+  form.user-form .form-type-managed-file {
+    padding: 0.5em;
+    border: 1px solid #ccc;
+    border-radius: 5px; }
+
 /* F */
 .Featured.view {
   margin-left: 2em;
   margin-bottom: 1em; }
+
+.field--name-field-comments ul.tips {
+  display: none; }
 
 .field--name-field-subtitle {
   margin-bottom: 2em; }
@@ -299,6 +352,10 @@ article.node--type-contributed-post.node--view-mode-teaser .node__content,
     height: calc( 100% - 30px); }
 
 /* I */
+.image-style-200x200 {
+  max-width: 200px;
+  width: 100%; }
+
 .image-thumb {
   max-width: 200px; }
 
@@ -325,6 +382,9 @@ html[lang='pt-br'] .block-language li[hreflang="pt-br"],
 html[lang='ru'] .block-language li[hreflang="ru"],
 ._ {
   border-bottom: 2px solid black; }
+
+.layout-container {
+  margin: 0; }
 
 /* R */
 .region-footer {
@@ -403,11 +463,9 @@ article.media--type-remote-video.media--view-mode-full {
   margin: 0.5rem; }
 
 h1.page-title {
-  margin: 1em 0 0 0;
-  text-align: center; }
+  margin: 1em 0 0 0; }
 
 /* S */
-/* herehere */
 .simplenews-subscriber-form {
   background: var(--wco-dol-bg2-color);
   padding: 1em;
@@ -420,6 +478,13 @@ h1.page-title {
   .simplenews-subscriber-form #edit-mail-0-value--description,
   .simplenews-subscriber-form ._ {
     display: none; }
+
+.path-search .item-list {
+  max-width: 1000px;
+  margin: auto; }
+  .path-search .item-list ol {
+    margin: 1em;
+    padding: 0; }
 
 .search-form,
 .node_search-results {
@@ -446,6 +511,13 @@ h1.page-title {
 .spacer-500 {
   height: 500px; }
 
+.stickied-list {
+  margin-bottom: 2em; }
+  .stickied-list .item {
+    border-left: 5px solid gray;
+    padding-left: 5px;
+    margin-bottom: 1em; }
+
 /* T */
 .Tags {
   display: flex;
@@ -454,6 +526,16 @@ h1.page-title {
     padding-right: 1em; }
   .Tags .field__items {
     display: flex; }
+
+/* admin form tags are inline. */
+div[class^='field--name-field-tag'] .form-checkboxes {
+  display: flex; }
+
+.form-checkboxes {
+  display: flex; }
+
+.text-center {
+  text-align: center; }
 
 .view-terms-conditions {
   border-left: 1px solid orange;
