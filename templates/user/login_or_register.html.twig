@@ -1,0 +1,65 @@
+<div class='row'>
+  <div class='col-md-6'>
+    <div class='bordered'>
+      <form class="user-login-form" data-drupal-selector="user-login-form" action="/user/login" method="post" id="user-login-form" accept-charset="UTF-8">
+        <div class="js-form-item form-item js-form-type-email form-type-email js-form-item-name form-item-name">
+          <label for="edit-name" class="js-form-required form-required">Email address</label>
+          <input autocorrect="none" autocapitalize="none" spellcheck="false" autofocus="autofocus" data-drupal-selector="edit-name" aria-describedby="edit-name--description" type="email" id="edit-name" name="name" value="" class="form-email required" required="required" aria-required="true">
+          <div id="edit-name--description" class="description">
+            Enter your email address.
+          </div>
+        </div>
+        <div class="js-form-item form-item js-form-type-password form-type-password js-form-item-pass form-item-pass">
+          <label for="edit-pass" class="js-form-required form-required">Password</label>
+          <input data-drupal-selector="edit-pass" aria-describedby="edit-pass--description"
+            type="password" id="edit-pass" name="pass"
+            class="form-text required" required="required" aria-required="true">
+          <div id="edit-pass--description" class="description">
+            Enter the password that accompanies your email address.
+          </div>
+        </div>
+        <input autocomplete="off" data-drupal-selector="form-laazcf5iak-lvsjly0jm9kgrwczt1msogy5ncrbp1lk" type="hidden" name="form_build_id" value="form-lAazCF5IaK-LVSJLy0Jm9kGrwczt1MSOGy5NCRBP1Lk">
+        <input data-drupal-selector="edit-user-login-form" type="hidden" name="form_id" value="user_login_form">
+        <div data-drupal-selector="edit-actions" class="form-actions js-form-wrapper form-wrapper" id="edit-actions"><input data-drupal-selector="edit-submit" type="submit" id="edit-submit" name="op" value="Log in" class="button js-form-submit form-submit">
+        </div>
+      </form>
+    </div>
+  </div>
+  <div class='col-md-6'>
+    <div class='bordered'>
+      <form class="user-register-form user-form" data-user-info-from-browser="" data-drupal-selector="user-register-form" action="/user/register" method="post" id="user-register-form" accept-charset="UTF-8" data-once="form-updated user-info-from-browser" data-drupal-form-fields="edit-mail,edit-message-subscribe-email-value,edit-message-digest,edit-submit">
+        <div data-drupal-selector="edit-account" id="edit-account" class="js-form-wrapper form-wrapper">
+          <div class="js-form-item form-item js-form-type-email form-type-email js-form-item-mail form-item-mail">
+            <label for="edit-mail" class="js-form-required form-required">Email address</label>
+            <input data-drupal-selector="edit-mail" aria-describedby="edit-mail--description" type="email" id="edit-mail" name="mail" value="" class="form-email required" required="required" aria-required="true">
+          </div>
+        </div>
+        <input data-drupal-selector="edit-user-register-form" type="hidden" name="form_id" value="user_register_form">
+        <div class="field--type-boolean field--name-message-subscribe-email field--widget-boolean-checkbox js-form-wrapper form-wrapper" data-drupal-selector="edit-message-subscribe-email-wrapper" id="edit-message-subscribe-email-wrapper">
+          <div class="js-form-item form-item js-form-type-checkbox form-type-checkbox js-form-item-message-subscribe-email-value form-item-message-subscribe-email-value">
+            <input data-drupal-selector="edit-message-subscribe-email-value" aria-describedby="edit-message-subscribe-email-value--description" type="checkbox" id="edit-message-subscribe-email-value" name="message_subscribe_email[value]" value="1" checked="checked" class="form-checkbox">
+            <label for="edit-message-subscribe-email-value" class="option">Email subscriptions</label>
+          </div>
+        </div>
+        <div class="field--type-list-string field--name-message-digest field--widget-options-select js-form-wrapper form-wrapper" data-drupal-selector="edit-message-digest-wrapper" id="edit-message-digest-wrapper">
+          <div class="js-form-item form-item js-form-type-select form-type-select js-form-item-message-digest form-item-message-digest">
+            <label for="edit-message-digest" class="js-form-required form-required">Message digest interval</label>
+            <select data-drupal-selector="edit-message-digest" aria-describedby="edit-message-digest--description" id="edit-message-digest" name="message_digest" class="form-select required" required="required" aria-required="true">
+              <option value="0" selected="selected">Send immediately</option>
+            </select>
+          </div>
+        </div>
+
+        {% include '/modules/contrib/captcha/templates/captcha.html.twig' %}
+
+
+        <div data-drupal-selector="edit-actions" class="form-actions js-form-wrapper form-wrapper" id="edit-actions">
+          <input data-drupal-selector="edit-submit" type="submit" id="edit-submit" name="op"
+            value="Create new account" class="button button--primary js-form-submit form-submit">
+        </div>
+
+
+      </form>
+    </div>
+  </div>
+</div>

@@ -12,7 +12,7 @@
 #}
 {%
 set classes = [
-  style_name ? 'image-style-' ~ style_name|clean_class,
+  style_name ? 'image-style-' ~ style_name,
 ]
 %}
-<img{{ attributes.addClass(classes) }} />
+<img{{ attributes.addClass(classes).removeAttribute('width').removeAttribute('height') }} />
