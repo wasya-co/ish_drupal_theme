@@ -100,6 +100,18 @@ section.field--type-comment {
   section.field--type-comment {
     margin: 1em 5em; } }
 
+.node-contributed-post-form {
+  margin: 1em; }
+
+.form-checkboxes {
+  display: flex;
+  flex-wrap: wrap; }
+  .form-checkboxes .form-item {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 1em;
+    padding: 0.5em; }
+
 /* Fonts */
 .archivo-black {
   font-family: "Archivo Black", sans-serif;
@@ -142,6 +154,16 @@ form.user-login-form .description {
 
 .form-type-password {
   display: flex; }
+
+.toc .views-row {
+  display: flex; }
+  .toc .views-row .views-field-field-weight {
+    display: flex;
+    padding-right: .4em; }
+    .toc .views-row .views-field-field-weight .field-content {
+      padding-right: .4em; }
+    .toc .views-row .views-field-field-weight:after {
+      content: " - "; }
 
 article img {
   max-width: 100%;
@@ -192,6 +214,9 @@ table.bordered {
   padding: 2px;
   margin-bottom: 10px; }
 
+.bordered.node--type-location {
+  border: 1px solid red; }
+
 /* C */
 .center {
   margin: auto; }
@@ -200,7 +225,7 @@ table.bordered {
   --wco-chip-bg-color: #9ef;
   background: var(--wco-chip-bg-color);
   border-radius: 1em 0 0 1em;
-  display: inline-block;
+  display: inline;
   height: 32px;
   margin-right: 32px;
   margin-bottom: 0.5em;
@@ -443,8 +468,7 @@ article.media--type-remote-video.media--view-mode-full {
   margin: 0.5rem; }
 
 h1.page-title {
-  margin: 1em 0 0 0;
-  text-align: center; }
+  margin: 1em 0 0 0; }
 
 /* S */
 .simplenews-subscriber-form {
@@ -507,6 +531,13 @@ h1.page-title {
     padding-right: 1em; }
   .Tags .field__items {
     display: flex; }
+
+/* admin form tags are inline. */
+div[class^='field--name-field-tag'] .form-checkboxes {
+  display: flex; }
+
+.form-checkboxes {
+  display: flex; }
 
 .text-center {
   text-align: center; }

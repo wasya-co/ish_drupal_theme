@@ -3,9 +3,11 @@
 @import "./block--header.scss";
 @import "./Card.scss";
 @import "./comments.scss";
+@import "./contributed-post.scss";
 @import "./fonts.scss";
 @import "./vud-widget.scss";
 @import "./users.scss";
+@import "./book.scss";
 
 article {
   img {
@@ -85,6 +87,10 @@ table.bordered {
   // margin: 0 var(--wco-margin-large);
 }
 
+.bordered.node--type-location {
+  border: 1px solid red;
+}
+
 /* C */
 
 
@@ -98,7 +104,7 @@ table.bordered {
 
   background: var(--wco-chip-bg-color);
   border-radius: 1em 0 0 1em;
-  display: inline-block;
+  display: inline;
   height: 32px;
   margin-right: 32px;
   margin-bottom: 0.5em;
@@ -470,7 +476,7 @@ article.media--type-remote-video.media--view-mode-full {
 
 h1.page-title {
   margin: 1em 0 0 0;
-  text-align: center;
+  // text-align: center;
 }
 
 /* S */
@@ -556,6 +562,21 @@ h1.page-title {
     display: flex;
   }
 }
+
+/* admin form tags are inline. */
+div[class^='field--name-field-tag'] {
+  .form-checkboxes {
+    display: flex;
+  }
+}
+.form-checkboxes {
+  display: flex;
+}
+
+
+
+
+
 .text-center {
   text-align: center;
 }
