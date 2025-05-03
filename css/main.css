@@ -337,6 +337,11 @@ form.user-form {
 .field--name-field-comments ul.tips {
   display: none; }
 
+.field--name-field-name {
+  font-size: 2em;
+  margin: 1em 0;
+  text-align: center; }
+
 .field--name-field-subtitle {
   margin-bottom: 2em; }
 
