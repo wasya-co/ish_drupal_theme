@@ -391,6 +391,12 @@ html[lang='ru'] .block-language li[hreflang="ru"],
 .layout-container {
   margin: 0; }
 
+.layout--twocol::after {
+  content: "L";
+  position: absolute;
+  top: 0;
+  right: 0; }
+
 /* R */
 .region-footer {
   border-top: 5px solid orange;
@@ -468,7 +474,7 @@ article.media--type-remote-video.media--view-mode-full {
   margin: 0.5rem; }
 
 h1.page-title {
-  margin: 1em 0 0 0; }
+  margin: 1em 0 0.5em 0; }
 
 /* S */
 .simplenews-subscriber-form {

@@ -1,0 +1,14 @@
+
+{%
+  set title_classes = [
+    label_display == 'visually_hidden' ? 'visually-hidden',
+  ]
+%}
+<div class="field--name-field-link" >
+  {% if not label_hidden %}
+    <div{{ title_attributes.addClass(title_classes) }}>{{ label }}</div>
+  {% endif %}
+  {% for item in items %}
+    <a href="{{ item.content }}" >{{ item.content }}</a>
+  {% endfor %}
+</div>
