@@ -332,6 +332,16 @@ html[lang='ru'] .block-language li[hreflang="ru"],
 .layout-container {
   margin: 0;
 }
+.layout--twocol {
+  &::after {
+    content: "L";
+
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+}
+
 
 /* R */
 
@@ -475,7 +485,7 @@ article.media--type-remote-video.media--view-mode-full {
 }
 
 h1.page-title {
-  margin: 1em 0 0 0;
+  margin: 1em 0 0.5em 0;
   // text-align: center;
 }
 
