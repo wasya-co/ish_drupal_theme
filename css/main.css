@@ -196,8 +196,13 @@ div.bordered {
 
 table.bordered {
   border: 1px solid black; }
-  table.bordered td {
+  table.bordered th {
+    background: #eee;
+    padding: 0.5em;
     border: 1px solid black; }
+  table.bordered td {
+    border: 1px solid black;
+    padding: 0.5em; }
 
 /* BibliographyWebsite */
 .view-bibliography-websites .view-content,
@@ -333,6 +338,9 @@ form.user-form {
 .Featured.view {
   margin-left: 2em;
   margin-bottom: 1em; }
+
+.field--name-body {
+  margin-top: 0.5em; }
 
 .field--name-field-comments ul.tips {
   display: none; }

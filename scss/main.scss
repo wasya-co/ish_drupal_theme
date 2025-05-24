@@ -56,8 +56,15 @@ div.bordered {
 table.bordered {
   border: 1px solid black;
 
+  th {
+    background: #eee;
+    padding: 0.5em;
+    border: 1px solid black;
+  }
+
   td {
     border: 1px solid black;
+    padding: 0.5em;
   }
 }
 
@@ -244,6 +251,10 @@ form.user-form {
 .Featured.view {
   margin-left: 2em;
   margin-bottom: 1em;
+}
+
+.field--name-body {
+  margin-top: 0.5em;
 }
 
 .field--name-field-comments {
