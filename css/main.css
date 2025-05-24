@@ -570,7 +570,8 @@ div[class^='field--name-field-tag'] .form-checkboxes {
 .text-formatted {
   /* 2023-11-17 _vp_ for mobile, to not touch the edge. for "at wco we understand the challenged... */
   max-width: 90vw;
-  margin: auto; }
+  margin-left: auto;
+  margin-right: auto; }
 
 /* U */
 .user-login-form,
