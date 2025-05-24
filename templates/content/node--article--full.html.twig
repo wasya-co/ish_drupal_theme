@@ -50,6 +50,7 @@
       {{ content.field_tags }}
       {{ content.field_tag_contrib }}
       {{ content.field_issue }}
+      {{ content.field_city }}
       {{ content.field_citytag }}
     </div>
   </div>
@@ -57,7 +58,7 @@
   <div class='row'>
     <div class='col-sm-12'>
       <div{{ content_attributes.addClass('node__content') }}>
-        {{ content | without('field_citytag') | without('field_vote_up_down') | without('field_image_hero') | without('field_image_thumb') | without('field_tags') | without('field_tag_contrib') | without('field_issue') }}
+        {{ content | without('field_city') | without('field_citytag') | without('field_vote_up_down') | without('field_image_hero') | without('field_image_thumb') | without('field_tags') | without('field_tag_contrib') | without('field_issue') }}
       </div>
     </div>
   </div>
