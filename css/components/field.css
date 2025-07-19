@@ -23,5 +23,7 @@
 .field--label-inline .field__label::after {
   content: ":"; }
 
-.field--name-field-image-thumb img {
-  width: 100%; }
+.field--name-field-image-thumb {
+  max-width: 200px; }
+  .field--name-field-image-thumb img {
+    width: 100%; }
