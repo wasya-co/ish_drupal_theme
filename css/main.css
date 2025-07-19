@@ -311,6 +311,7 @@ article.node--type-contributed-post.node--view-mode-teaser .node__content,
   /* small desktop */
   article.node--type-article.node--view-mode-teaser .lvl-1,
   article.node--type-contributed-post.node--view-mode-teaser .lvl-1,
+  article.node--type-curriculum-two-step.node--view-mode-teaser .lvl-1,
   ._ .lvl-1 {
     flex-direction: column;
     align-items: flex-start; } }
