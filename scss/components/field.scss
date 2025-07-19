@@ -24,6 +24,10 @@
   content: ":";
 }
 
-.field--name-field-image-thumb img {
-  width: 100%;
+.field--name-field-image-thumb {
+  max-width: 200px;
+
+  img {
+    width: 100%;
+  }
 }
