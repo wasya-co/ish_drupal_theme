@@ -3,18 +3,25 @@ $ = jQuery;
 $(function () {
 
   $(".collapse-expand").each(function() {
-    const thisId = $(this).attr('id')
+    const self = this
+    const thisId = $(self).attr('id')
     const state = localStorage.getItem("collapse-expand#"+thisId)
+    if (null === state) {
+      if ($(self).attr('class').split(/\s+/).indexOf('collapsed') != -1) {
+        localStorage.setItem("collapse-expand#"+thisId, "collapsed")
+        $(self).next().slideToggle()
+      }
+    }
     if (state === 'collapsed') {
-      $(this).next().slideToggle()
-      $(this).addClass('collapsed')
+      $(self).next().slideToggle()
+      $(self).addClass('collapsed')
     }
   })
   $(".collapse-expand").click(function (_e) {
     const thisId = $(this).attr('id')
     const state = localStorage.getItem("collapse-expand#"+thisId)
     if (state === 'collapsed') {
-      localStorage.removeItem("collapse-expand#"+thisId)
+      localStorage.setItem("collapse-expand#"+thisId, "expanded")
       $(this).removeClass('collapsed')
     } else {
       localStorage.setItem("collapse-expand#"+thisId, "collapsed")

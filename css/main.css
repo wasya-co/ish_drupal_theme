@@ -196,8 +196,13 @@ div.bordered {
 
 table.bordered {
   border: 1px solid black; }
-  table.bordered td {
+  table.bordered th {
+    background: #eee;
+    padding: 0.5em;
     border: 1px solid black; }
+  table.bordered td {
+    border: 1px solid black;
+    padding: 0.5em; }
 
 /* BibliographyWebsite */
 .view-bibliography-websites .view-content,
@@ -334,6 +339,9 @@ form.user-form {
   margin-left: 2em;
   margin-bottom: 1em; }
 
+.field--name-body {
+  margin-top: 0.5em; }
+
 .field--name-field-comments ul.tips {
   display: none; }
 
@@ -390,6 +398,12 @@ html[lang='ru'] .block-language li[hreflang="ru"],
 
 .layout-container {
   margin: 0; }
+
+.layout--twocol::after {
+  content: "L";
+  position: absolute;
+  top: 0;
+  right: 0; }
 
 /* R */
 .region-footer {
@@ -468,7 +482,7 @@ article.media--type-remote-video.media--view-mode-full {
   margin: 0.5rem; }
 
 h1.page-title {
-  margin: 1em 0 0 0; }
+  margin: 1em 0 0.5em 0; }
 
 /* S */
 .simplenews-subscriber-form {
@@ -556,7 +570,8 @@ div[class^='field--name-field-tag'] .form-checkboxes {
 .text-formatted {
   /* 2023-11-17 _vp_ for mobile, to not touch the edge. for "at wco we understand the challenged... */
   max-width: 90vw;
-  margin: auto; }
+  margin-left: auto;
+  margin-right: auto; }
 
 /* U */
 .user-login-form,
