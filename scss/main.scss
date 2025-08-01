@@ -494,6 +494,13 @@ article.media--type-remote-video.media--view-mode-full {
 .padded {
   margin: 0.5rem;
 }
+table.padded,
+table.table-padded {
+  td {
+    padding: 0.5em;
+  }
+}
+
 
 h1.page-title {
   margin: 1em 0 0.5em 0;
