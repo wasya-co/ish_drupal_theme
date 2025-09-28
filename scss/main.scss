@@ -491,6 +491,11 @@ article.media--type-remote-video.media--view-mode-full {
   }
 }
 
+/* O */
+.openid-connect-login-form {
+  border: 1px solid red;
+}
+
 /* P */
 .padded {
   margin: 0.5rem;
@@ -861,3 +866,4 @@ div[class^='field--name-field-tag'] {
     width: auto;
   }
 }
+

@@ -478,9 +478,18 @@ article.media--type-remote-video.media--view-mode-full {
 .view-content .views-row:last-child {
   border: 0; }
 
+/* O */
+.openid-connect-login-form {
+  border: 1px solid red; }
+
 /* P */
 .padded {
   margin: 0.5rem; }
+
+table.padded td, table.padded th,
+table.table-padded td,
+table.table-padded th {
+  padding: 0.5em; }
 
 h1.page-title {
   margin: 1em 0 0.5em 0; }
