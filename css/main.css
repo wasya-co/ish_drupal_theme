@@ -173,6 +173,12 @@ article footer {
   max-width: 1000px;
   margin: 0 auto 1em auto; }
 
+html,
+body,
+.dialog-off-canvas-main-canvas,
+.layout-container {
+  height: 100%; }
+
 html {
   font-size: 16px;
   --wco-margin-large: 1em;
@@ -284,6 +290,11 @@ table.bordered {
   .City .header h2, .City .header h3, .City .header h4, .City .header h5 {
     background: white;
     padding: 0 1em; }
+
+.block-current-user-block,
+.current_user_block {
+  display: flex;
+  align-items: center; }
 
 /*
  * Contributed Post
@@ -397,14 +408,18 @@ html[lang='ru'] .block-language li[hreflang="ru"],
 ._ {
   border-bottom: 2px solid black; }
 
-.layout-container {
-  margin: 0; }
-
 .layout--twocol::after {
   content: "L";
   position: absolute;
   top: 0;
   right: 0; }
+
+.layout-container {
+  display: flex;
+  flex-direction: column;
+  margin: 0; }
+  .layout-container main[role='main'] {
+    flex-grow: 1; }
 
 /* R */
 .region-footer {
@@ -500,13 +515,20 @@ h1.page-title {
   padding: 1em;
   border: 1px solid gray;
   border-radius: 5px;
-  display: inline-block; }
+  display: inline-block;
+  margin-bottom: 1em; }
   .simplenews-subscriber-form .field--name-field-first-name,
   .simplenews-subscriber-form .field--name-field-last-name,
   .simplenews-subscriber-form .field--name-field-city,
   .simplenews-subscriber-form #edit-mail-0-value--description,
   .simplenews-subscriber-form ._ {
     display: none; }
+
+.block-simplenews-subscription-block .form-type-email {
+  display: flex;
+  flex-wrap: wrap; }
+  .block-simplenews-subscription-block .form-type-email input[type='email'] {
+    width: 100%; }
 
 .path-search .item-list {
   max-width: 1000px;
