@@ -21,6 +21,13 @@ article {
   }
 }
 
+html,
+body,
+.dialog-off-canvas-main-canvas,
+.layout-container {
+  height: 100%;
+}
+
 html {
   font-size: 16px;
   --wco-margin-large: 1em;
@@ -179,6 +186,11 @@ table.bordered {
   }
 }
 
+.block-current-user-block,
+.current_user_block {
+  display: flex;
+  align-items: center;
+}
 
 /*
  * Contributed Post
@@ -333,17 +345,14 @@ form.user-form {
 
 /* L */
 
-html[lang='en'] .block-language li[hreflang="en"],
-html[lang='es'] .block-language li[hreflang="es"],
+html[lang='en']    .block-language li[hreflang="en"],
+html[lang='es']    .block-language li[hreflang="es"],
 html[lang='pt-br'] .block-language li[hreflang="pt-br"],
-html[lang='ru'] .block-language li[hreflang="ru"],
+html[lang='ru']    .block-language li[hreflang="ru"],
 ._ {
   border-bottom: 2px solid black;
 }
 
-.layout-container {
-  margin: 0;
-}
 .layout--twocol {
   &::after {
     content: "L";
@@ -351,6 +360,18 @@ html[lang='ru'] .block-language li[hreflang="ru"],
     position: absolute;
     top: 0;
     right: 0;
+  }
+}
+
+
+.layout-container {
+  display: flex;
+  flex-direction: column;
+
+  margin: 0;
+
+  main[role='main'] {
+    flex-grow: 1;
   }
 }
 
@@ -522,6 +543,7 @@ h1.page-title {
   border: 1px solid gray;
   border-radius: 5px;
   display: inline-block;
+  margin-bottom: 1em;
 
   .field--name-field-first-name,
   .field--name-field-last-name,
@@ -531,6 +553,17 @@ h1.page-title {
     display: none;
   }
 }
+.block-simplenews-subscription-block {
+  .form-type-email {
+    display: flex;
+    flex-wrap: wrap;
+
+    input[type='email'] {
+      width: 100%;
+    }
+  }
+}
+
 
 .path-search .item-list {
   max-width: 1000px;

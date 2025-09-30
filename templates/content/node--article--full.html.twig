@@ -58,12 +58,24 @@
   <div class='row'>
     <div class='col-sm-12'>
       <div{{ content_attributes.addClass('node__content') }}>
-        {{ content | without('field_city') | without('field_citytag') | without('field_vote_up_down') | without('field_image_hero') | without('field_image_thumb') | without('field_tags') | without('field_tag_contrib') | without('field_issue') }}
+        {{ content | without('field_city') | without('field_citytag') | without('field_vote_up_down') | without('field_image_hero') | without('field_image_thumb') | without('field_tags') | without('field_tag_contrib') | without('field_issue')| without('field_comments') }}
       </div>
     </div>
   </div>
 
+  <h5 class='center text-center'>Related Articles</h5>
+  <div class="row ">
+    {% for node in related_articles %}
+      <div class="col-6 col-md-3">
+        {{ drupal_entity('node', node.id(), 'card') }}
+      </div>
+    {% endfor %}
+  </div>
+
+  {{ content.field_comments }}
+
   <div class="clearfix"></div>
+
 </article>
 
 
