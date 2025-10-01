@@ -37,6 +37,10 @@ html {
 
 }
 
+iframe {
+  max-width: 100%;
+}
+
 main {
   display: flex;
   justify-content: center;
@@ -230,7 +234,14 @@ article.node--type-contributed-post.node--view-mode-teaser,
     }
   }
 }
+@media (max-width: 576px) { // portrait phones
+  article.node--type-page-youtube {
+    > .d-flex {
+    }
 
+  }
+
+}
 
 /* D */
 
@@ -458,6 +469,11 @@ html[lang='ru']    .block-language li[hreflang="ru"],
       }
     }
   }
+
+  .search-block-form {
+    flex-grow: 1;
+  }
+
 }
 @media screen and (max-width: 768px) { /* cellphones */
   .region-footer {
@@ -575,6 +591,7 @@ h1.page-title {
   }
 }
 
+
 .search-form,
 .node_search-results {
   // border: 2px solid blue;
@@ -585,6 +602,7 @@ h1.page-title {
 .search-form + h2 {
   text-align: center;
 }
+
 
 .spacer {
   // background: gold;

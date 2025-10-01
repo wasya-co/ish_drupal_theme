@@ -185,6 +185,9 @@ html {
   --wco-dol-bg-color: white;
   --wco-dol-bg2-color: #efefef; }
 
+iframe {
+  max-width: 100%; }
+
 main {
   display: flex;
   justify-content: center;
@@ -462,6 +465,8 @@ html[lang='ru'] .block-language li[hreflang="ru"],
         background: url("//d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2023/11/01111621/40x26-brasil-tiny.png"); }
       .region-footer .block-language ul.links li[hreflang="ru"]:before {
         background: url("//d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2023/11/29103220/40x26-russia-tiny.png"); }
+  .region-footer .search-block-form {
+    flex-grow: 1; }
 
 @media screen and (max-width: 768px) {
   /* cellphones */
