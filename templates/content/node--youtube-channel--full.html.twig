@@ -1,0 +1,53 @@
+
+{%
+  set classes = [
+    'YoutubeChannel',
+    'node',
+    'node--type-' ~ node.bundle|clean_class,
+    node.isPromoted() ? 'node--promoted',
+    node.isSticky() ? 'node--sticky',
+    not node.isPublished() ? 'node--unpublished',
+    view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
+  ]
+%}
+{{ attach_library('ish_drupal_theme/node') }}
+<article{{ attributes.addClass(classes) }}>
+
+  {{ title_prefix }}
+  {% if label and not page %}
+    <h2{{ title_attributes }}>
+      <a href="{{ url }}" rel="bookmark">{{ label }}</a>
+    </h2>
+  {% endif %}
+  {{ title_suffix }}
+
+  {% if display_submitted %}
+    <footer class="node__meta">
+      {{ author_picture }}
+      <div{{ author_attributes.addClass('node__submitted') }}>
+        {% trans %}Submitted by {{ author_name }} on {{ date }}{% endtrans %}
+        {{ metadata }}
+      </div>
+    </footer>
+  {% endif %}
+
+  <div class='actions'>
+    {# {{ dump( youtube_channels_check_button ) }}
+    {{ youtube_channels_check_button }} #}
+    <a href="{{ path('ish_drupal_module.youtube_channels_check', { 'node': node.id }) }}">Go to Check</a>
+  </div>
+
+  <div{{ content_attributes.addClass('maxwidth node__content') }}>
+    {{ content }}
+  </div>
+
+  <div class='center container row'>
+    <div class='col-6'>&nbsp;</div>
+    <div class='col-6'>
+      {{ pages_youtube }}
+    </div>
+  </div>
+
+  <div class="clearfix"></div>
+
+</article>
