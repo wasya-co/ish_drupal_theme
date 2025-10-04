@@ -173,11 +173,20 @@ article footer {
   max-width: 1000px;
   margin: 0 auto 1em auto; }
 
+html,
+body,
+.dialog-off-canvas-main-canvas,
+.layout-container {
+  height: 100%; }
+
 html {
   font-size: 16px;
   --wco-margin-large: 1em;
   --wco-dol-bg-color: white;
   --wco-dol-bg2-color: #efefef; }
+
+iframe {
+  max-width: 100%; }
 
 main {
   display: flex;
@@ -285,6 +294,11 @@ table.bordered {
     background: white;
     padding: 0 1em; }
 
+.block-current-user-block,
+.current_user_block {
+  display: flex;
+  align-items: center; }
+
 /*
  * Contributed Post
 **/
@@ -311,6 +325,7 @@ article.node--type-contributed-post.node--view-mode-teaser .node__content,
   /* small desktop */
   article.node--type-article.node--view-mode-teaser .lvl-1,
   article.node--type-contributed-post.node--view-mode-teaser .lvl-1,
+  article.node--type-curriculum-two-step.node--view-mode-teaser .lvl-1,
   ._ .lvl-1 {
     flex-direction: column;
     align-items: flex-start; } }
@@ -396,14 +411,18 @@ html[lang='ru'] .block-language li[hreflang="ru"],
 ._ {
   border-bottom: 2px solid black; }
 
-.layout-container {
-  margin: 0; }
-
 .layout--twocol::after {
   content: "L";
   position: absolute;
   top: 0;
   right: 0; }
+
+.layout-container {
+  display: flex;
+  flex-direction: column;
+  margin: 0; }
+  .layout-container main[role='main'] {
+    flex-grow: 1; }
 
 /* R */
 .region-footer {
@@ -446,6 +465,8 @@ html[lang='ru'] .block-language li[hreflang="ru"],
         background: url("//d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2023/11/01111621/40x26-brasil-tiny.png"); }
       .region-footer .block-language ul.links li[hreflang="ru"]:before {
         background: url("//d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2023/11/29103220/40x26-russia-tiny.png"); }
+  .region-footer .search-block-form {
+    flex-grow: 1; }
 
 @media screen and (max-width: 768px) {
   /* cellphones */
@@ -477,9 +498,18 @@ article.media--type-remote-video.media--view-mode-full {
 .view-content .views-row:last-child {
   border: 0; }
 
+/* O */
+.openid-connect-login-form {
+  border: 1px solid red; }
+
 /* P */
 .padded {
   margin: 0.5rem; }
+
+table.padded td, table.padded th,
+table.table-padded td,
+table.table-padded th {
+  padding: 0.5em; }
 
 h1.page-title {
   margin: 1em 0 0.5em 0; }
@@ -490,13 +520,20 @@ h1.page-title {
   padding: 1em;
   border: 1px solid gray;
   border-radius: 5px;
-  display: inline-block; }
+  display: inline-block;
+  margin-bottom: 1em; }
   .simplenews-subscriber-form .field--name-field-first-name,
   .simplenews-subscriber-form .field--name-field-last-name,
   .simplenews-subscriber-form .field--name-field-city,
   .simplenews-subscriber-form #edit-mail-0-value--description,
   .simplenews-subscriber-form ._ {
     display: none; }
+
+.block-simplenews-subscription-block .form-type-email {
+  display: flex;
+  flex-wrap: wrap; }
+  .block-simplenews-subscription-block .form-type-email input[type='email'] {
+    width: 100%; }
 
 .path-search .item-list {
   max-width: 1000px;
