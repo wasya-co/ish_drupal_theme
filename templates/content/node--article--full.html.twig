@@ -58,10 +58,17 @@
   <div class='row'>
     <div class='col-sm-12'>
       <div{{ content_attributes.addClass('node__content') }}>
-        {{ content | without('field_city') | without('field_citytag') | without('field_vote_up_down') | without('field_image_hero') | without('field_image_thumb') | without('field_tags') | without('field_tag_contrib') | without('field_issue') }}
+        {{ content | without('comment') | without('field_city') | without('field_citytag') | without('field_vote_up_down') | without('field_image_hero') | without('field_image_thumb') | without('field_tags') | without('field_tag_contrib') | without('field_issue') }}
       </div>
     </div>
   </div>
+
+  {% if logged_in %}
+    {{ content.comment }}
+  {% else %}
+    <p>Please log in to post a comment:</p>
+    {{ drupal_block('social_auth_login') }}
+  {% endif %}
 
   <div class="clearfix"></div>
 </article>
