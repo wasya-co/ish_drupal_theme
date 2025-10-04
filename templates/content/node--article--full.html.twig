@@ -48,7 +48,7 @@
     <div class='a'>
       <div class="sharethis-inline-share-buttons mb-2"></div>
       {{ content.field_tags }}
-      {{ content.field_tag_contrib }}
+      {{ content.field_tags_contrib }}
       {{ content.field_issue }}
       {{ content.field_city }}
       {{ content.field_citytag }}
@@ -63,6 +63,15 @@
     </div>
   </div>
 
+  <h5 class='center text-center'>Related Articles</h5>
+  <div class="row ">
+    {% for node in related_articles %}
+      <div class="col-6 col-md-3">
+        {{ drupal_entity('node', node.id(), 'card') }}
+      </div>
+    {% endfor %}
+  </div>
+
   {% if logged_in %}
     {{ content.comment }}
   {% else %}
@@ -71,6 +80,7 @@
   {% endif %}
 
   <div class="clearfix"></div>
+
 </article>
 
 
