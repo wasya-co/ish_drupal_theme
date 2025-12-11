@@ -23,27 +23,22 @@
     <div class='mr-2' style="" >
       {{ content.field_vote_up_down }}
     </div>
-    <div class='d-flex lvl-1'>
+    <div class='d-flex lvl-1 flex-column align-items-start'>
 
-      <div class="d-flex mr-2 test-0" style="flex-shrink: 0">
-        {% if content.field_image_thumb_url %}
-          <a href="{{ url }}" >
-            <img class='image-thumb' src="{{- content.field_image_thumb_url|escape|striptags|replace({"\n": "", "\r": "", "\t": ""}) -}}" alt='' />
-          </a>
-        {% endif %}
-        {% if content.field_image_thumb %}
-          {{ content.field_image_thumb }}
-        {% endif %}
+        <h2{{ title_attributes }}>
+          <a href="{{ url }}" rel="bookmark">{{ label }}</a>
+        </h2>
 
-      </div>
-      <div class=''>
-        {{ title_prefix }}
-        {% if label and not page %}
-          <h2{{ title_attributes }}>
-            <a href="{{ url }}" rel="bookmark">{{ label }}</a>
-          </h2>
-        {% endif %}
-        {{ title_suffix }}
+        <div class='thumb' >
+          {% if content.field_image_thumb_url | length > 3%}
+            <a href="{{ url }}" >
+              <img class='image-thumb' src="{{- content.field_image_thumb_url|escape|striptags|replace({"\n": "", "\r": "", "\t": ""}) -}}" alt='' />
+            </a>
+          {% endif %}
+          {% if content.field_image_thumb %}
+            {{ content.field_image_thumb }}
+          {% endif %}
+        </div>
 
         {# {% if display_submitted %}
           <footer class="node__meta">
@@ -59,7 +54,6 @@
           {{ content | without('field_vote_up_down') | without('field_image_thumb') | without('field_image_thumb_url') }}
         </div>
 
-      </div>
     </div>
   </div>
 
