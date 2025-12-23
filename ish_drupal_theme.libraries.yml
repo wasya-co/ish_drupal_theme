@@ -9,7 +9,9 @@ base:
     vendor/js/lightbox2@2.11.5.min.js:
       minified: true
     js/main.js: {}
-
+  dependencies:
+    - core/jquery
+    - core/drupal
   css:
     base:
       css/index.css:
