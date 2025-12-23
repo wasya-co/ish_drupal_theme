@@ -40,27 +40,9 @@
      * near — Camera frustum near plane.
      * far — Camera frustum far plane.
     **/
-    // camera = new THREE.PerspectiveCamera( 45, w/h, 1, 1600 )
-    // camera.position.set( -1.8, 0.6, 2.7 )
-    /* loader.load( 'cyberpunk-laptop/cyberpunk-laptop.glb', function ( gltf ) {
-      $("#rotatingC span.label").css('display', 'none')
-      document.getElementById('rotatingC').appendChild( container )
-      scene.add( gltf.scene )
-      render()
-    } ); */
-
-
-    camera = new THREE.PerspectiveCamera( 1, w/h, 1, 1600 )
-    camera.position.set( 0, 0.5, 20 )
-    camera.lookAt(0, 0, 0)
-    camera.position.z = 3   // closer
-    camera.position.z = 1   // very close
-    const light = new THREE.DirectionalLight(0xffffff, 1.2)
-    light.position.set(5, 10, 7)
-    light.target.position.set(0, 0, 0)
-    scene.add(light)
-    scene.add(light.target)
-    loader.load( 'tank-hafen/hafen.glb', function ( gltf ) {
+    camera = new THREE.PerspectiveCamera( 45, w/h, 1, 1600 )
+    camera.position.set( -1.8, 0.6, 2.7 )
+    loader.load( 'cyberpunk-laptop/cyberpunk-laptop.glb', function ( gltf ) {
       $("#rotatingC span.label").css('display', 'none')
       document.getElementById('rotatingC').appendChild( container )
       scene.add( gltf.scene )
