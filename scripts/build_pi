@@ -3,6 +3,8 @@
 # set -e ## error
 set -x
 
+yarn run build-minify
+
 git add .
 git commit -m 'autocommit'
 git push
