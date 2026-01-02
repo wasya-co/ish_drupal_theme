@@ -77,8 +77,10 @@
   {% if logged_in %}
     {{ content.field_comments }}
   {% else %}
-    <p>Please log in to post or read comments</p>
-    <div class='d-inline-block'>{{ drupal_block('social_auth_login') }}</div>
+    <div class='d-flex'>
+      <p>Please log in to post or read comments</p>
+      <div class='d-inline-block'>{{ drupal_block('social_auth_login') }}</div>
+    </div>
   {% endif %}
 
   <div class="clearfix"></div>
