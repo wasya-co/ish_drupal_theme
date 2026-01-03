@@ -49,12 +49,14 @@
       {% elseif content.field_image_thumb %}
         {{ content.field_image_thumb }}
       {% else %}
-        <img src="https://img.youtube.com/vi/{{ content.field_youtube_id |escape|striptags|replace({"\n": "", " ": "", "\r": "", "\t": ""}) -}}/mqdefault.jpg" alt='' />
+        <a href="{{ url }}" >
+          <img src="https://img.youtube.com/vi/{{ content.field_youtube_id |escape|striptags|replace({"\n": "", " ": "", "\r": "", "\t": ""}) -}}/mqdefault.jpg" alt='' />
+        </a>
       {% endif %}
     </div>
-    <div{{ content_attributes.addClass('node__content') }}>
+    {# <div{{ content_attributes.addClass('node__content') }}>
       {{ content | without('field_vote_up_down') | without('field_image_thumb') | without('field_image_thumb_url') }}
-    </div>
+    </div> #}
 
   </div>
   <div class="clearfix"></div>
