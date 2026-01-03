@@ -515,6 +515,16 @@ article.media--type-remote-video.media--view-mode-full {
   margin: 2em 0;
 }
 
+.more-link {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+
+  a::after {
+    content: " →";
+  }
+}
+
 /* N */
 
 

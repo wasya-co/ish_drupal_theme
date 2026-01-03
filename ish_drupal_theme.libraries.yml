@@ -38,7 +38,6 @@ base:
       css/components/link.css:
       css/components/links.css:
       css/components/menu.css:
-      css/components/more-link.css:
       css/components/pager.css:
       css/components/tabledrag.css:
       css/components/tableselect.css:
