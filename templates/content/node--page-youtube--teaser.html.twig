@@ -1,11 +1,6 @@
-
-{#
-  2023-12-06 :: Teaser is not a card. It is a col-md-12 sort of a display.
-#}
-
 {%
   set classes = [
-    'Teaser',
+    'Card',
     'node',
     'node--type-' ~ node.bundle|clean_class,
     node.isPromoted() ? 'node--promoted',
@@ -18,45 +13,45 @@
 
 <article{{ attributes.addClass(classes) }}>
 
-  <div class='d-flex'>
-    <div class='mr-2' style="" >
-      {{ content.field_vote_up_down }}
-    </div>
-
-    {{ title_prefix }}
-    {% if label and not page %}
-      <h2{{ title_attributes }}>
-        <a href="{{ url }}" rel="bookmark">{{ label }}</a>
-      </h2>
+  <div class='mb-2'>
+    {% if content.field_image_thumb_url %}
+      <a href="{{ url }}" >
+        <img class='image-thumb' src="{{- content.field_image_thumb_url|escape|striptags|replace({"\n": "", "\r": "", "\t": ""}) -}}" alt='' />
+      </a>
     {% endif %}
-    {{ title_suffix }}
+    {% if content.field_image_thumb %}
+      {{ content.field_image_thumb }}
+    {% endif %}
   </div>
-  {% if display_submitted %}
-    <footer class="node__meta">
-      {{ author_picture }}
-      <div{{ author_attributes.addClass('node__submitted') }}>
-        {% trans %}Submitted by {{ author_name }} on {{ date }}{% endtrans %}
-        {{ metadata }}
-      </div>
-    </footer>
-  {% endif %}
-  <div class='d-flex'>
-    <div class="d-flex mr-2 test-0" style="flex-shrink: 0">
-      {% if content.field_image_thumb_url %}
-        <a href="{{ url }}" >
-          <img class='image-thumb' src="{{- content.field_image_thumb_url|escape|striptags|replace({"\n": "", "\r": "", "\t": ""}) -}}" alt='' />
-        </a>
-      {% endif %}
-      {% if content.field_image_thumb %}
-        {{ content.field_image_thumb }}
-      {% endif %}
-    </div>
-    <div{{ content_attributes.addClass('node__content') }}>
-      {{ content | without('field_vote_up_down') | without('field_image_thumb') | without('field_image_thumb_url') }}
-    </div>
 
+  <div class='d-flex'>
+
+    {{ content.field_vote_up_down }}
+
+    <div class="d-flex flex-column" >
+
+      <img src="https://img.youtube.com/vi/{{ content.field_youtube_id |escape|striptags|replace({"\n": "", " ": "", "\r": "", "\t": ""}) -}}/mqdefault.jpg" alt='' />
+      {{ title_prefix }}
+      {% if label and not page %}
+        <h5{{ title_attributes }}>
+          <a href="{{ url }}" rel="bookmark">{{ label }}</a>
+        </h5>
+      {% endif %}
+      {{ title_suffix }}
+
+      {% if display_submitted %}
+        <div{{ author_attributes.addClass('node__submitted') }}>
+          {% trans %}Submitted by {{ author_name }} on {{ date }}{% endtrans %}
+          {{ metadata }}
+        </div>
+      {% endif %}
+
+      <div{{ content_attributes.addClass('node__content') }}>
+        {{ content | without('field_youtube_id') | without('field_vote_up_down') | without('field_image_thumb') | without('field_image_thumb_url') }}
+      </div>
+
+    </div>
   </div>
-  <div class="clearfix"></div>
 
 </article>
 
