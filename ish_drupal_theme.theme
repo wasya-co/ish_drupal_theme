@@ -15,6 +15,12 @@ function ish_drupal_theme_preprocess_image_widget(array &$variables) {
   }
 }
 
+function ish_drupal_theme_preprocess_node(&$variables) {
+  if (isset($variables['content']['field_comments'])) {
+    $variables['content']['field_comments']['#cache']['contexts'][] = 'languages:content';
+  }
+}
+
 /**
  * Implements hook_theme().
  *
