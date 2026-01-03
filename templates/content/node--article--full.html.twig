@@ -67,22 +67,14 @@
     <h5 class='center text-center'>Related Articles</h5>
     <div class="row ">
       {% for node in related_articles %}
-        <div class="col-12 col-sm-6 col-md-4">
+        <div class="col-12 col-md-4">
           {{ drupal_entity('node', node.id(), 'card') }}
         </div>
       {% endfor %}
     </div>
   {% endif %}
 
-  {% if logged_in %}
-    {{ content.field_comments }}
-  {% else %}
-    <div class='d-flex align-items-center'>
-      <div>Please log in to post or read comments: &nbsp;</div>
-      <a href="/user/login/google?destination={{ url('<current>') }}" class="btn">Login with Google</a>
-      {# <div class='d-inline-block'>{{ drupal_block('social_auth_login') }}</div> #}
-    </div>
-  {% endif %}
+  {{ content.field_comments }}
 
   <div class="clearfix"></div>
 
