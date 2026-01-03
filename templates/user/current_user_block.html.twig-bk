@@ -1,5 +1,5 @@
 
-{# DEPRECATED. Moved to ish_drupal_module. #}
+{# DEPRECATED, moved to ish_drupal_module. _vp_ 2026-01-03 #}
 
 <div class='current_user_block'>
   {% if current_user_email %}
