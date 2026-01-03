@@ -46,9 +46,10 @@
         <a href="{{ url }}" >
           <img class='image-thumb' src="{{- content.field_image_thumb_url|escape|striptags|replace({"\n": "", "\r": "", "\t": ""}) -}}" alt='' />
         </a>
-      {% endif %}
-      {% if content.field_image_thumb %}
+      {% elseif content.field_image_thumb %}
         {{ content.field_image_thumb }}
+      {% else %}
+        <img src="https://img.youtube.com/vi/{{ content.field_youtube_id |escape|striptags|replace({"\n": "", " ": "", "\r": "", "\t": ""}) -}}/mqdefault.jpg" alt='' />
       {% endif %}
     </div>
     <div{{ content_attributes.addClass('node__content') }}>
