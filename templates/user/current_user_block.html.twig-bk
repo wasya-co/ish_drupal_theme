@@ -1,7 +1,9 @@
 
+{# DEPRECATED. Moved to ish_drupal_module. #}
+
 <div class='current_user_block'>
-  {% if email %}
-    <a href="/user/dashboard">{{ email }}</a>
+  {% if current_user_email %}
+    <a href="/user/dashboard">{{ current_user_email }}</a>
     <a href="/user/logout">[Log out]</a>
   {% else %}
     {# <a href="/user/register">Register</a>&nbsp;|&nbsp; #}
