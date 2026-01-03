@@ -42,7 +42,7 @@ function ish_drupal_theme_theme($existing, $type, $theme, $path) {
       'render element' => 'children',
       'template' => 'user/current_user_block',
       'variables' => [
-        'email' => Null,
+        'current_user_email' => Null,
       ],
     ],
 
