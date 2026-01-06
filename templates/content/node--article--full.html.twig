@@ -41,8 +41,10 @@
 
   <div class='d-flex mb-2'>
     <div class='mr-2'>
-      <a href="{{ content.field_image_thumb.0 }}" data-lightbox="article-thumb" >
-        <img style="max-height: 80px;" src="{{ content.field_image_thumb.0 }}" alt='' />
+      <a href="{{ content.field_image_thumb.0 ?:
+          content.field_image_thumb_url |escape|striptags|replace({"\n": "", " ": "", "\r": "", "\t": ""}) }}" data-lightbox="article-thumb" >
+        <img style="max-height: 80px;" src="{{ content.field_image_thumb.0 ?:
+          content.field_image_thumb_url |escape|striptags|replace({"\n": "", " ": "", "\r": "", "\t": ""}) }}" alt='' />
       </a>
     </div>
     <div class='a'>
