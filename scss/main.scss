@@ -11,13 +11,8 @@
 
 article {
   img {
-    max-width: 100%;
+    max-width: calc( 100% - 0.8em );
     height: auto;
-  }
-  footer {
-    max-width: 1000px;
-    // margin: auto;
-    margin: 0 auto 1em auto;
   }
 }
 
