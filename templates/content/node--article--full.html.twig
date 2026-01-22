@@ -41,8 +41,10 @@
 
   <div class='d-flex mb-2'>
     <div class='mr-2'>
-      <a href="{{ content.field_image_thumb.0 }}" data-lightbox="article-thumb" >
-        <img style="max-height: 80px;" src="{{ content.field_image_thumb.0 }}" alt='' />
+      <a href="{{ content.field_image_thumb.0 ?:
+          content.field_image_thumb_url |escape|striptags|replace({"\n": "", " ": "", "\r": "", "\t": ""}) }}" data-lightbox="article-thumb" >
+        <img style="max-height: 80px;" src="{{ content.field_image_thumb.0 ?:
+          content.field_image_thumb_url |escape|striptags|replace({"\n": "", " ": "", "\r": "", "\t": ""}) }}" alt='' />
       </a>
     </div>
     <div class='a'>
@@ -58,7 +60,12 @@
   <div class='row'>
     <div class='col-sm-12'>
       <div{{ content_attributes.addClass('node__content') }}>
-        {{ content | without('field_comments') | without('field_city') | without('field_citytag') | without('field_vote_up_down') | without('field_image_hero') | without('field_image_thumb') | without('field_tags') | without('field_tag_contrib') | without('field_tags_contrib') | without('field_tags_issue') | without('field_issue') }}
+        {{ content | without('comment')
+                   | without('field_city')        | without('field_citytag')    | without('field_comments')
+                   | without('field_issue')       | without('field_image_hero') | without('field_image_thumb')  | without('field_image_thumb_url')
+                   | without('field_tag_contrib') | without('field_tags')       | without('field_tags_contrib') | without('field_tags_issue')
+                   | without('field_vote_up_down')
+        }}
       </div>
     </div>
   </div>
@@ -74,7 +81,9 @@
     </div>
   {% endif %}
 
-  {{ content.field_comments }}
+
+  {{ content.comment }}{# wasya_co, infiniteshelter #}
+  {{ content.field_comments }}{# piousbox_com #}
 
   <div class="clearfix"></div>
 
