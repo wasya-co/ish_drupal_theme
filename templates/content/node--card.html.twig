@@ -24,8 +24,7 @@
       <a href="{{ url }}" >
         <img class='image-thumb' src="{{- content.field_image_thumb_url|escape|striptags|replace({"\n": "", "\r": "", "\t": ""}) -}}" alt='' />
       </a>
-    {% endif %}
-    {% if content.field_image_thumb %}
+    {% elseif content.field_image_thumb %}
       {{ content.field_image_thumb }}
     {% endif %}
   </div>

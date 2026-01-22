@@ -1,5 +1,18 @@
 
 /* comments */
+
+article.comment {
+  .content {
+    display: flex;
+    align-items: center;
+
+    ul.links {
+      margin-bottom: 0;
+    }
+  }
+}
+
+
 .comment-wrapper {
   article {
     border-left: 2px solid gray;
