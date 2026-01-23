@@ -1,7 +1,14 @@
 
-{{ dump( items ) }}
+{# {{ dump( element['#object'] ) }} #}
+{# {{ dump( element['#object'].get('field_width').value ) }} #}
 
-<div id="rotating_20260121" class="r2" style="width: 800px; height: 600px;
+{% set dom_el = element['#object'].get('uuid').value |replace({'-': ''}) %}
+{% set width = element['#object'].get('field_width').value %}
+{% set height = element['#object'].get('field_height').value %}
+
+<div id="rotating_{{ dom_el }}" class="rotating-ctrl-3" style="
+  width: {{ width }}; max-width: 90%;
+  height: {{ height }}; max-height: 70%;
   /* background: #cecece; */
   border: 1px solid red;
   text-align: center;
@@ -11,19 +18,23 @@
 
 <script type="module">
 
+  const dom_id = "rotating_{{ dom_el }}"
+  const model_path = "{{ items[0].content }}"
+
   import * as THREE from 'three';
 
   import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
   import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+
+  import { fitCameraToObject, logg } from 'ish/shared';
+
   const object_loader = new THREE.ObjectLoader();
 
-  const selectorId = 'rotating_20260121';
-  const el = document.getElementById(selectorId)
+  const el = document.getElementById(dom_id);
   const { width, height } = el.getBoundingClientRect();
 
-  const model_path = "{{ items[0].content }}";
-
-  let camera, controls, scene, renderer, helper;
+  let camera, controls, helper, scene, renderer;
+  let maxDim;
 
   init();
   animate();
@@ -33,50 +44,6 @@
     const container = document.createElement( 'div' )
     const gltf_loader = new GLTFLoader()
     scene = new THREE.Scene({})
-
-
-    /* fov — Camera frustum vertical field of view.
-     * aspect — Camera frustum aspect ratio.
-     * near — Camera frustum near plane.
-     * far — Camera frustum far plane.
-    **/
-    camera = new THREE.PerspectiveCamera( 45, width/height, 1, 1500 )
-    // camera.position.set( -1.8, 2.6, 2.7 )
-    camera.position.set( 5.551, 4.193, -7.819 )
-    scene.add(camera);
-
-    const ambientLight = new THREE.AmbientLight(0xffffff, 0.1);
-    scene.add(ambientLight);
-
-
-    // const dirLight = new THREE.DirectionalLight(0xffffff, 1);
-    // dirLight.position.set(0, 200, 200);
-    // dirLight.target.position.set(0, 1, 0);
-    // helper = new THREE.DirectionalLightHelper(dirLight, 0.5);
-    // scene.add(dirLight);
-    // scene.add(helper);
-
-
-    const dirLight = new THREE.DirectionalLight(0xffffff, 1);
-    dirLight.position.set(100000, 0, 100000);
-    dirLight.target.position.set(0, 0, 0);
-    helper = new THREE.DirectionalLightHelper(dirLight, 5);
-    camera.add(dirLight);
-    camera.add(dirLight.target);
-    scene.add(helper);
-
-    // const light = new THREE.PointLight(0xffffff, 1);
-    // camera.add(light);
-
-
-
-    gltf_loader.load( model_path, function ( gltf ) {
-      document.querySelectorAll(`#${selectorId} span.label`).forEach(el => el.style.display = 'none');
-      document.getElementById(selectorId).appendChild( container )
-      gltf.scene.scale.set(1500, 1500, 1500);
-      scene.add( gltf.scene )
-      render()
-    } );
 
     renderer = new THREE.WebGLRenderer({
       alpha: true,
@@ -90,13 +57,54 @@
     renderer.outputEncoding = THREE.sRGBEncoding;
     container.appendChild( renderer.domElement );
 
+
+
+    /* fov — Camera frustum vertical field of view.
+     * aspect — Camera frustum aspect ratio.
+     * near — Camera frustum near plane.
+     * far — Camera frustum far plane.
+    **/
+    camera = new THREE.PerspectiveCamera( 45, width/height, 1, 1500 )
+    scene.add(camera)
+
     controls = new OrbitControls( camera, renderer.domElement );
     // controls.addEventListener( 'change', render ); // use if there is no animation loop
-    controls.minDistance = 400;
-    controls.maxDistance = 800;
-    controls.target.set( 0, 1, 0);
+
+
+    // const ambientLight = new THREE.AmbientLight(0xffffff, 0.5);
+    // scene.add(ambientLight);
+
+    const dirLight = new THREE.DirectionalLight(0xffffff, 1);
+    dirLight.position.set(100, 0, 100);
+    dirLight.target.position.set(0, 0, 0);
+    helper = new THREE.DirectionalLightHelper(dirLight, 5);
+    camera.add(dirLight);
+    camera.add(dirLight.target);
+    scene.add(helper);
+
+
+    gltf_loader.load( model_path, function ( gltf ) {
+      document.querySelectorAll(`#${dom_id} span.label`).forEach(el => el.style.display = 'none');
+      document.getElementById(dom_id).appendChild( container )
+
+      scene.add( gltf.scene )
+
+      maxDim = fitCameraToObject(camera, gltf.scene, controls);
+      // logg(maxDim, 'maxDim')
+      controls.minDistance = maxDim;
+      controls.maxDistance = maxDim*3;
+      // controls.update();
+
+      render()
+    } );
+
+
+
+    controls.target.set( 0, 10, 0 );
     controls.autoRotate = true;
     controls.update();
+
+
 
     window.addEventListener( 'resize', onWindowResize );
   }
@@ -116,8 +124,5 @@
     controls.update();
     renderer.render( scene, camera );
   }
-
 </script>
 
-</body>
-</html>
