@@ -34,12 +34,9 @@
     'comment-wrapper',
   ]
 %}
-{%
-  set title_classes = [
-    'title',
-    label_display == 'visually_hidden' ? 'visually-hidden',
-  ]
-%}
+{% set title_classes = [ 'title',
+         label_display == 'visually_hidden' ? 'visually-hidden'
+] %}
 <section{{ attributes.addClass(classes) }}>
 
   {% if comments and not label_hidden %}

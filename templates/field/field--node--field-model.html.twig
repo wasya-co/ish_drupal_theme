@@ -1,0 +1,123 @@
+
+{{ dump( items ) }}
+
+<div id="rotating_20260121" class="r2" style="width: 800px; height: 600px;
+  /* background: #cecece; */
+  border: 1px solid red;
+  text-align: center;
+  margin: auto; " >
+    <span class="label">Loading...</span>
+</div>
+
+<script type="module">
+
+  import * as THREE from 'three';
+
+  import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+  import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+  const object_loader = new THREE.ObjectLoader();
+
+  const selectorId = 'rotating_20260121';
+  const el = document.getElementById(selectorId)
+  const { width, height } = el.getBoundingClientRect();
+
+  const model_path = "{{ items[0].content }}";
+
+  let camera, controls, scene, renderer, helper;
+
+  init();
+  animate();
+
+  function init() {
+
+    const container = document.createElement( 'div' )
+    const gltf_loader = new GLTFLoader()
+    scene = new THREE.Scene({})
+
+
+    /* fov — Camera frustum vertical field of view.
+     * aspect — Camera frustum aspect ratio.
+     * near — Camera frustum near plane.
+     * far — Camera frustum far plane.
+    **/
+    camera = new THREE.PerspectiveCamera( 45, width/height, 1, 1500 )
+    // camera.position.set( -1.8, 2.6, 2.7 )
+    camera.position.set( 5.551, 4.193, -7.819 )
+    scene.add(camera);
+
+    const ambientLight = new THREE.AmbientLight(0xffffff, 0.1);
+    scene.add(ambientLight);
+
+
+    // const dirLight = new THREE.DirectionalLight(0xffffff, 1);
+    // dirLight.position.set(0, 200, 200);
+    // dirLight.target.position.set(0, 1, 0);
+    // helper = new THREE.DirectionalLightHelper(dirLight, 0.5);
+    // scene.add(dirLight);
+    // scene.add(helper);
+
+
+    const dirLight = new THREE.DirectionalLight(0xffffff, 1);
+    dirLight.position.set(100000, 0, 100000);
+    dirLight.target.position.set(0, 0, 0);
+    helper = new THREE.DirectionalLightHelper(dirLight, 5);
+    camera.add(dirLight);
+    camera.add(dirLight.target);
+    scene.add(helper);
+
+    // const light = new THREE.PointLight(0xffffff, 1);
+    // camera.add(light);
+
+
+
+    gltf_loader.load( model_path, function ( gltf ) {
+      document.querySelectorAll(`#${selectorId} span.label`).forEach(el => el.style.display = 'none');
+      document.getElementById(selectorId).appendChild( container )
+      gltf.scene.scale.set(1500, 1500, 1500);
+      scene.add( gltf.scene )
+      render()
+    } );
+
+    renderer = new THREE.WebGLRenderer({
+      alpha: true,
+      antialias: true,
+    });
+    // renderer.setClearColor( 0x000000, 0 ); // default
+    renderer.setPixelRatio( window.devicePixelRatio );
+    renderer.setSize( width, height );
+    renderer.toneMapping = THREE.ACESFilmicToneMapping;
+    renderer.toneMappingExposure = 1;
+    renderer.outputEncoding = THREE.sRGBEncoding;
+    container.appendChild( renderer.domElement );
+
+    controls = new OrbitControls( camera, renderer.domElement );
+    // controls.addEventListener( 'change', render ); // use if there is no animation loop
+    controls.minDistance = 400;
+    controls.maxDistance = 800;
+    controls.target.set( 0, 1, 0);
+    controls.autoRotate = true;
+    controls.update();
+
+    window.addEventListener( 'resize', onWindowResize );
+  }
+
+  function onWindowResize() {
+    camera.aspect = width / height;
+    camera.updateProjectionMatrix();
+    renderer.setSize( width, height );
+    render();
+  }
+
+  function render() {
+    renderer.render( scene, camera );
+  }
+  function animate() {
+    requestAnimationFrame( animate );
+    controls.update();
+    renderer.render( scene, camera );
+  }
+
+</script>
+
+</body>
+</html>
