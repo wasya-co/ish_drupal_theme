@@ -58,7 +58,8 @@ div.bordered {
   border: 1px solid red;
 }
 
-table.bordered {
+table.bordered,
+.compose-tips table {
   border: 1px solid black;
 
   th {
@@ -188,6 +189,11 @@ table.bordered {
     }
 
   }
+}
+
+.compose-tips {
+  max-width: 900px;
+  margin: auto;
 }
 
 .block-current-user-block,
