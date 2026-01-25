@@ -63,7 +63,8 @@ div.bordered {
   border: 1px solid red;
 }
 
-table.bordered {
+table.bordered,
+.compose-tips table {
   border: 1px solid black;
 
   th {
@@ -193,6 +194,11 @@ table.bordered {
     }
 
   }
+}
+
+.compose-tips {
+  max-width: 900px;
+  margin: auto;
 }
 
 .block-current-user-block,
@@ -777,7 +783,10 @@ div[class^='field--name-field-tag'] {
 
 /* H */
 
-/* header?! */
+/* headers */
+h2.header {
+  margin: 1em auto;
+}
 
 .region-headerW {
   padding: 1em 0 0.5em 0;
