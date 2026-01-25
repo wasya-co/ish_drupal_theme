@@ -1,5 +1,7 @@
 <?php
 
+use Drupal\node\NodeInterface;
+
 /*
  *
 **/
@@ -22,6 +24,26 @@ function ish_drupal_theme_preprocess_node(&$variables) {
 }
 
 /**
+ * for object3d, allows overriding the entire page.
+**/
+function ish_drupal_theme_theme_suggestions_html_alter(array &$suggestions, array $variables) {
+  $route_match = \Drupal::routeMatch();
+  $node = $route_match->getParameter('node');
+
+  if ($node instanceof NodeInterface) {
+    $suggestions[] = 'html__' . $node->bundle();
+  }
+}
+function ish_drupal_theme_theme_suggestions_page_alter(array &$suggestions, array $variables) {
+  $route_match = \Drupal::routeMatch();
+  $node = $route_match->getParameter('node');
+
+  if ($node instanceof NodeInterface) {
+    $suggestions[] = 'page__node__' . $node->bundle();
+  }
+}
+
+/**
  * Implements hook_theme().
  *
  * Register a module or theme's theme implementations.
@@ -34,7 +56,6 @@ function ish_drupal_theme_preprocess_node(&$variables) {
  * table 'drush cc theme-registry' and 'drush cc router'.
 **/
 function ish_drupal_theme_theme($existing, $type, $theme, $path) {
-  // echo("ish_drupal_theme_theme");
   // var_dump([ $existing, $type, $theme, $path ]);
 
   return [
