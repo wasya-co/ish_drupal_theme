@@ -6,7 +6,6 @@
 {%
   set classes = [
     'Teaser',
-
     'node',
     'node--type-' ~ node.bundle|clean_class,
     node.isPromoted() ? 'node--promoted',
@@ -16,7 +15,6 @@
   ]
 %}
 {{ attach_library('ish_drupal_theme/node') }}
-
 <article{{ attributes.addClass(classes) }}>
 
   <div class='d-flex'>
@@ -25,9 +23,13 @@
     </div>
     <div class='d-flex lvl-1 flex-column align-items-start'>
 
-        <h2{{ title_attributes }}>
-          <a href="{{ url }}" rel="bookmark">{{ label }}</a>
-        </h2>
+        {{ title_prefix }}
+        {% if label and not page %}
+          <h2{{ title_attributes }}>
+            <a href="{{ url }}" rel="bookmark">{{ label }}</a>
+          </h2>
+        {% endif %}
+        {{ title_suffix }}
 
         <div class='thumb' >
           {% if content.field_image_thumb_url | length > 3 %}
@@ -41,7 +43,12 @@
           {% endif %}
         </div>
 
-        {# {% if display_submitted %}
+        <div{{ content_attributes.addClass('node__content') }}>
+          {{ content | without('field_vote_up_down') | without('field_image_thumb') | without('field_image_thumb_url') }}
+          ({{ node.field_comments.comment_count }} {{ 'Comments'|t }})
+        </div>
+
+        {% if display_submitted %}
           <footer class="node__meta">
             {{ author_picture }}
             <div{{ author_attributes.addClass('node__submitted') }}>
@@ -49,11 +56,7 @@
               {{ metadata }}
             </div>
           </footer>
-        {% endif %} #}
-
-        <div{{ content_attributes.addClass('node__content') }}>
-          {{ content | without('field_vote_up_down') | without('field_image_thumb') | without('field_image_thumb_url') }}
-        </div>
+        {% endif %}
 
     </div>
   </div>

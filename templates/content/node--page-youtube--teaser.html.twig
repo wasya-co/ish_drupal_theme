@@ -37,6 +37,7 @@
       <div{{ author_attributes.addClass('node__submitted') }}>
         {% trans %}Submitted by {{ author_name }} on {{ date }}{% endtrans %}
         {{ metadata }}
+        ({{ node.field_comments.comment_count }} {{ 'Comments'|t }})
       </div>
     </footer>
   {% endif %}

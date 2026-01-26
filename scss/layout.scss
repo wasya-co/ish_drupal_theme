@@ -1,8 +1,9 @@
 
 .field--type-text-with-summary {
   /* Originally, for `Infinite Business Plan - Download` */
-  height: 100%;
+  // height: 100%; /* interfered with Teasers and Cards on homepage of piousbox_com, when field is empty */
 }
+
 
 .ish-layout {
   .block-layout-builder {
