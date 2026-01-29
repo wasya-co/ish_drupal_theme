@@ -76,8 +76,6 @@ class MovementPad {
     }
 
     alignAndConfigPad(canvas) {
-      console.log('+++ alignAndConfigPad', canvas)
-
       // this.padElement.style.top = canvas.height + this.container.getBoundingClientRect().top - this.region.offsetHeight - 10 + 'px'
       this.padElement.style.bottom = '120px'
       this.padElement.style.left = '20px'
