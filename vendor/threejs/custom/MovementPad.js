@@ -76,26 +76,26 @@ class MovementPad {
     }
 
     alignAndConfigPad(canvas) {
-        this.padElement.style.top = canvas.height + this.container.getBoundingClientRect().top
-                                    - this.region.offsetHeight - 10 + 'px'
-        this.padElement.style.left = '20px'
+      // this.padElement.style.top = canvas.height + this.container.getBoundingClientRect().top - this.region.offsetHeight - 10 + 'px'
+      this.padElement.style.bottom = '120px'
+      this.padElement.style.left = '20px'
 
-        this.regionData.width = this.region.offsetWidth
-        this.regionData.height = this.region.offsetHeight
-        this.regionData.position = {
-            top: this.region.offsetTop,
-            left: this.region.offsetLeft
-        }
-        this.regionData.offset = utils.getOffset(this.region)
-        this.regionData.radius = this.regionData.width / 2
-        this.regionData.centerX = this.regionData.position.left + this.regionData.radius
-        this.regionData.centerY = this.regionData.position.top + this.regionData.radius
+      this.regionData.width = this.region.offsetWidth
+      this.regionData.height = this.region.offsetHeight
+      this.regionData.position = {
+          top: this.region.offsetTop,
+          left: this.region.offsetLeft
+      }
+      this.regionData.offset = utils.getOffset(this.region)
+      this.regionData.radius = this.regionData.width / 2
+      this.regionData.centerX = this.regionData.position.left + this.regionData.radius
+      this.regionData.centerY = this.regionData.position.top + this.regionData.radius
 
-        this.handleData.width = this.handle.offsetWidth
-        this.handleData.height = this.handle.offsetHeight
-        this.handleData.radius = this.handleData.width / 2
+      this.handleData.width = this.handle.offsetWidth
+      this.handleData.height = this.handle.offsetHeight
+      this.handleData.radius = this.handleData.width / 2
 
-        this.regionData.radius = this.regionData.width / 2 - this.handleData.radius
+      this.regionData.radius = this.regionData.width / 2 - this.handleData.radius
     }
 
     update(pageX, pageY) {

@@ -40,7 +40,7 @@
       </div>
     </footer>
   {% endif %}
-  ({{ node.field_comments.comment_count }} {{ 'Comments'|t }})
+  ({{ node.field_comments.comment_count |default('No'|t) }} {{ 'Comments'|t }})
   <div class='d-flex'>
     <div class="d-flex mr-2 test-0" style="flex-shrink: 0">
       {% if content.field_image_thumb_url %}
