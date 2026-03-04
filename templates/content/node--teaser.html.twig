@@ -45,7 +45,9 @@
 
         <div{{ content_attributes.addClass('node__content') }}>
           {{ content | without('field_vote_up_down') | without('field_image_thumb') | without('field_image_thumb_url') }}
-          ({{ node.field_comments.comment_count }} {{ 'Comments'|t }})
+          {% if content.field_example is defined %}
+            ({{ node.field_comments.comment_count |default(0) }} {{ 'Comments'|t }})
+          {% endif %}
         </div>
 
         {% if display_submitted %}
