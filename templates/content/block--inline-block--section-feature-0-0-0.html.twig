@@ -1,18 +1,10 @@
-
-
 {%
   set classes = [
-    'section-feature-0-0-0',
-
     'block',
     'block-' ~ configuration.provider|clean_class,
     'block-' ~ plugin_id|clean_class,
   ]
 %}
-{% set reverse_str = (content.field_is_reverse[0]['#markup'] == 'On') ? 'flex-direction: row-reverse; ' : '' %}
-{# value: {{ dump( content.field_is_reverse[0]['#markup'] ) }}
-reverse_str: {{ dump( reverse_str ) }} #}
-
 <div{{ attributes.addClass(classes) }}>
   {{ title_prefix }}
   {% if label %}
@@ -20,14 +12,9 @@ reverse_str: {{ dump( reverse_str ) }} #}
   {% endif %}
   {{ title_suffix }}
   {% block content %}
-    <div{{ content_attributes.addClass('content') }}>
 
-{# {{ dump( content ) }} #}
 
-{# link: {{ dump( content.field_link[0]['#plain_text'] ) }} #}
-
-{# body: {{ dump( content.body ) }} #}
-
+{% set reverse_str = (content.field_is_reverse[0]['#markup'] == 'On') ? 'flex-direction: row-reverse; ' : '' %}
 <section class="services" style="display: block;
                                  {# border: 1px solid red; #}
                                  padding: 0;
@@ -73,8 +60,8 @@ reverse_str: {{ dump( reverse_str ) }} #}
 </section>
 
 
-    </div>
   {% endblock %}
 </div>
+
 
 
