@@ -14,6 +14,8 @@
   {% block content %}
 
 
+{# {{ dump( content ) }} #}
+
 {% set reverse_str = (content.field_is_reverse[0]['#markup'] == 'On') ? 'flex-direction: row-reverse; ' : '' %}
 <section class="services" style="display: block;
                                  {# border: 1px solid red; #}
@@ -36,7 +38,7 @@
                      "
             >
               <a class="title"
-                 href="{{ content.field_link[0]['#plain_text'] }}"
+                 href="{{ content.field_link[0] }}"
               >{{ content.field_image }}</a>
             </div>
           </div>
@@ -44,11 +46,11 @@
           <div class="col-md-6">
             <div class="content-wrapper">
               <h2><a class="title"
-                     href="{{ content.field_link[0]['#plain_text'] }}"
+                     href="{{ content.field_link[0] }}"
                   >{{ content.field_title }}</a></h2>
               {{ content.body }}
               <a class=''
-                 href="{{ content.field_link[0]['#plain_text'] }}"
+                 href="{{ content.field_link[0] }}"
               ><svg class="long-arrow" xmlns="http://www.w3.org/2000/svg" width="280" height="70" viewBox="0 0 280 70"><path data-name="Path 39255" d="M401.537,232.07l45.653,32.084L402.044,302.07l-.507-31.112H167.19V260.265H401.537Z" transform="translate(-167.189 -232.07)" fill="#111" fill-rule="evenodd"></path></svg></a>
             </div>
           </div>

@@ -18,4 +18,6 @@ piousbox-0.2.0 - 2023-09-12 - merged demmitv-0.0.0
 0.2.0 - 2023-11-12 - groking performance, removing blocking css from the head.
 0.2.2 - 2023-11-13 - groking wco theme, very nice
 
-
+0.3.0 :: 2026-03-23 :: ?last stable version for drupal 9.5
+0.4.0 :: 2026-03-23 :: actually, section-feature-0-0-0 works fine this way on drupal 9.5
+1.0.0 :: 2026-03-23 :: groking upgrade to drupal 10.
