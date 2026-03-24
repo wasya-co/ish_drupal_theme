@@ -1316,9 +1316,6 @@ pre[class*="language-"] {
   border: 1px solid #dddddd; }
 
 /* ELEMENTS PAGE */
-.page-title-padd {
-  padding-top: 100px; }
-
 .heading,
 .accordion,
 .alert,
@@ -1348,51 +1345,6 @@ pre[class*="language-"] {
 
 .alert {
   margin-bottom: 0; }
-
-.page-title::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #0000008c; }
-
-.page-title-block {
-  padding: 83px 0 89px;
-  padding-left: 80px; }
-
-.header-3 .page-title-block {
-  padding-top: 115px; }
-
-.page-title-block h1 {
-  margin-bottom: 10px;
-  position: relative;
-  color: white; }
-
-.page-title-block .blog-heading {
-  margin-bottom: 31px; }
-
-.page-title-block h1::before {
-  content: "";
-  position: absolute;
-  width: 55px;
-  height: 2px;
-  background-color: white;
-  top: 50%;
-  transform: translateY(-50%);
-  left: -80px; }
-
-.page-title-block p {
-  position: relative;
-  color: white;
-  font-size: 14px;
-  line-height: 17px;
-  font-family: var(--heading-font);
-  font-weight: 600; }
-
-.page-title-block p a {
-  color: white; }
 
 .heading-block > div:last-child .code-block {
   margin-bottom: 0; }
@@ -6773,15 +6725,6 @@ a {
 .region-footer-third {
   margin: 0; }
 
-/* DEV - 1 */
-.navigation {
-  width: 100%;
-  display: flex;
-  justify-content: end; }
-
-.header-3.active .navigation {
-  justify-content: center; }
-
 .navbar-nav .nav-item:last-child .dropdown-menu li:last-child {
   display: none; }
 
@@ -6790,9 +6733,6 @@ a {
   flex-wrap: wrap;
   padding: 0;
   max-width: 284px; }
-
-.block.block-menu.navigation {
-  padding: 0; }
 
 .footer2-links .region-footer-second {
   padding: 0; }
@@ -6828,9 +6768,6 @@ footer .navbar-brand path {
 
 .nav-sticky rect:first-child {
   fill: black; }
-
-.blogs-page .page-title-block h1 {
-  margin-bottom: 31px; }
 
 footer rect {
   fill: #ffffff; }
@@ -7639,9 +7576,6 @@ section.home1.home1-info .swiper-button-prev:hover::after {
   .navbar-nav .nav-item > .nav-link {
     font-size: 14px;
     line-height: 18px; }
-  .page-title-block h1 {
-    font-size: 30px;
-    line-height: 38px; }
   .btn-primary.scroll-top {
     width: 35px;
     height: 35px;
@@ -9040,12 +8974,6 @@ a {
     width: 30px;
     height: 30px;
     margin-top: 0; }
-  .header-1 .user-page .page-title.page-title-padd,
-  .header-1 .page-not-found-page .page-title.page-title-padd,
-  .header-1 .page-access-denied .page-title.page-title-padd,
-  .header-1 .search-title-padd,
-  .header-1 .page_banner-block_1 .page-title {
-    padding-top: 40px !important; }
   .service-detailefull.custom-services .container {
     padding: 0; }
   .page-login .form-group:first-child {
