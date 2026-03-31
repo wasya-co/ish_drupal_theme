@@ -14,6 +14,8 @@ git push
 # ssh do2 "cd /mnt/volume_sfo2_01/projects/docker/volumes/piousbox_drupal_production_data/web/themes/ish_drupal_theme ; git pull && echo $HOSTNAME ok"
 ssh do2 "cd /mnt/volume_sfo2_01/projects/docker/volumes/wco_drupal_production_data/web/themes/ish_drupal_theme ; git pull && echo $HOSTNAME ok"
 
+# ssh do2 "cd /mnt/volume_sfo2_01/projects/docker ; docker exec -it wco_drupal_production sh -c './vendor/bin/drush cr' "
+ssh do2 "cd /mnt/volume_sfo2_01/projects/docker ; docker exec -it docker_wco_drupal_production_1 sh -c './vendor/bin/drush cr' "
 
 set +e
 set +x
