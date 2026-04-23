@@ -22,4 +22,6 @@ piousbox-0.2.0 - 2023-09-12 - merged demmitv-0.0.0
 0.4.0 :: 2026-03-23 :: actually, section-feature-0-0-0 works fine this way on drupal 9.5
 1.0.0 :: 2026-03-23 :: groking upgrade to drupal 10.
 1.1.0 :: 2026-04-21 :: i may have skipped 1.0.0. this is the ^10 update.
+2.0.0 :: 2026-04-22 :: paragraph why_choose_us looks great
+                       switched to bootstrap 5. Drupal ^10
 
