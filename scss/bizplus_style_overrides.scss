@@ -62,3 +62,26 @@ body.page-node-124 .home2-info-block a.btn-primary {
   max-width: 90%;
   height: auto;
 }
+
+.why_choose_us {
+  .row div,
+  .col-sm-6 {
+    position: relative;
+    z-index: 2;
+  }
+}
+
+.why_choose_us_2 {
+  position: relative;
+
+  margin-bottom: 50px;
+
+  h1 {
+    margin-top: 0;
+  }
+
+  .image-wrapper img {
+    border-radius: 10px;
+  }
+
+}
