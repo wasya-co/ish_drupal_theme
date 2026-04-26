@@ -12,7 +12,9 @@
   ]
 %}
 {{ attach_library('ish_drupal_theme/node') }}
-<article{{ attributes.addClass(classes) }}>
+<div{{ attributes.addClass(classes) }}>
+
+  <article>
 
   <div class='row'>
     <div class='col-2 col-md-1 voteW'>
@@ -85,25 +87,30 @@
     </div>
   </div>
 
-
-  {% if related_articles is not empty %}
-    <h5 class='center mb-2 mt-5 text-center'>Related Articles</h5>
-    <div class="row ">
-      {% for node in related_articles %}
-        <div class="col-12 col-md-4">
-          {{ drupal_entity('node', node.id(), 'card') }}
-        </div>
-      {% endfor %}
-    </div>
-  {% endif %}
-
-
-
-  {{ content.comment }}{# wasya_co, infiniteshelter #}
-  {{ content.field_comments }}{# piousbox_com #}
-
   <div class="clearfix"></div>
+  </article>
 
-</article>
+  <div class='row'>
+    <div class='col-12'>
+      {% if related_articles is not empty %}
+        <h5 class='center mb-2 mt-5 text-center'>Related Articles</h5>
+        <div class="row ">
+          {% for node in related_articles %}
+            <div class="col-12 col-md-4">
+              {{ drupal_entity('node', node.id(), 'card') }}
+            </div>
+          {% endfor %}
+        </div>
+      {% endif %}
+    </div>
+  </div>
 
+  <div class='row'>
+    <div class='col-12'>
+      {{ content.comment }}{# wasya_co, infiniteshelter #}
+      {{ content.field_comments }}{# piousbox_com #}
+    </div>
+  </div>
+
+</div>
 
