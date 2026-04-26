@@ -36,11 +36,12 @@
 // @import "components/user";
 
 // @import "main";
-// @import "issues-navigator";
+
 // @import "layout";
 // @import "regions";
 // @import "service";
 // @import "superfish";
 
-@import "block--header";
 
+@import "./block--header";
+@import "./issues";

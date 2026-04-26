@@ -402,16 +402,6 @@ html[lang='ru']    .block-language li[hreflang="ru"],
   border-bottom: 2px solid black;
 }
 
-.layout--twocol {
-  &::after {
-    content: "L";
-
-    position: absolute;
-    top: 0;
-    right: 0;
-  }
-}
-
 
 .layout-container {
   display: flex;
@@ -602,7 +592,7 @@ h1.page-title {
 
 
 .simplenews-subscriber-form {
-  background: var(--wco-dol-bg2-color);
+  // background: var(--wco-dol-bg2-color);
   padding: 1em;
   border: 1px solid gray;
   border-radius: 5px;
@@ -694,6 +684,12 @@ h1.page-title {
   .field__items {
     display: flex;
   }
+}
+
+.thumb-row {
+  display: flex;
+  width: 100%;
+  justify-content: center;
 }
 
 /* admin form tags are inline. */

@@ -48,7 +48,6 @@ base:
       css/components/ui-dialog.css:
       css/service.css:
       css/layout.css:
-      css/issues-navigator.css:
       css/superfish.css:
 
 dialog:
