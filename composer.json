@@ -1,0 +1,17 @@
+{
+    "name": "wasya-co/ish_drupal_theme",
+    "type": "drupal-theme",
+    "description": "Ish Drupal Theme",
+    "homepage": "https://wasya.co/projects/ish_drupal_theme",
+    "authors": [
+      {
+        "name": "Victor Pudeyev",
+        "role": "Maintainer"
+      }
+    ],
+    "require": {
+      "drupal/core": "^9 || ^10 || ^11"
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+  }
