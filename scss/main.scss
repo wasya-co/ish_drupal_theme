@@ -1,23 +1,24 @@
 
+@import "./bizplus_style.scss";
+@import "./bizplus_style_overrides.scss";
+
 @import "./aphorism.scss";
 @import "./block--header.scss";
 @import "./Card.scss";
+@import "./commerce-cart.scss";
 @import "./comments.scss";
 @import "./contributed-post.scss";
 @import "./fonts.scss";
 @import "./vud-widget.scss";
 @import "./users.scss";
 @import "./book.scss";
+@import "./paragraphs.scss";
+
 
 article {
   img {
-    max-width: 100%;
+    max-width: calc( 100% - 0.8em );
     height: auto;
-  }
-  footer {
-    max-width: 1000px;
-    // margin: auto;
-    margin: 0 auto 1em auto;
   }
 }
 
@@ -25,7 +26,7 @@ html,
 body,
 .dialog-off-canvas-main-canvas,
 .layout-container {
-  height: 100%;
+  min-height: 100vh;
 }
 
 html {
@@ -55,6 +56,16 @@ main {
 //   height: 100%;
 // }
 
+.text-formatted blockquote {
+  border-left: 5px solid #ccc;
+  font-style: italic;
+  margin-left: 2em;
+  margin-right: 2em;
+  overflow: hidden;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+}
+
 div.bordered {
   border: 1px solid black;
 }
@@ -63,7 +74,8 @@ div.bordered {
   border: 1px solid red;
 }
 
-table.bordered {
+table.bordered,
+.compose-tips table {
   border: 1px solid black;
 
   th {
@@ -108,7 +120,7 @@ table.bordered {
 .btn {
   display: inline-block;
   padding: 10px 16px;
-  background: #4285f4;
+  // background: #4285f4;
   color: #fff;
   text-decoration: none;
   border-radius: 4px;
@@ -119,7 +131,8 @@ table.bordered {
 
 
 .center {
-  margin: auto;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .Chip {
@@ -193,6 +206,11 @@ table.bordered {
     }
 
   }
+}
+
+.compose-tips {
+  max-width: 900px;
+  margin: auto;
 }
 
 .block-current-user-block,
@@ -384,16 +402,6 @@ html[lang='ru']    .block-language li[hreflang="ru"],
   border-bottom: 2px solid black;
 }
 
-.layout--twocol {
-  &::after {
-    content: "L";
-
-    position: absolute;
-    top: 0;
-    right: 0;
-  }
-}
-
 
 .layout-container {
   display: flex;
@@ -565,7 +573,7 @@ article.media--type-remote-video.media--view-mode-full {
 
 /* P */
 .padded {
-  margin: 0.5rem;
+  padding: 0.5rem;
 }
 table.padded,
 table.table-padded {
@@ -584,7 +592,7 @@ h1.page-title {
 
 
 .simplenews-subscriber-form {
-  background: var(--wco-dol-bg2-color);
+  // background: var(--wco-dol-bg2-color);
   padding: 1em;
   border: 1px solid gray;
   border-radius: 5px;
@@ -676,6 +684,12 @@ h1.page-title {
   .field__items {
     display: flex;
   }
+}
+
+.thumb-row {
+  display: flex;
+  width: 100%;
+  justify-content: center;
 }
 
 /* admin form tags are inline. */
@@ -777,7 +791,35 @@ div[class^='field--name-field-tag'] {
 
 /* H */
 
-/* header?! */
+.header {
+  text-align: center;
+  magrin: auto;
+}
+
+
+/* P */
+
+.region-postfooter {
+  display: flex;
+
+  nav.menu--terms-conditions ul.menu {
+    border-left: 2px solid orange;
+    padding-left: 1em;
+
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+
+    li {
+      border-right: 2px solid orange;
+      padding-right: 1em;
+      margin-right: 1em;
+    }
+  }
+}
+
+/* R */
 
 .region-headerW {
   padding: 1em 0 0.5em 0;
@@ -815,28 +857,6 @@ div[class^='field--name-field-tag'] {
 
 .region-highlighted {
   background: #cecece;
-}
-
-/* P */
-
-.region-postfooter {
-  display: flex;
-
-  nav.menu--terms-conditions ul.menu {
-    border-left: 2px solid orange;
-    padding-left: 1em;
-
-    height: 100%;
-
-    display: flex;
-    align-items: center;
-
-    li {
-      border-right: 2px solid orange;
-      padding-right: 1em;
-      margin-right: 1em;
-    }
-  }
 }
 
 .region-primary-menu {

@@ -12,7 +12,9 @@
   ]
 %}
 {{ attach_library('ish_drupal_theme/node') }}
-<article{{ attributes.addClass(classes) }}>
+<div{{ attributes.addClass(classes) }}>
+
+  <article>
 
   <div class='row'>
     <div class='col-2 col-md-1 voteW'>
@@ -41,11 +43,26 @@
 
   <div class='d-flex mb-2'>
     <div class='mr-2'>
-      <a href="{{ content.field_image_thumb.0 ?:
-          content.field_image_thumb_url |escape|striptags|replace({"\n": "", " ": "", "\r": "", "\t": ""}) }}" data-lightbox="article-thumb" >
-        <img style="max-height: 80px;" src="{{ content.field_image_thumb.0 ?:
-          content.field_image_thumb_url |escape|striptags|replace({"\n": "", " ": "", "\r": "", "\t": ""}) }}" alt='' />
-      </a>
+
+      {% if content.field_image_thumb_url.0 %}
+        {# {{ dump( content.field_image_thumb_url.0 ) }} #}
+        <a href="{{ content.field_image_thumb_url.0 ?:
+          content.field_image_thumb_url.0 |preg_replace('/<!--.*?-->/s','')|striptags|replace({"\n":"","\r":"","\t":""})   }}" data-lightbox="article-thumb" >
+          <img style="max-height: 80px;" src="{{ content.field_image_thumb_url.0 ?:
+            content.field_image_thumb_url.0 |preg_replace('/<!--.*?-->/s','')|striptags|replace({"\n":"","\r":"","\t":""})   }}" alt='' />
+        </a>
+      {% endif %}
+
+      {% if content.field_image_thumb.0 %}
+        {# {{ content.field_image_thumb.0 }} #}
+        <a href="{{ content.field_image_thumb.0 ?:
+          content.field_image_thumb.0 |preg_replace('/<!--.*?-->/s','')|striptags|replace({"\n":"","\r":"","\t":""})   }}" data-lightbox="article-thumb" >
+            <img style="max-height: 80px;" src="{{ content.field_image_thumb.0 ?:
+              content.field_image_thumb.0 |preg_replace('/<!--.*?-->/s','')|striptags|replace({"\n":"","\r":"","\t":""})   }}" alt='' />
+        </a>
+      {% endif %}
+
+
     </div>
     <div class='a'>
       <div class="sharethis-inline-share-buttons mb-2"></div>
@@ -58,35 +75,42 @@
   </div>
 
   <div class='row'>
-    <div class='col-sm-12'>
+    <div class='col-12'>
       <div{{ content_attributes.addClass('node__content') }}>
         {{ content | without('comment')
                    | without('field_city')        | without('field_citytag')    | without('field_comments')
-                   | without('field_issue')       | without('field_image_hero') | without('field_image_thumb') | without('field_image_thumb_url')
-                   | without('field_tags_contrib') | without('field_tags')
+                   | without('field_issue')       | without('field_image_hero') | without('field_image_thumb')  | without('field_image_thumb_url')
+                   | without('field_tag_contrib') | without('field_tags')       | without('field_tags_contrib') | without('field_tags_issue')
                    | without('field_vote_up_down')
         }}
       </div>
     </div>
   </div>
 
-  {% if related_articles is not empty %}
-    <h5 class='center text-center'>Related Articles</h5>
-    <div class="row ">
-      {% for node in related_articles %}
-        <div class="col-12 col-md-4">
-          {{ drupal_entity('node', node.id(), 'card') }}
-        </div>
-      {% endfor %}
-    </div>
-  {% endif %}
-
-
-  {{ content.comment }}{# wasya_co, infiniteshelter #}
-  {{ content.field_comments }}{# piousbox_com #}
-
   <div class="clearfix"></div>
+  </article>
 
-</article>
+  <div class='row'>
+    <div class='col-12'>
+      {% if related_articles is not empty %}
+        <h5 class='center mb-2 mt-5 text-center'>Related Articles</h5>
+        <div class="row ">
+          {% for node in related_articles %}
+            <div class="col-12 col-md-4">
+              {{ drupal_entity('node', node.id(), 'card') }}
+            </div>
+          {% endfor %}
+        </div>
+      {% endif %}
+    </div>
+  </div>
 
+  <div class='row'>
+    <div class='col-12'>
+      {{ content.comment }}{# wasya_co, infiniteshelter #}
+      {{ content.field_comments }}{# piousbox_com #}
+    </div>
+  </div>
+
+</div>
 
