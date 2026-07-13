@@ -1,5 +1,6 @@
 <?php
 
+use Drupal\Core\Url;
 use Drupal\node\NodeInterface;
 
 /*
@@ -18,9 +19,43 @@ function ish_drupal_theme_preprocess_image_widget(array &$variables) {
 }
 
 function ish_drupal_theme_preprocess_node(&$variables) {
+  $node = $variables['node'];
+
   if (isset($variables['content']['field_comments'])) {
     $variables['content']['field_comments']['#cache']['contexts'][] = 'languages:language_content';
   }
+
+  $links = [];
+  foreach (\Drupal::languageManager()->getLanguages() as $langcode => $language) {
+    if ($node->hasTranslation($langcode)) {
+      $translation = $node->getTranslation($langcode);
+      $links[$langcode] = [
+        'title' => $language->getName(),
+        'url' => $translation->toUrl('canonical'),
+        'language' => $language,
+        'attributes' => [
+          'hreflang' => $langcode,
+        ],
+      ];
+    }
+    else {
+      $links[$langcode] = [
+        '#attributes' => [
+          'class' => 'd-inline-blick',
+        ],
+        'title' => $language->getName(),
+        'url' => Url::fromUri('internal:/articles/' . $node->id() . '/translate-to/' . $langcode),
+        'language' => $language,
+      ];
+    }
+  }
+
+
+  $variables['translation_links'] = [
+    '#theme' => 'links',
+    '#links' => $links,
+  ];
+
 }
 
 /**

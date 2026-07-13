@@ -11,7 +11,7 @@
   * ssh into node, login to docker and run:
   * the container_name is piousbox_com, service is app_*
 
-    composer update wasya-co/ish_drupal_module \
+    composer update wasya-co/ish_drupal_theme \
       --ignore-platform-req=ext-bcmath --ignore-platform-req=ext-gd ;
     drush cr
 
