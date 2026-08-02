@@ -25,4 +25,4 @@ piousbox-0.2.0 - 2023-09-12 - merged demmitv-0.0.0
 2.0.0 :: 2026-04-22 :: paragraph why_choose_us looks great
                        switched to bootstrap 5. Drupal ^10
 2.1.0                  groking dark theme
-
+2.1.1 - added region footer_bottom and changed the node teaser to flow better?

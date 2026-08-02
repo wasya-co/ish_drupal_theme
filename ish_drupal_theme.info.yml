@@ -28,6 +28,7 @@ regions:
   content: 'Content'
   filters: 'Filters'
   footer: 'Footer'
+  footer_bottom: 'Footer Bottom'
   header: 'Header'
   help: 'Help'
   highlighted: 'Highlighted'
